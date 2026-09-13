@@ -1103,6 +1103,11 @@ bundles:
       supported_plmns:
         - "302220"
         - "313340"
+    - id: apple_dito_ph
+      bundle: Dito_ph.bundle
+      path: profiles/dito_ph.yaml
+      supported_plmns:
+        - "51566"
     - id: apple_djezzy_dz
       bundle: Djezzy_dz.bundle
       path: profiles/djezzy_dz.yaml
