@@ -21,10 +21,10 @@ common:
         epdg:
             address: epdg.epc.mnc000.mcc454.pub.3gppnetwork.org
             configuration_attributes:
-                - identifier: 20
+                - identifier: 16384
                   name: AssignedPCSCFIPv4
                   type: v4
-                - identifier: 21
+                - identifier: 16386
                   name: AssignedPCSCFIPv6
                   type: v6
         ike:
