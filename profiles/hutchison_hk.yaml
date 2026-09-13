@@ -59,7 +59,7 @@ common:
                   eap_method: EAP-AKA
             sa_lifetime_seconds: 80000
             validate_remote_certificate: false
-        ip_stack: ipv4v6
+        ip_stack: ipv4
         media:
             rtcp_interval_seconds: 5
         register:
