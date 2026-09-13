@@ -44,6 +44,7 @@ common:
                 interval_seconds: 600
                 max_retries: 4
                 retry_interval_seconds: 10
+            include_device_identity: true
             local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
             proposals:
                 - encryption:
