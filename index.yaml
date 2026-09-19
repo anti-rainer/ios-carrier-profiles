@@ -1674,6 +1674,11 @@ bundles:
       path: profiles/laotel_la.yaml
       supported_plmns:
         - "45701"
+    - id: apple_lebara_uk
+      bundle: Lebara_uk.bundle
+      path: profiles/lebara_uk.yaml
+      supported_plmns:
+          - "23487"
     - id: apple_lgu_kr
       bundle: LGU_kr.bundle
       path: profiles/lgu_kr.yaml
