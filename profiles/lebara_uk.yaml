@@ -12,10 +12,39 @@ plmn_overrides:
         ims:
             apn: ims
             ip_stack: ipv4v6
+            pcscf:
+                address: pcscf.ims.mnc087.mcc234.3gppnetwork.org
             epdg:
                 address: epdg.epc.mnc087.mcc234.pub.3gppnetwork.org
+                # Lebara is an MVNO on Vodafone UK's ePDG, which answers the
+                # standard TS 24.302 attributes. The vendor aliases some Apple
+                # bundles carry (16384/16386) send an MVNO card into an
+                # in-tunnel P-CSCF DNS lookup instead, and that lookup times
+                # out on this network.
+                configuration_attributes:
+                    - identifier: 20
+                      type: v4
+                    - identifier: 21
+                      type: v6
             ike:
+                ipsec_mtu: 1350
+                full_dual_stack_request: true
+                nat_keepalive_enabled: true
+                nat_keepalive_seconds: 20
+                sa_lifetime_seconds: 80000
+                local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
+                validate_remote_certificate: false
                 proposals:
+                    - encryption:
+                        - aes256
+                      integrity:
+                        - sha512
+                      prf:
+                        - sha512
+                      dh_groups:
+                        - 14
+                      authentication_method: None
+                      eap_method: EAP-AKA
                     - encryption:
                         - aes256
                       integrity:
@@ -24,7 +53,16 @@ plmn_overrides:
                         - sha256
                       dh_groups:
                         - 14
-                      lifetime_seconds: 80000
+                      authentication_method: None
+                      eap_method: EAP-AKA
+                    - encryption:
+                        - aes256
+                      integrity:
+                        - sha1
+                      prf:
+                        - sha1
+                      dh_groups:
+                        - 14
                       authentication_method: None
                       eap_method: EAP-AKA
                 dpd:
@@ -33,7 +71,16 @@ plmn_overrides:
                     max_retries: 4
                     retry_interval_seconds: 10
                 child_sa:
+                    lifetime_seconds: 80000
+                    replay_window_size: 12
                     proposals:
+                        - source_branch: FirstChild
+                          encryption:
+                            - aes256
+                          integrity:
+                            - sha512
+                          esn: auto
+                          install_policies: true
                         - source_branch: FirstChild
                           encryption:
                             - aes256
@@ -41,31 +88,21 @@ plmn_overrides:
                             - sha256
                           esn: auto
                           install_policies: true
-                          lifetime_seconds: 80000
-                    lifetime_seconds: 80000
-                    replay_window_size: 12
-                local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
-                validate_remote_certificate: false
-                sa_lifetime_seconds: 80000
+                        - source_branch: FirstChild
+                          encryption:
+                            - aes256
+                          integrity:
+                            - sha1
+                          esn: auto
+                          install_policies: true
             register:
                 use_ipsec: true
+                include_cellular_network_info: true
             signaling:
+                max_udp_message_size: 1000
                 preconditions: supported
                 support_p_early_media: true
                 early_media_needs_header: true
-                csfb_on:
-                    - method: INVITE
-                      statuses:
-                        - 5XX
-                require_preconditions_when_mandatory: false
-                contact:
-                    additional_contact_params:
-                        - selector: REGISTER,INVITE,INVITE:*
-                          params:
-                            - +g.3gpp.mid-call
-                            - +g.3gpp.srvcc-alerting
-                            - +g.3gpp.ps2cs-srvcc-orig-pre-alerting
-                            - +g.3gpp.smsip
             media:
                 rtcp_interval_seconds: 5
             volte:
