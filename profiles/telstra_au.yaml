@@ -46,9 +46,22 @@ common:
                 max_retries: 4
                 retry_interval_seconds: 10
             local_identifier: Telstra@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
+            proposals:
+                - encryption:
+                    - aes256
+                  integrity:
+                    - sha256
+                  prf:
+                    - sha256
+                  dh_groups:
+                    - 14
+                  lifetime_seconds: 80000
+                  authentication_method: Certificate
+                  eap_method: EAP-AKA
             remote_certificate_authority_name: DigiCert Global Root G2
             remote_certificate_hostname: epdg.epc.mnc001.mcc505.pub.3gppnetwork.org
             sa_lifetime_seconds: 80000
+            username: 0$imsi@nai.epc.mnc001.mcc505.3gppnetwork.org
             validate_remote_certificate: true
         ip_stack: ipv4v6
         media:

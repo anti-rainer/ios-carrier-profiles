@@ -46,10 +46,23 @@ common:
                 retry_interval_seconds: 10
             local_identifier: anonymous@nai.epc.mnc580.mcc311.3gppnetwork.org
             local_identifier_type: IDUserFQDN
+            proposals:
+                - encryption:
+                    - aes256
+                  integrity:
+                    - sha512
+                  prf:
+                    - sha512
+                  dh_groups:
+                    - 15
+                  lifetime_seconds: 80000
+                  authentication_method: Certificate
+                  eap_method: EAP-AKA
             remote_certificate_authority_name: DigiCert Global Root G2
             remote_certificate_hostname: epdg.epc.mnc580.mcc311.pub.3gppnetwork.org
             remote_identifier_type: IDFQDN
             sa_lifetime_seconds: 80000
+            username: 0$imsi@nai.epc.mnc580.mcc311.3gppnetwork.org
             validate_remote_certificate: true
         impi_format: imsi@carrierDomain
         impu_format: imsi@carrierDomain

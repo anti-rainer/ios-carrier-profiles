@@ -41,6 +41,7 @@ plmn_overrides:
                           lifetime_seconds: 86400
                     lifetime_seconds: 86400
                 local_identifier: PseudoIMSI@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
+                username: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 remote_certificate_authority_name: TI Trust Technologies OV CA
                 remote_certificate_hostname: epdg.epc.mnc001.mcc222.pub.3gppnetwork.org
                 validate_remote_certificate: true

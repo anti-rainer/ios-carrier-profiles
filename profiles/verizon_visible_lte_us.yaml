@@ -46,9 +46,22 @@ common:
                 max_retries: 4
                 retry_interval_seconds: 10
             local_identifier: anonymous@nai.epc.mnc480.mcc311.3gppnetwork.org
+            proposals:
+                - encryption:
+                    - aes256
+                  integrity:
+                    - sha1
+                  prf:
+                    - sha1
+                  dh_groups:
+                    - 2
+                  lifetime_seconds: 80000
+                  authentication_method: Certificate
+                  eap_method: EAP-AKA
             remote_certificate_authority_name: Verizon Wireless ROOT CA - RSA
             remote_certificate_hostname: wo.vzwwo.com
             sa_lifetime_seconds: 80000
+            username: 0$imsi@nai.epc.mnc480.mcc311.3gppnetwork.org
             validate_remote_certificate: true
         ip_stack: ipv6
         media:

@@ -28,6 +28,18 @@ plmn_overrides:
                       name: AssignedPCSCFIPv6
                       type: v6
             ike:
+                proposals:
+                    - encryption:
+                        - aes256
+                      integrity:
+                        - sha256
+                      prf:
+                        - sha256
+                      dh_groups:
+                        - 14
+                      lifetime_seconds: 80000
+                      authentication_method: Certificate
+                      eap_method: EAP-AKA
                 dpd:
                     enabled: false
                     interval_seconds: 600
@@ -46,6 +58,7 @@ plmn_overrides:
                     lifetime_seconds: 80000
                     replay_window_size: 12
                 local_identifier: anonymous@nai.epc.mnc020.mcc234.3gppnetwork.org
+                username: 0$imsi@nai.epc.mnc020.mcc234.3gppnetwork.org
                 remote_certificate_authority_name: DigiCert Global Root G2
                 remote_certificate_hostname: epdg.epc.mnc020.mcc234.pub.3gppnetwork.org
                 validate_remote_certificate: true

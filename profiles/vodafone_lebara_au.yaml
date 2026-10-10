@@ -27,6 +27,18 @@ plmn_overrides:
                       name: AssignedPCSCFIPv6
                       type: v6
             ike:
+                proposals:
+                    - encryption:
+                        - aes256
+                      integrity:
+                        - sha512
+                      prf:
+                        - sha256
+                      dh_groups:
+                        - 14
+                      lifetime_seconds: 80000
+                      authentication_method: Certificate
+                      eap_method: EAP-AKA
                 child_sa:
                     proposals:
                         - source_branch: FirstChild

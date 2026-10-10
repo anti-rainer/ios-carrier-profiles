@@ -41,9 +41,22 @@ common:
                 max_retries: 4
                 retry_interval_seconds: 10
             local_identifier: anonymous@nai.epc.mnc004.mcc204.3gppnetwork.org
+            proposals:
+                - encryption:
+                    - aes256
+                  integrity:
+                    - sha256
+                  prf:
+                    - sha512
+                  dh_groups:
+                    - 14
+                  lifetime_seconds: 80000
+                  authentication_method: Certificate
+                  eap_method: EAP-AKA
             remote_certificate_authority_name: DigiCert Global Root G2
             remote_certificate_hostname: epdg.epc.mnc004.mcc204.pub.3gppnetwork.org
             sa_lifetime_seconds: 80000
+            username: 0$imsi@nai.epc.mnc004.mcc204.3gppnetwork.org
             validate_remote_certificate: true
         register:
             include_cellular_network_info: true
