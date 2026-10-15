@@ -1107,6 +1107,7 @@ bundles:
       bundle: Dito_ph.bundle
       path: profiles/dito_ph.yaml
       supported_plmns:
+        - "20404"
         - "51566"
     - id: apple_djezzy_dz
       bundle: Djezzy_dz.bundle
@@ -1678,7 +1679,8 @@ bundles:
       bundle: Lebara_uk.bundle
       path: profiles/lebara_uk.yaml
       supported_plmns:
-          - "23487"
+        - "20404"
+        - "23487"
     - id: apple_lgu_kr
       bundle: LGU_kr.bundle
       path: profiles/lgu_kr.yaml

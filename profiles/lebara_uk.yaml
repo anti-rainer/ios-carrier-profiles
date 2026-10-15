@@ -3,109 +3,88 @@ kind: carrier_bundle
 id: apple_lebara_uk
 bundle: Lebara_uk.bundle
 supported_plmns:
+    - "20404"
     - "23487"
-plmn_overrides:
-    "23487":
-        e911:
-            over_itech_supported: true
-            wifi_calling_without_entitlement: true
-        ims:
-            apn: ims
-            ip_stack: ipv4v6
-            pcscf:
-                address: pcscf.ims.mnc087.mcc234.3gppnetwork.org
-            epdg:
-                address: epdg.epc.mnc087.mcc234.pub.3gppnetwork.org
-                # Lebara is an MVNO on Vodafone UK's ePDG, which answers the
-                # standard TS 24.302 attributes. The vendor aliases some Apple
-                # bundles carry (16384/16386) send an MVNO card into an
-                # in-tunnel P-CSCF DNS lookup instead, and that lookup times
-                # out on this network.
-                configuration_attributes:
-                    - identifier: 20
-                      type: v4
-                    - identifier: 21
-                      type: v6
-            ike:
-                ipsec_mtu: 1350
-                full_dual_stack_request: true
-                nat_keepalive_enabled: true
-                nat_keepalive_seconds: 20
-                sa_lifetime_seconds: 80000
-                local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
-                validate_remote_certificate: false
+common:
+    apns:
+        - apn: uk.lebara.mobi
+          username: wap
+          password: wap
+          type_mask: 55
+          allowed_ip_stack: ipv4
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv6
+          support_switch_over: true
+          support_5g_sa_handover: true
+    ims:
+        apn: ims
+        domain: ims.mnc087.mcc234.3gppnetwork.org
+        epdg:
+            address: epdg.epc.mnc087.mcc234.pub.3gppnetwork.org
+            configuration_attributes:
+                - identifier: 16389
+                  name: AssignedPCSCFIPv4
+                  type: v4
+                - identifier: 16390
+                  name: AssignedPCSCFIPv6
+                  type: v6
+        ike:
+            child_sa:
                 proposals:
-                    - encryption:
-                        - aes256
-                      integrity:
-                        - sha512
-                      prf:
-                        - sha512
-                      dh_groups:
-                        - 14
-                      authentication_method: None
-                      eap_method: EAP-AKA
-                    - encryption:
+                    - source_branch: FirstChild
+                      encryption:
                         - aes256
                       integrity:
                         - sha256
-                      prf:
-                        - sha256
-                      dh_groups:
-                        - 14
-                      authentication_method: None
-                      eap_method: EAP-AKA
-                    - encryption:
-                        - aes256
-                      integrity:
-                        - sha1
-                      prf:
-                        - sha1
-                      dh_groups:
-                        - 14
-                      authentication_method: None
-                      eap_method: EAP-AKA
-                dpd:
-                    enabled: false
-                    interval_seconds: 600
-                    max_retries: 4
-                    retry_interval_seconds: 10
-                child_sa:
-                    lifetime_seconds: 80000
-                    replay_window_size: 12
-                    proposals:
-                        - source_branch: FirstChild
-                          encryption:
-                            - aes256
-                          integrity:
-                            - sha512
-                          esn: auto
-                          install_policies: true
-                        - source_branch: FirstChild
-                          encryption:
-                            - aes256
-                          integrity:
-                            - sha256
-                          esn: auto
-                          install_policies: true
-                        - source_branch: FirstChild
-                          encryption:
-                            - aes256
-                          integrity:
-                            - sha1
-                          esn: auto
-                          install_policies: true
-            register:
-                use_ipsec: true
-                include_cellular_network_info: true
-            signaling:
-                max_udp_message_size: 1000
-                preconditions: supported
-                support_p_early_media: true
-                early_media_needs_header: true
-            media:
-                rtcp_interval_seconds: 5
-            volte:
-                enable_volte_by_default: true
-        roaming:
-            wifi_calling_allowed: false
+                      esn: auto
+                      install_policies: true
+                      lifetime_seconds: 80000
+                replay_window_size: 12
+            dpd:
+                enabled: false
+                interval_seconds: 600
+                max_retries: 4
+                retry_interval_seconds: 10
+            local_identifier: 0$imsi@nai.epc.mnc087.mcc234.3gppnetwork.org
+            proposals:
+                - encryption:
+                    - aes256
+                  integrity:
+                    - sha256
+                  prf:
+                    - sha256
+                  dh_groups:
+                    - 14
+                  lifetime_seconds: 80000
+                  authentication_method: None
+                  eap_method: EAP-AKA
+            username: 0$imsi@nai.epc.mnc087.mcc234.3gppnetwork.org
+            validate_remote_certificate: false
+        ip_stack: ipv6
+        media:
+            rtcp_interval_seconds: 5
+        register:
+            use_ipsec: true
+        signaling:
+            contact:
+                additional_contact_params:
+                    - selector: REGISTER,INVITE,INVITE:*
+                      params:
+                        - +g.3gpp.mid-call
+                        - +g.3gpp.srvcc-alerting
+                        - +g.3gpp.ps2cs-srvcc-orig-pre-alerting
+                        - +g.3gpp.smsip
+            csfb_on:
+                - method: INVITE
+                  statuses:
+                    - 5XX
+            early_media_needs_header: true
+            preconditions: supported
+            require_preconditions_when_mandatory: false
+            support_p_early_media: true
+        volte:
+            enable_volte_by_default: true
+    roaming:
+        wifi_calling_allowed: false

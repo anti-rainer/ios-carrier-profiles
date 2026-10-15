@@ -54,6 +54,23 @@ profiles:
             - field: iccid
               match: prefix
               value: "894707"
+    - id: apple_dito_ph
+      path: profiles/dito_ph.yaml
+      selectors:
+        - raw: 20404_ID-8963662600
+          conditions:
+            - field: iccid
+              match: prefix
+              value: "8963662600"
+    - id: apple_lebara_uk
+      path: profiles/lebara_uk.yaml
+      selectors:
+        - raw: 20404_ID-89441600
+          vowifi_imsi: "23487${iccid[9:19]}"
+          conditions:
+            - field: iccid
+              match: prefix
+              value: "89441600"
     - id: apple_iwireless_us
       path: profiles/iwireless_us.yaml
       selectors:
