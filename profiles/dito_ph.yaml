@@ -3,38 +3,46 @@ kind: carrier_bundle
 id: apple_dito_ph
 bundle: Dito_ph.bundle
 supported_plmns:
+    - "20404"
     - "51566"
-plmn_overrides:
-    "51566":
-        ims:
-            apn: ims
-            ip_stack: ipv4
-            epdg:
-                address: epdg.epc.mnc066.mcc515.pub.3gppnetwork.org
-            ike:
+common:
+    apns:
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv4
+          default_ip_stack: ipv4
+    ims:
+        apn: ims
+        epdg:
+            address: epdg.epc.mnc066.mcc515.pub.3gppnetwork.org
+        ike:
+            child_sa:
                 proposals:
-                    - encryption:
+                    - source_branch: FirstChild
+                      encryption:
                         - aes128
                       integrity:
                         - sha1
-                      prf:
-                        - sha1
-                      dh_groups:
-                        - 2
-                child_sa:
-                    proposals:
-                        - encryption:
-                            - aes128
-                          integrity:
-                            - sha1
-                    replay_window_size: 32
-                nat_keepalive_seconds: 20
-                include_device_identity: true
-                rf_off_delay: 5
-            register:
-                use_ipsec: true
-                include_cellular_network_info: true
-                expiry_seconds: 7200
-                user_agent: rmx3366
-            volte:
-                enable_volte_by_default: true
+                      esn: auto
+                replay_window_size: 32
+            nat_keepalive_enabled: true
+            nat_keepalive_seconds: 20
+            proposals:
+                - encryption:
+                    - aes128
+                  integrity:
+                    - sha1
+                  prf:
+                    - sha1
+                  dh_groups:
+                    - 2
+                  authentication_method: None
+                  eap_method: EAP-AKA
+        ip_stack: ipv4
+        register:
+            expires: 7200
+            include_cellular_network_info: true
+            use_ipsec: true
+        volte:
+            enable_volte_by_default: true
