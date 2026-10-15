@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "72410"
+          carrier_name: VIVO
+          iso: BR

@@ -6,6 +6,20 @@ supported_plmns:
     - "27099"
 plmn_overrides:
     "27099":
+        apns:
+            - apn: orange5g.lu
+              type_mask: 32823
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4
+              support_switch_over: true
+              use_network_mtu: true
+            - apn: sos
+              type_mask: 262144
+              allowed_ip_stack: ipv4v6
+              use_network_mtu: true
+              allow_no_dns: 1
         apple:
             carrier_entitlements:
                 supported_entitlements: 8401
@@ -35,8 +49,6 @@ plmn_overrides:
                           rekey_pfs_group: 5
                           esn: auto
                           lifetime_seconds: 80000
-                    lifetime_seconds: 80000
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
                 include_cellular_network_info: false

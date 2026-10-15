@@ -6,6 +6,17 @@ supported_plmns:
     - "29502"
 plmn_overrides:
     "29502":
+        apns:
+            - apn: internet-ofl
+              type_mask: 51
+            - apn: mms-ofl
+              type_mask: 4
+            - apn: internet-ofl
+              type_mask: 48
+            - apn: hos
+              type_mask: 1048576
+              tech_type_mask: 1048576
+              allowed_ip_stack: ipv4
         e911:
             over_itech_supported: false
             wifi_calling_without_entitlement: true

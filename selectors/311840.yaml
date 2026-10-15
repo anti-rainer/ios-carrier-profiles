@@ -5,6 +5,8 @@ profiles:
       path: profiles/cellcomwi_lte_us.yaml
       selectors:
         - raw: 311840_GID1-C1
+          carrier_name: Cellcom
+          iso: US
           conditions:
             - field: gid1
               match: prefix

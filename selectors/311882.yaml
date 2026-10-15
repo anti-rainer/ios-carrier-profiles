@@ -5,6 +5,8 @@ profiles:
       path: profiles/dentwireless.yaml
       selectors:
         - raw: 311882_GID1-3597bfd533
+          carrier_name: DENT
+          iso: US
           conditions:
             - field: gid1
               match: prefix
@@ -14,3 +16,5 @@ profiles:
       generic: true
       selectors:
         - raw: "311882"
+          carrier_name: T-Mobile
+          iso: US

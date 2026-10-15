@@ -27,6 +27,22 @@ supported_plmns:
     - "40555"
     - "40556"
 common:
+    apns:
+        - apn: airtelgprs.com
+          type_mask: 32817
+          allowed_ip_stack: ipv4v6
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv4v6
+          support_switch_over: true
+          support_5g_sa_handover: true
+          no_cellular_reconnect_cause_codes:
+            - cause_codes:
+                - 2086
+              recovers_on_airplane_mode: true
+              type: 3GPP
+          dont_suspend: true
     apple:
         carrier_entitlements:
             supported_entitlements: 9233
@@ -47,7 +63,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 86400
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -79,12 +94,12 @@ common:
                   lifetime_seconds: 80000
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 80000
         ip_stack: ipv4v6
         media:
             rtcp_interval_seconds: 5
             rtp_inactivity_seconds: 20
         register:
+            expires: 7200
             include_cellular_network_info: true
             use_ipsec: true
         signaling:

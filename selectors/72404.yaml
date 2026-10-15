@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "72404"
+          carrier_name: TIM
+          iso: BR

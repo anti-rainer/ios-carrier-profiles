@@ -6,6 +6,31 @@ supported_plmns:
     - "23003"
 plmn_overrides:
     "23003":
+        apns:
+            - apn: iphone.vodafone.cz
+              type_mask: 1081393
+              allowed_ip_stack: ipv4v6
+            - apn: mms
+              username: mms
+              password: mms
+              type_mask: 4
+              tech_type_mask: 4
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              support_switch_over: true
+              no_cellular_reconnect_cause_codes:
+                - cause_codes:
+                    - 33
+                  recovers_on_airplane_mode: true
+                  num_tries_allowed: 100
+                  type: 3GPP
+                  timeout: 86400
+            - apn: iphone.vodafone.cz
+              type_mask: 1048624
+            - apn: sos
+              type_mask: 262144
+              tech_type_mask: 262144
         apple:
             carrier_entitlements:
                 supported_entitlements: 13312
@@ -51,10 +76,8 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 80000
-                    lifetime_seconds: 80000
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
                 include_cellular_network_info: true

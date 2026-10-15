@@ -6,9 +6,18 @@ supported_plmns:
     - "29340"
 plmn_overrides:
     "29340":
+        apns:
+            - apn: internet
+              password: internet
+              type_mask: 32817
+            - apn: mms
+              password: mms
+              type_mask: 4
+            - apn: hos
+              type_mask: 1048576
         apple:
             carrier_entitlements:
-                supported_entitlements: 8193
+                supported_entitlements: 13313
         entitlement:
             entitlement_url: https://esim-es-open-prod-aonesi.esimcloud.net/aonesi/prod/executeAppleActions
         ims:

@@ -6,6 +6,34 @@ supported_plmns:
     - "313790"
 plmn_overrides:
     "313790":
+        apns:
+            - apn: internet
+              type_mask: 32771
+              tech_type_mask: 3
+              allowed_ip_stack: ipv4v6
+            - apn: mms
+              type_mask: 4
+              tech_type_mask: 4
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              support_switch_over: true
+              support_5g_sa_handover: true
+              use_network_mtu: true
+            - apn: hotspot
+              type_mask: 16
+              allowed_ip_stack: ipv4v6
+            - apn: hos
+              type_mask: 1048576
+              tech_type_mask: 1048576
+              allowed_ip_stack: ipv4v6
+              support_switch_over: false
+            - apn: sos
+              type_mask: 262144
+              tech_type_mask: 262144
+              allowed_ip_stack: ipv4v6
+              allow_no_dns: 1
         apple:
             carrier_entitlements:
                 supported_entitlements: 11673
@@ -52,15 +80,14 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 86400
-                    lifetime_seconds: 86400
                 local_identifier: anonymous@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 username: 0$imsi@nai.epc.mnc$MNC.mcc$MCC.3gppnetwork.org
                 remote_certificate_authority_name: Go Daddy Secure Certificate Authority - G2
                 remote_certificate_hostname: epdg.epc.mnc860.mcc354.pub.3gppnetwork.org
                 validate_remote_certificate: true
-                sa_lifetime_seconds: 86400
             register:
                 use_ipsec: true
+                expires: 3600
                 include_cellular_network_info: true
             signaling:
                 max_udp_message_size: 1200

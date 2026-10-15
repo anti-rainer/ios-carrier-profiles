@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "72433"
+          carrier_name: Algar
+          iso: BR

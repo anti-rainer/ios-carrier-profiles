@@ -6,10 +6,14 @@ profiles:
       generic: true
       selectors:
         - raw: "45501"
+          carrier_name: CTM
+          iso: MO
     - id: apple_multibyte
       path: profiles/multibyte.yaml
       selectors:
         - raw: 45501_GID1-1501
+          carrier_name: MultiByte
+          iso: MO
           conditions:
             - field: gid1
               match: prefix
@@ -18,6 +22,8 @@ profiles:
       path: profiles/redteamobile.yaml
       selectors:
         - raw: 45501_ID-89852245280
+          carrier_name: RedteaMobile
+          iso: MO
           conditions:
             - field: iccid
               match: prefix
@@ -26,6 +32,8 @@ profiles:
       path: profiles/shinetown.yaml
       selectors:
         - raw: 45501_GID1-AAAA
+          carrier_name: AIRSIMe
+          iso: MO
           conditions:
             - field: gid1
               match: prefix

@@ -6,6 +6,23 @@ supported_plmns:
     - "52503"
 plmn_overrides:
     "52503":
+        apns:
+            - apn: sunsurf
+              type_mask: 32817
+              allowed_ip_stack: ipv4v6
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              support_switch_over: true
+              support_5g_sa_handover: true
+            - apn: xcap
+              type_mask: 1048576
+              allowed_ip_stack: ipv4v6
+            - apn: sos
+              type_mask: 262144
+              allowed_ip_stack: ipv4v6
+              allow_no_dns: 1
         apple:
             carrier_entitlements:
                 supported_entitlements: 9217
@@ -58,11 +75,9 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 8640
-                    lifetime_seconds: 8640
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 8640
             register:
                 use_ipsec: true
             signaling:

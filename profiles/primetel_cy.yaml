@@ -5,3 +5,14 @@ bundle: PrimeTel_cy.bundle
 supported_plmns:
     - "22201"
     - "28020"
+common:
+    apns:
+        - apn: ip.primetel
+          type_mask: 5
+        - apn: phs.primetel
+          type_mask: 48
+        - apn: ip.primetel
+          type_mask: 4
+    ims:
+        volte:
+            enable_volte_by_default: true

@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "330110"
+          carrier_name: Claro Puerto Rico
+          iso: PR

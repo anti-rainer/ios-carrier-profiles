@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "63104"
+          carrier_name: Movicel
+          iso: AO

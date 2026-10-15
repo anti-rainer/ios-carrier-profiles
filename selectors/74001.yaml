@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "74001"
+          carrier_name: CLARO
+          iso: EC

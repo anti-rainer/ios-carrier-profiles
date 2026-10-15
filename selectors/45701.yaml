@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "45701"
+          carrier_name: LaoTel
+          iso: LA

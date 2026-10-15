@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "42901"
+          carrier_name: Nepal Telecom
+          iso: NP

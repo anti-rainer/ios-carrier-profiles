@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "45416"
+          carrier_name: csl
+          iso: HK

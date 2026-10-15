@@ -6,6 +6,12 @@ supported_plmns:
     - "25702"
 plmn_overrides:
     "25702":
+        apns:
+            - apn: mts
+              username: mts
+              password: mts
+              type_mask: 53
+              allowed_ip_stack: ipv4v6
         ims:
             register:
                 use_ipsec: true

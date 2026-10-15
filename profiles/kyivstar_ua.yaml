@@ -6,6 +6,13 @@ supported_plmns:
     - "25503"
 plmn_overrides:
     "25503":
+        apns:
+            - apn: internet
+              type_mask: 49
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+            - apn: ims
+              type_mask: 131072
         ims:
             apn: ims
             register:

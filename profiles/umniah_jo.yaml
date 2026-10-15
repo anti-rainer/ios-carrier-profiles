@@ -6,6 +6,16 @@ supported_plmns:
     - "41603"
 plmn_overrides:
     "41603":
+        apns:
+            - apn: net
+              type_mask: 49
+            - apn: mms
+              type_mask: 4
+        apple:
+            carrier_entitlements:
+                supported_entitlements: 1
+        entitlement:
+            entitlement_url: https://des.umniah.com/entitlement/
         ims:
             register:
                 use_ipsec: true

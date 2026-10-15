@@ -5,6 +5,8 @@ profiles:
       path: profiles/turkcell_kktcell_tr.yaml
       selectors:
         - raw: 28601_GID1-4B4B5443454C4C
+          carrier_name: KKTCELL
+          iso: TR
           conditions:
             - field: gid1
               match: prefix
@@ -14,3 +16,5 @@ profiles:
       generic: true
       selectors:
         - raw: "28601"
+          carrier_name: Turkcell
+          iso: TR

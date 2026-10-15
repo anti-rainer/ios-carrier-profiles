@@ -6,9 +6,27 @@ supported_plmns:
     - "42602"
 plmn_overrides:
     "42602":
+        apns:
+            - apn: internet
+              type_mask: 32817
+            - apn: MMS
+              type_mask: 4
+            - apn: ims
+              type_mask: 131072
+              allowed_ip_stack: ipv4
+              allow_no_dns: 1
+              no_cellular_reconnect_cause_codes:
+                - cause_codes:
+                    - 55
+                  recovers_on_airplane_mode: true
+                  num_tries_allowed: 100
+                  type: 3GPP
+                  timeout: 86400
+            - apn: hos
+              type_mask: 1048576
         apple:
             carrier_entitlements:
-                supported_entitlements: 31745
+                supported_entitlements: 23553
         entitlement:
             entitlement_url: https://es.bh.zain.com
         ims:

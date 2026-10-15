@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "61701"
+          carrier_name: my.t
+          iso: MU

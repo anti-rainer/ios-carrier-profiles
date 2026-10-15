@@ -4,3 +4,8 @@ id: apple_orange_vu
 bundle: Orange_vu.bundle
 supported_plmns:
     - "54101"
+plmn_overrides:
+    "54101":
+        apns:
+            - apn: tvlweb.net.vu
+              type_mask: 49

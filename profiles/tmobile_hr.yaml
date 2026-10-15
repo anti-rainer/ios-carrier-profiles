@@ -6,6 +6,31 @@ supported_plmns:
     - "21901"
     - "21920"
 common:
+    apns:
+        - apn: internet.ht.hr
+          type_mask: 32817
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4
+          xlat464_enabled: true
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv4
+          roaming_ip_stack: ipv4
+          support_switch_over: true
+          no_cellular_reconnect_cause_codes:
+            - cause_codes:
+                - 33
+              recovers_on_airplane_mode: true
+              num_tries_allowed: 2
+              type: 3GPP
+              timeout: 86400
+        - apn: hos
+          type_mask: 1048580
+          tech_type_mask: 1048580
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4
+          xlat464_enabled: true
     apple:
         carrier_entitlements:
             supported_entitlements: 1025
@@ -27,7 +52,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 64800
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -56,7 +80,6 @@ common:
                   lifetime_seconds: 64800
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 64800
             validate_remote_certificate: false
         ip_stack: ipv4
         media:

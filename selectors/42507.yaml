@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "42507"
+          carrier_name: HOT mobile
+          iso: IL

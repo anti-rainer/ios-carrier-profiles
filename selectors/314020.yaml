@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "314020"
+          carrier_name: Spectrum
+          iso: US

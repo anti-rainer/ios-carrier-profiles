@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "60801"
+          carrier_name: Orange Senegal
+          iso: SN

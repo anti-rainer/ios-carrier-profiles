@@ -5,6 +5,8 @@ profiles:
       path: profiles/multibyte.yaml
       selectors:
         - raw: 45413_GID1-0331
+          carrier_name: MultiByte
+          iso: HK
           conditions:
             - field: gid1
               match: prefix

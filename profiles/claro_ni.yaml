@@ -6,6 +6,18 @@ supported_plmns:
     - "71021"
 plmn_overrides:
     "71021":
+        apns:
+            - apn: internet.ideasclaro
+              type_mask: 49
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: internet.ideasclaro
+              type_mask: 48
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: ims
+              type_mask: 131072
+              allowed_ip_stack: ipv4
         ims:
             apn: ims
             ip_stack: ipv4

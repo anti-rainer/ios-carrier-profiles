@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "42508"
+          carrier_name: GOLAN T
+          iso: IL

@@ -6,9 +6,34 @@ supported_plmns:
     - "21403"
 plmn_overrides:
     "21403":
+        apns:
+            - apn: orangeworld
+              username: orange
+              password: orange
+              type_mask: 32769
+              allowed_ip_stack: ipv4
+            - apn: orangemms
+              username: orange
+              password: orange
+              type_mask: 4
+              allowed_ip_stack: ipv4
+            - apn: internet
+              username: orange
+              password: orange
+              type_mask: 48
+              allowed_ip_stack: ipv4
+              support_5g_sa_handover: true
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4
+              support_switch_over: true
+              support_5g_sa_handover: true
+              use_network_mtu: true
+              allow_no_dns: 1
         apple:
             carrier_entitlements:
-                supported_entitlements: 9425
+                supported_entitlements: 4203729
         e911:
             over_itech_supported: true
             wifi_calling_without_entitlement: false
@@ -56,12 +81,10 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 80000
-                    lifetime_seconds: 80000
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 remote_identifier_type: KeyID
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
             signaling:

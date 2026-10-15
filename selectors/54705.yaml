@@ -5,6 +5,8 @@ profiles:
       path: profiles/ora_pf.yaml
       selectors:
         - raw: 54705_ID-8954705
+          carrier_name: ORA MOBILE
+          iso: PF
           conditions:
             - field: iccid
               match: prefix

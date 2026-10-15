@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "61203"
+          carrier_name: Orange Ivory Coast
+          iso: CI

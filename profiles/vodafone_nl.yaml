@@ -6,6 +6,20 @@ supported_plmns:
     - "20404"
     - "26202"
 common:
+    apns:
+        - apn: live.vodafone.com
+          username: vodafone
+          password: vodafone
+          type_mask: 32817
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          support_switch_over: true
+          allow_no_dns: 1
+        - apn: sos
+          type_mask: 262144
+          tech_type_mask: 262144
+          allow_no_dns: 1
     apple:
         carrier_entitlements:
             supported_entitlements: 9216
@@ -23,7 +37,6 @@ common:
                   type: v4
         ike:
             child_sa:
-                lifetime_seconds: 80000
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -55,7 +68,6 @@ common:
                   eap_method: EAP-AKA
             remote_certificate_authority_name: DigiCert Global Root G2
             remote_certificate_hostname: epdg.epc.mnc004.mcc204.pub.3gppnetwork.org
-            sa_lifetime_seconds: 80000
             username: 0$imsi@nai.epc.mnc004.mcc204.3gppnetwork.org
             validate_remote_certificate: true
         register:

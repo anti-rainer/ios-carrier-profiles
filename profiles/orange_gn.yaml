@@ -4,3 +4,14 @@ id: apple_orange_gn
 bundle: Orange_gn.bundle
 supported_plmns:
     - "61101"
+plmn_overrides:
+    "61101":
+        apns:
+            - apn: internetogn
+              username: internetogn
+              password: internetogn
+              type_mask: 49
+            - apn: internetogn
+              username: internetogn
+              password: internetogn
+              type_mask: 48

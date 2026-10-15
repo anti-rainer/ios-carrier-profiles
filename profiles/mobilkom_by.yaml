@@ -6,6 +6,15 @@ supported_plmns:
     - "25701"
 plmn_overrides:
     "25701":
+        apns:
+            - apn: internet
+              type_mask: 49
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: mms
+              type_mask: 4
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
         ims:
             register:
                 use_ipsec: true

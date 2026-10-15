@@ -5,3 +5,7 @@ bundle: MTX_B2B_lu.bundle
 supported_plmns:
     - "27002"
     - "90139"
+common:
+    apns:
+        - apn: internet.pro
+          type_mask: 65585

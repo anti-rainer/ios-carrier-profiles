@@ -6,9 +6,20 @@ supported_plmns:
     - "28405"
 plmn_overrides:
     "28405":
+        apns:
+            - apn: internet
+              type_mask: 32817
+            - apn: mms
+              username: mms
+              password: mms
+              type_mask: 4
+            - apn: ims
+              type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              use_network_mtu: true
         apple:
             carrier_entitlements:
-                supported_entitlements: 5121
+                supported_entitlements: 13313
         entitlement:
             entitlement_url: https://esim-es-open-prod-tlr.esimcloud.net/tlr/prod/executeAppleActions
         ims:

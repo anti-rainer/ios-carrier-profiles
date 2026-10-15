@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "405846"
+          carrier_name: Vi
+          iso: IN

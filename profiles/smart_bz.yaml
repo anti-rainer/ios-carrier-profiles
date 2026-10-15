@@ -4,3 +4,8 @@ id: apple_smart_bz
 bundle: Smart_bz.bundle
 supported_plmns:
     - "70269"
+plmn_overrides:
+    "70269":
+        apns:
+            - apn: smart.com.bz
+              type_mask: 49

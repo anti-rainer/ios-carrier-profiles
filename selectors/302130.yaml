@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "302130"
+          carrier_name: Xplore
+          iso: CA

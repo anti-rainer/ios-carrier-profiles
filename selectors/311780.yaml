@@ -5,6 +5,8 @@ profiles:
       path: profiles/astca_as.yaml
       selectors:
         - raw: 311780_ID-8901780
+          carrier_name: ASTCA
+          iso: AS
           conditions:
             - field: iccid
               match: prefix

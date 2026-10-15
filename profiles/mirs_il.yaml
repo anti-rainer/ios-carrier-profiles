@@ -7,6 +7,29 @@ supported_plmns:
     - "20809"
     - "42507"
 common:
+    apns:
+        - apn: net.hotm
+          type_mask: 32769
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4
+        - apn: mms.hotm
+          type_mask: 4
+        - apn: pc.hotm
+          type_mask: 48
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv4v6
+          support_switch_over: true
+          use_network_mtu: true
+        - apn: xcap
+          type_mask: 1048576
+          tech_type_mask: 1048576
+          allowed_ip_stack: ipv4
+        - apn: sos
+          type_mask: 262144
+          tech_type_mask: 262144
+          allowed_ip_stack: ipv4v6
     apple:
         carrier_entitlements:
             supported_entitlements: 9217
@@ -25,7 +48,6 @@ common:
                   type: v4
         ike:
             child_sa:
-                lifetime_seconds: 86400
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -56,7 +78,6 @@ common:
                   lifetime_seconds: 86400
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 86400
         ip_stack: ipv4v6
         media:
             rtp_inactivity_seconds: 15

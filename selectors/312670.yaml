@@ -6,3 +6,12 @@ profiles:
       generic: true
       selectors:
         - raw: "312670"
+          carrier_name: FirstNet
+          iso: US
+        - raw: 312670_GID1-52FF
+          carrier_name: FirstNet
+          iso: US
+          conditions:
+            - field: gid1
+              match: prefix
+              value: 52FF

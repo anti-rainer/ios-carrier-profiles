@@ -5,3 +5,15 @@ bundle: Telia_tj.bundle
 supported_plmns:
     - "43601"
     - "43602"
+common:
+    apns:
+        - apn: Tcell
+          username: Tcell
+          password: Tcell
+          type_mask: 49
+        - apn: mms
+          type_mask: 4
+        - apn: Tcell
+          username: Tcell
+          password: Tcell
+          type_mask: 48

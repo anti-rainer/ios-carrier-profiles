@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "40494"
+          carrier_name: AirTel
+          iso: IN

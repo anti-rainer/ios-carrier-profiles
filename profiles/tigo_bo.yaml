@@ -6,6 +6,20 @@ supported_plmns:
     - "73603"
 plmn_overrides:
     "73603":
+        apns:
+            - apn: internet.tigo.bo
+              type_mask: 49
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: mms.tigo.bo
+              type_mask: 4
+            - apn: ims
+              type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              support_switch_over: true
+            - apn: xcap
+              type_mask: 1048576
+              allowed_ip_stack: ipv4v6
         ims:
             apn: ims
             ip_stack: ipv4v6
@@ -19,9 +33,7 @@ plmn_overrides:
                     - method: INVITE
                       statuses:
                         - 3XX
-                        - 4XX
                         - 5XX
-                        - 6XX
                 require_preconditions_when_mandatory: false
                 contact:
                     always_add_sip_instance: true
@@ -32,10 +44,10 @@ plmn_overrides:
                             - +g.3gpp.srvcc-alerting
                             - +g.3gpp.ps2cs-srvcc-orig-pre-alerting
             media:
-                rtp_inactivity_seconds: 30
+                rtp_inactivity_seconds: 10
                 rtcp_inactivity_seconds: 10
                 rtcp_interval_seconds: 5
             ussi:
                 enabled: true
             volte:
-                enable_volte_by_default: false
+                enable_volte_by_default: true

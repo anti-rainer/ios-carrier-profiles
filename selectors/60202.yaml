@@ -5,6 +5,8 @@ profiles:
       path: profiles/affinityclick.yaml
       selectors:
         - raw: 60202_GID1-616C6F73696D31
+          carrier_name: aloSIM
+          iso: EG
           conditions:
             - field: gid1
               match: prefix
@@ -13,6 +15,8 @@ profiles:
       path: profiles/knowroaming.yaml
       selectors:
         - raw: 60202_GID1-636f6e6e65637431
+          carrier_name: Connect
+          iso: EG
           conditions:
             - field: gid1
               match: prefix
@@ -22,3 +26,5 @@ profiles:
       generic: true
       selectors:
         - raw: "60202"
+          carrier_name: Vodafone
+          iso: EG

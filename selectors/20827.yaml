@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "20827"
+          carrier_name: Coriolis
+          iso: FR

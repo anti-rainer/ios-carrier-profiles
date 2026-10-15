@@ -7,6 +7,16 @@ supported_plmns:
     - "72403"
     - "72404"
 common:
+    apns:
+        - apn: timbrasil.br
+          username: tim
+          password: tim
+          type_mask: 1048629
+          allowed_ip_stack: ipv4v6
+        - apn: ims
+          type_mask: 131072
+          allowed_ip_stack: ipv6
+          support_switch_over: true
     apple:
         carrier_entitlements:
             supported_entitlements: 4203537

@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "42004"
+          carrier_name: Zain KSA
+          iso: SA

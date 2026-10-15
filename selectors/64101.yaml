@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "64101"
+          carrier_name: airtel
+          iso: UG

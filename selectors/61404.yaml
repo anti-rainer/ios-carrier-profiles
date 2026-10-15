@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "61404"
+          carrier_name: Orange Niger
+          iso: NE

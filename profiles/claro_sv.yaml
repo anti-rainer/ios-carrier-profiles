@@ -6,9 +6,23 @@ supported_plmns:
     - "70601"
 plmn_overrides:
     "70601":
+        apns:
+            - apn: Internet.ideasclaro
+              type_mask: 32817
+              allowed_ip_stack: ipv4
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4
+              support_switch_over: true
+        apple:
+            carrier_entitlements:
+                supported_entitlements: 1041
         e911:
             over_itech_supported: false
             wifi_calling_without_entitlement: true
+        entitlement:
+            entitlement_url: https://aes.mnc001.mcc706.pub.3gppnetwork.org:44308/entitlement/
         ims:
             apn: ims
             ip_stack: ipv4
@@ -50,10 +64,8 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 86400
-                    lifetime_seconds: 86400
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
-                sa_lifetime_seconds: 86400
             register:
                 use_ipsec: true
             signaling:

@@ -5,6 +5,8 @@ profiles:
       path: profiles/dentwireless.yaml
       selectors:
         - raw: 51503_GID1-3597bfd533
+          carrier_name: DENT
+          iso: PH
           conditions:
             - field: gid1
               match: prefix
@@ -14,3 +16,5 @@ profiles:
       generic: true
       selectors:
         - raw: "51503"
+          carrier_name: SMART
+          iso: PH

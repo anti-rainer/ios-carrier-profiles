@@ -6,6 +6,17 @@ supported_plmns:
     - "374012"
     - "37412"
 common:
+    apns:
+        - apn: bmobile
+          type_mask: 49
+          allowed_ip_stack: ipv4v6
+        - apn: ims
+          type_mask: 131072
+          allowed_ip_stack: ipv4v6
+          use_network_mtu: true
+        - apn: sos
+          type_mask: 262144
+          allowed_ip_stack: ipv4
     e911:
         emergency_urns:
             "811": urn:service:sos.ambulance

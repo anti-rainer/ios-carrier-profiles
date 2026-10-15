@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "20826"
+          carrier_name: BTBD
+          iso: FR

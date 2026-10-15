@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "52801"
+          carrier_name: Imagine
+          iso: BN

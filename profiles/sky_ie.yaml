@@ -6,6 +6,15 @@ supported_plmns:
     - "24007"
     - "27225"
 common:
+    apns:
+        - apn: mobile.sky
+          type_mask: 32819
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+        - apn: ut.mobile.sky
+          type_mask: 1048576
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
     apple:
         carrier_entitlements:
             supported_entitlements: 8193

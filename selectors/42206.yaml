@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "42206"
+          carrier_name: Vodafone OM
+          iso: OM

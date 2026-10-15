@@ -6,9 +6,36 @@ supported_plmns:
     - "24201"
 plmn_overrides:
     "24201":
+        apns:
+            - apn: telenor.smart
+              type_mask: 32817
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv6
+              support_switch_over: true
+              no_cellular_reconnect_cause_codes:
+                - cause_codes:
+                    - 33
+                  recovers_on_airplane_mode: true
+                  num_tries_allowed: 5
+                  type: 3GPP
+                  timeout: 86400
+            - apn: telenor.mms
+              type_mask: 6
+              tech_type_mask: 6
+              allowed_ip_stack: ipv4
+            - apn: hos
+              type_mask: 1048576
+              tech_type_mask: 1048576
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv6
         apple:
             carrier_entitlements:
-                supported_entitlements: 9217
+                supported_entitlements: 11265
         e911:
             over_itech_supported: true
             wifi_calling_without_entitlement: true
@@ -61,11 +88,9 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 80000
-                    lifetime_seconds: 80000
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
             signaling:

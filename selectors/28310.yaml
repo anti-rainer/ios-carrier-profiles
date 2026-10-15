@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "28310"
+          carrier_name: Ucom Armenia
+          iso: AM

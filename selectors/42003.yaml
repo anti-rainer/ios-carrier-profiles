@@ -5,6 +5,8 @@ profiles:
       path: profiles/knowroaming.yaml
       selectors:
         - raw: 42003_GID1-636f6e6e65637431
+          carrier_name: Connect
+          iso: SA
           conditions:
             - field: gid1
               match: prefix
@@ -14,3 +16,5 @@ profiles:
       generic: true
       selectors:
         - raw: "42003"
+          carrier_name: Mobily
+          iso: SA

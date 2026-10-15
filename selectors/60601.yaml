@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "60601"
+          carrier_name: Al Madar
+          iso: LY

@@ -5,6 +5,8 @@ profiles:
       path: profiles/faroesetelecom_fo.yaml
       selectors:
         - raw: 28801_ID-8929801
+          carrier_name: Føroya Tele
+          iso: FO
           conditions:
             - field: iccid
               match: prefix

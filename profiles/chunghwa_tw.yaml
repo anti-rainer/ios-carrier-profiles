@@ -6,6 +6,30 @@ supported_plmns:
     - "46692"
 plmn_overrides:
     "46692":
+        apns:
+            - apn: internet
+              type_mask: 32817
+              allowed_ip_stack: ipv4v6
+              support_switch_over: false
+            - apn: emome
+              type_mask: 4
+              support_switch_over: false
+            - apn: IMS
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4
+              support_switch_over: true
+              wait_for_bring_up_complete: true
+            - apn: hos
+              type_mask: 1048576
+              tech_type_mask: 1048576
+              support_switch_over: false
+            - apn: sos
+              type_mask: 262144
+              tech_type_mask: 262144
+              allowed_ip_stack: ipv4
+              support_switch_over: true
+              wait_for_bring_up_complete: true
         apple:
             carrier_entitlements:
                 supported_entitlements: 3216
@@ -62,10 +86,8 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 80000
-                    lifetime_seconds: 80000
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
                 include_cellular_network_info: true

@@ -7,6 +7,22 @@ supported_plmns:
     - "466891"
     - "46690"
 common:
+    apns:
+        - apn: internet
+          type_mask: 53
+          allowed_ip_stack: ipv4v6
+        - apn: ims
+          type_mask: 131072
+          allowed_ip_stack: ipv4
+        - apn: internet
+          type_mask: 52
+          allowed_ip_stack: ipv4v6
+        - apn: xcap
+          type_mask: 1048576
+        - apn: sos
+          type_mask: 262144
+          tech_type_mask: 262144
+          allowed_ip_stack: ipv4
     e911:
         emergency_urns:
             "110": urn:service:sos.police

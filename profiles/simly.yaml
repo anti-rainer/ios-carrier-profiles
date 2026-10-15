@@ -11,3 +11,8 @@ supported_plmns:
     - "45400"
     - "52505"
     - "90188"
+common:
+    apns:
+        - apn: ""
+          type_mask: 65585
+          allowed_ip_stack: ipv4v6

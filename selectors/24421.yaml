@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "24421"
+          carrier_name: Saunalahti
+          iso: FI

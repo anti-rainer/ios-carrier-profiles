@@ -6,6 +6,22 @@ supported_plmns:
     - "44020"
 plmn_overrides:
     "44020":
+        apns:
+            - apn: kqtqjsdi
+              username: tsnkkktk
+              password: knkkrsk
+              auth_type: CHAP
+              type_mask: 1081399
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: ims
+              type_mask: 131072
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv6
+            - apn: ""
+              type_mask: 262144
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
         apple:
             carrier_entitlements:
                 supported_entitlements: 4759569
@@ -33,3 +49,21 @@ plmn_overrides:
                 rtcp_interval_seconds: 5
             volte:
                 enable_volte_by_default: true
+selector_overrides:
+    44020_GID1-16FFFF:
+        apns:
+            - apn: plus.acs.jp.V6
+              username: ym
+              password: ym
+              auth_type: CHAP
+              type_mask: 1081399
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: ims
+              type_mask: 131072
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv6
+            - apn: ""
+              type_mask: 262144
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6

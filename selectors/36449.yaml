@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "36449"
+          carrier_name: aliv
+          iso: BS

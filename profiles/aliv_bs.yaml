@@ -6,6 +6,18 @@ supported_plmns:
     - "20809"
     - "36449"
 common:
+    apns:
+        - apn: pda.newcomobile.com
+          type_mask: 1081397
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+        - apn: ims
+          type_mask: 131072
+          allowed_ip_stack: ipv4
+          allow_no_dns: 1
+        - apn: sos
+          type_mask: 262144
+          allowed_ip_stack: ipv4
     apple:
         carrier_entitlements:
             supported_entitlements: 1041

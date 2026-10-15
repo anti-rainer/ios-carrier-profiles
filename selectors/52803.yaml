@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "52803"
+          carrier_name: DSTCom
+          iso: BN

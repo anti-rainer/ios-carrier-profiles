@@ -6,6 +6,13 @@ supported_plmns:
     - "28401"
 plmn_overrides:
     "28401":
+        apns:
+            - apn: internet.a1.bg
+              type_mask: 32817
+            - apn: mms.a1.bg
+              type_mask: 4
+            - apn: hos
+              type_mask: 1048576
         apple:
             carrier_entitlements:
                 supported_entitlements: 13313

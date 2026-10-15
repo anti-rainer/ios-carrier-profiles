@@ -6,6 +6,22 @@ supported_plmns:
     - "52501"
 plmn_overrides:
     "52501":
+        apns:
+            - apn: e-ideas
+              username: 65ideas
+              password: 65ideas
+              type_mask: 32821
+              allowed_ip_stack: ipv4v6
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv4v6
+              support_switch_over: true
+            - apn: stm-ut
+              type_mask: 1048576
+              tech_type_mask: 1048576
+              allowed_ip_stack: ipv6
         apple:
             carrier_entitlements:
                 supported_entitlements: 4197377
@@ -58,14 +74,12 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 80000
-                    lifetime_seconds: 80000
                     replay_window_size: 12
                 local_identifier: anonymous@nai.epc.mnc001.mcc525.3gppnetwork.org
                 username: 0$imsi@nai.epc.mnc001.mcc525.3gppnetwork.org
                 remote_certificate_authority_name: DigiCert Global Root G2
                 remote_certificate_hostname: epdg.epc.mnc001.mcc525.pub.3gppnetwork.org
                 validate_remote_certificate: true
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
             signaling:

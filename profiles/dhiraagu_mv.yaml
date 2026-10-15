@@ -6,6 +6,13 @@ supported_plmns:
     - "47201"
 plmn_overrides:
     "47201":
+        apns:
+            - apn: internet.dhimobile
+              type_mask: 53
+            - apn: ims
+              type_mask: 131072
+            - apn: xcap
+              type_mask: 1048576
         apple:
             carrier_entitlements:
                 supported_entitlements: 9217

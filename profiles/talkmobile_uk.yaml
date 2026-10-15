@@ -6,6 +6,24 @@ supported_plmns:
     - "23415"
 plmn_overrides:
     "23415":
+        apns:
+            - apn: talkmobile.co.uk
+              type_mask: 53
+              allowed_ip_stack: ipv4
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4
+              support_switch_over: true
+            - apn: talkmobile.co.uk
+              type_mask: 52
+              allowed_ip_stack: ipv4
+            - apn: xcap
+              username: wap
+              password: wap
+              type_mask: 1081344
+              tech_type_mask: 1081344
+              allowed_ip_stack: ipv4
         apple:
             carrier_entitlements:
                 supported_entitlements: 192
@@ -54,11 +72,9 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 80000
-                    lifetime_seconds: 80000
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
             signaling:

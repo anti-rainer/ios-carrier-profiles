@@ -5,6 +5,8 @@ profiles:
       path: profiles/redteamobile.yaml
       selectors:
         - raw: 45407_ID-89852245280
+          carrier_name: RedteaMobile
+          iso: HK
           conditions:
             - field: iccid
               match: prefix
@@ -13,6 +15,8 @@ profiles:
       path: profiles/shinetown.yaml
       selectors:
         - raw: 45407_GID1-AAAA
+          carrier_name: AIRSIMe
+          iso: HK
           conditions:
             - field: gid1
               match: prefix
@@ -22,3 +26,5 @@ profiles:
       generic: true
       selectors:
         - raw: "45407"
+          carrier_name: CUniq
+          iso: HK

@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "70602"
+          carrier_name: Digicel
+          iso: SV

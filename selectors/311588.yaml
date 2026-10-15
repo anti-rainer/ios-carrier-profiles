@@ -5,6 +5,8 @@ profiles:
       path: profiles/webbing.yaml
       selectors:
         - raw: 311588_ID-8985235
+          carrier_name: Webbing
+          iso: US
           conditions:
             - field: iccid
               match: prefix

@@ -19,9 +19,43 @@ supported_plmns:
     - "311660"
     - "311882"
 common:
+    apns:
+        - apn: fast.t-mobile.com
+          type_mask: 1081351
+          allowed_ip_stack: ipv6
+          roaming_ip_stack: ipv4
+          domestic_roaming_ip_stack: ipv4
+          xlat464_enabled: true
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv6
+          roaming_ip_stack: ipv4v6
+          domestic_roaming_ip_stack: ipv4v6
+          always_on_pdu: true
+          support_switch_over: true
+          support_5g_sa_handover: true
+        - apn: tmus
+          tech_type_mask: 1048582
+          allowed_ip_stack: ipv6
+          roaming_ip_stack: ipv4
+          domestic_roaming_ip_stack: ipv4
+        - apn: pcweb.tmobile.com
+          type_mask: 16
+          allowed_ip_stack: ipv6
+          roaming_ip_stack: ipv4
+          domestic_roaming_ip_stack: ipv4
+          xlat464_enabled: true
+        - apn: sos
+          type_mask: 262144
+          tech_type_mask: 262144
+          allowed_ip_stack: ipv6
+          roaming_ip_stack: ipv4v6
+          domestic_roaming_ip_stack: ipv4v6
+          always_on_pdu: true
     apple:
         carrier_entitlements:
-            supported_entitlements: 4783513
+            supported_entitlements: 13172121
     e911:
         emergency_urns:
             default: urn:service:sos
@@ -44,7 +78,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 80000
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -74,7 +107,6 @@ common:
                   lifetime_seconds: 80000
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 80000
             validate_remote_certificate: false
         ip_stack: ipv4v6
         media:
@@ -90,10 +122,6 @@ common:
             early_media_needs_header: true
             max_udp_message_size: 1200
             preconditions: required
-            re_register_on:
-                - method: INVITE
-                  statuses:
-                    - "403"
             require_preconditions_when_mandatory: false
             sip_timers:
                 EmergencyInviteResponseTimeout: 5000
@@ -106,11 +134,82 @@ common:
         volte:
             enable_volte_by_default: true
 selector_overrides:
+    "310310":
+        apple:
+            carrier_entitlements:
+                supported_entitlements: 33049
+        e911:
+            wifi_calling_without_entitlement: true
+        entitlement:
+            entitlement_url: https://eas3.msg.lab.t-mobile.com
+        ims:
+            epdg:
+                address: epdg.epc.mnc310.mcc310.pub.3gppnetwork.org
     "311660":
+        apns:
+            - apn: iot.t-mobile.com
+              type_mask: 32785
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+              domestic_roaming_ip_stack: ipv4
+              xlat464_enabled: true
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+              domestic_roaming_ip_stack: ipv4v6
+              always_on_pdu: true
+              support_switch_over: true
+              support_5g_sa_handover: true
+            - apn: service
+              type_mask: 1048582
+              tech_type_mask: 1048582
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+              domestic_roaming_ip_stack: ipv4
+              xlat464_enabled: true
+            - apn: sos
+              type_mask: 262144
+              tech_type_mask: 262144
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+              domestic_roaming_ip_stack: ipv4v6
+              always_on_pdu: true
         apple:
             carrier_entitlements:
                 supported_entitlements: 409
     "311882":
+        apns:
+            - apn: iot.t-mobile.com
+              type_mask: 32785
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+              domestic_roaming_ip_stack: ipv4
+              xlat464_enabled: true
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+              domestic_roaming_ip_stack: ipv4v6
+              always_on_pdu: true
+              support_switch_over: true
+              support_5g_sa_handover: true
+            - apn: service
+              type_mask: 1048582
+              tech_type_mask: 1048582
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+              domestic_roaming_ip_stack: ipv4
+              xlat464_enabled: true
+            - apn: sos
+              type_mask: 262144
+              tech_type_mask: 262144
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+              domestic_roaming_ip_stack: ipv4v6
+              always_on_pdu: true
         apple:
             carrier_entitlements:
                 supported_entitlements: 409

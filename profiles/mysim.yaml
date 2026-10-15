@@ -19,6 +19,11 @@ supported_plmns:
     - "71204"
     - "732123"
 common:
+    apns:
+        - apn: esim.apn
+          type_mask: 49
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
     ims:
         volte:
             enable_volte_by_default: false

@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "41840"
+          carrier_name: KOREK
+          iso: IQ

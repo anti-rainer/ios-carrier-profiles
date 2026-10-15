@@ -6,6 +6,41 @@ supported_plmns:
     - "310240"
 plmn_overrides:
     "310240":
+        apns:
+            - apn: internet.cb
+              type_mask: 1081351
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv4
+              domestic_roaming_ip_stack: ipv4
+              xlat464_enabled: true
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv4v6
+              domestic_roaming_ip_stack: ipv4v6
+              always_on_pdu: true
+              support_switch_over: true
+              support_5g_sa_handover: true
+            - apn: service
+              tech_type_mask: 1048582
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv4
+              domestic_roaming_ip_stack: ipv4
+              xlat464_enabled: true
+            - apn: hotspot
+              type_mask: 16
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv4
+              domestic_roaming_ip_stack: ipv4
+              xlat464_enabled: true
+            - apn: sos
+              type_mask: 262144
+              tech_type_mask: 262144
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv4v6
+              domestic_roaming_ip_stack: ipv4v6
+              always_on_pdu: true
         apple:
             carrier_entitlements:
                 supported_entitlements: 4205977
@@ -59,11 +94,9 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 80000
-                    lifetime_seconds: 80000
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
             signaling:
@@ -71,10 +104,6 @@ plmn_overrides:
                 preconditions: required
                 support_p_early_media: true
                 early_media_needs_header: true
-                re_register_on:
-                    - method: INVITE
-                      statuses:
-                        - "403"
                 require_preconditions_when_mandatory: false
                 contact:
                     always_add_sip_instance: true

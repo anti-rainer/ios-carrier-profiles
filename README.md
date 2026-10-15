@@ -50,7 +50,10 @@ profiles:
           - field: gid1
             match: prefix
             value: "42"
+        carrier_name: RedPocket
+        iso: US
 ```
+
 
 支持的条件如下：
 

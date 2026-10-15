@@ -6,6 +6,23 @@ supported_plmns:
     - "312380"
 plmn_overrides:
     "312380":
+        apns:
+            - apn: cvt01
+              type_mask: 4244023
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131078
+              allowed_ip_stack: ipv4v6
+              support_switch_over: true
+            - apn: hos
+              type_mask: 1048576
+              tech_type_mask: 1048576
+              allowed_ip_stack: ipv4v6
+            - apn: sos
+              type_mask: 262144
+              allowed_ip_stack: ipv4v6
         apple:
             carrier_entitlements:
                 supported_entitlements: 209
@@ -57,15 +74,14 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 86400
-                    lifetime_seconds: 86400
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 local_identifier_type: IDUserFQDN
                 remote_identifier_type: IDFQDN
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
+                expires: 7200
                 include_cellular_network_info: true
             signaling:
                 max_udp_message_size: 1200

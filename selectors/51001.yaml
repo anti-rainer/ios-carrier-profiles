@@ -6,10 +6,14 @@ profiles:
       generic: true
       selectors:
         - raw: "51001"
+          carrier_name: INDOSAT
+          iso: ID
     - id: apple_knowroaming
       path: profiles/knowroaming.yaml
       selectors:
         - raw: 51001_GID1-636f6e6e65637431
+          carrier_name: Connect
+          iso: ID
           conditions:
             - field: gid1
               match: prefix

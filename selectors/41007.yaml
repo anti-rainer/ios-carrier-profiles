@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "41007"
+          carrier_name: Jazz
+          iso: PK

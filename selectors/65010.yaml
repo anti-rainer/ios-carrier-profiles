@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "65010"
+          carrier_name: Airtel
+          iso: MW

@@ -5,6 +5,8 @@ profiles:
       path: profiles/appalachian_lte_us.yaml
       selectors:
         - raw: 311480_GID2-CA
+          carrier_name: Appalachian
+          iso: US
           conditions:
             - field: gid2
               match: prefix
@@ -13,46 +15,28 @@ profiles:
       path: profiles/cellcom_lte_us.yaml
       selectors:
         - raw: 311480_GID2-AD
+          carrier_name: Cellcom
+          iso: US
           conditions:
             - field: gid2
               match: prefix
               value: AD
-    - id: apple_chat_lte_us
-      path: profiles/chat_lte_us.yaml
-      selectors:
-        - raw: 311480_GID2-CB
-          conditions:
-            - field: gid2
-              match: prefix
-              value: CB
     - id: apple_coppervalley_lte_us
       path: profiles/coppervalley_lte_us.yaml
       selectors:
         - raw: 311480_GID2-CF
+          carrier_name: Copper Valley Telecom
+          iso: US
           conditions:
             - field: gid2
               match: prefix
               value: CF
-    - id: apple_crosswireless_lte_us
-      path: profiles/crosswireless_lte_us.yaml
-      selectors:
-        - raw: 311480_GID2-AC
-          conditions:
-            - field: gid2
-              match: prefix
-              value: AC
-    - id: apple_nwm_lte_us
-      path: profiles/nwm_lte_us.yaml
-      selectors:
-        - raw: 311480_GID2-CD
-          conditions:
-            - field: gid2
-              match: prefix
-              value: CD
     - id: apple_thc_lte_us
       path: profiles/thc_lte_us.yaml
       selectors:
         - raw: 311480_GID2-AE
+          carrier_name: Thumb Cellular
+          iso: US
           conditions:
             - field: gid2
               match: prefix
@@ -61,6 +45,8 @@ profiles:
       path: profiles/verizon_charter_lte_us.yaml
       selectors:
         - raw: 311480_GID2-A7
+          carrier_name: Spectrum
+          iso: US
           conditions:
             - field: gid2
               match: prefix
@@ -69,6 +55,8 @@ profiles:
       path: profiles/verizon_comcast_lte_us.yaml
       selectors:
         - raw: 311480_GID2-A3
+          carrier_name: Xfinity Mobile
+          iso: US
           conditions:
             - field: gid2
               match: prefix
@@ -77,6 +65,8 @@ profiles:
       path: profiles/verizon_core_visible_lte_us.yaml
       selectors:
         - raw: 311480_GID2-1C
+          carrier_name: Visible
+          iso: US
           conditions:
             - field: gid2
               match: prefix
@@ -85,19 +75,129 @@ profiles:
       path: profiles/verizon_cox_lte_us.yaml
       selectors:
         - raw: 311480_GID2-B100000000000000
+          carrier_name: Cox Mobile
+          iso: US
           conditions:
             - field: gid2
               match: prefix
               value: B100000000000000
     - id: apple_verizon_lte_us
       path: profiles/verizon_lte_us.yaml
-      generic: true
       selectors:
-        - raw: "311480"
+        - raw: 311480_GID2-A8
+          carrier_name: Verizon
+          iso: US
+          conditions:
+            - field: gid2
+              match: prefix
+              value: A8
+        - raw: 311480_GID2-FF
+          carrier_name: Verizon
+          iso: US
+          conditions:
+            - field: gid2
+              match: prefix
+              value: FF
+    - id: apple_verizon_mvno_us
+      path: profiles/verizon_mvno_us.yaml
+      selectors:
+        - raw: 311480_GID2-A6
+          carrier_name: Verizon
+          iso: US
+          conditions:
+            - field: gid2
+              match: prefix
+              value: A6
+        - raw: 311480_GID2-B3
+          carrier_name: Verizon
+          iso: US
+          conditions:
+            - field: gid2
+              match: prefix
+              value: B3
+        - raw: 311480_GID2-B6
+          carrier_name: Verizon
+          iso: US
+          conditions:
+            - field: gid2
+              match: prefix
+              value: B6
+        - raw: 311480_GID2-B7
+          carrier_name: Verizon
+          iso: US
+          conditions:
+            - field: gid2
+              match: prefix
+              value: B7
+        - raw: 311480_GID2-B9
+          carrier_name: Verizon
+          iso: US
+          conditions:
+            - field: gid2
+              match: prefix
+              value: B9
+        - raw: 311480_GID2-C2
+          carrier_name: Verizon
+          iso: US
+          conditions:
+            - field: gid2
+              match: prefix
+              value: C2
+        - raw: 311480_GID2-C3
+          carrier_name: Verizon
+          iso: US
+          conditions:
+            - field: gid2
+              match: prefix
+              value: C3
+        - raw: 311480_GID2-C4
+          carrier_name: Verizon
+          iso: US
+          conditions:
+            - field: gid2
+              match: prefix
+              value: C4
+        - raw: 311480_GID2-C5
+          carrier_name: Verizon
+          iso: US
+          conditions:
+            - field: gid2
+              match: prefix
+              value: C5
+        - raw: 311480_GID2-C6
+          carrier_name: Verizon
+          iso: US
+          conditions:
+            - field: gid2
+              match: prefix
+              value: C6
+        - raw: 311480_GID2-C7
+          carrier_name: Verizon
+          iso: US
+          conditions:
+            - field: gid2
+              match: prefix
+              value: C7
+        - raw: 311480_GID2-C8
+          carrier_name: Verizon
+          iso: US
+          conditions:
+            - field: gid2
+              match: prefix
+              value: C8
+        - raw: 311480_GID2-D0
+          carrier_name: Verizon
+          iso: US
+          conditions:
+            - field: gid2
+              match: prefix
+              value: D0
     - id: apple_verizon_response_lte_us
       path: profiles/verizon_response_lte_us.yaml
       selectors:
         - raw: 311480_GID2-1B
+          carrier_name: Verizon Response
+          iso: US
           conditions:
             - field: gid2
               match: prefix
@@ -106,6 +206,8 @@ profiles:
       path: profiles/verizon_tfw_lte_us.yaml
       selectors:
         - raw: 311480_GID2-A1
+          carrier_name: Verizon
+          iso: US
           conditions:
             - field: gid2
               match: prefix
@@ -114,6 +216,8 @@ profiles:
       path: profiles/verizon_ting_lte_us.yaml
       selectors:
         - raw: 311480_GID2-A9
+          carrier_name: Ting
+          iso: US
           conditions:
             - field: gid2
               match: prefix
@@ -122,6 +226,8 @@ profiles:
       path: profiles/verizon_visible_lte_us.yaml
       selectors:
         - raw: 311480_GID2-1A
+          carrier_name: Visible
+          iso: US
           conditions:
             - field: gid2
               match: prefix

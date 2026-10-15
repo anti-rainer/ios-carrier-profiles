@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "24008"
+          carrier_name: Telenor
+          iso: SE

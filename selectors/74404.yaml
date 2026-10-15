@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "74404"
+          carrier_name: TIGO
+          iso: PY

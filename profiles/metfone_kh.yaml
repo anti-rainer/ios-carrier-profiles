@@ -6,6 +6,12 @@ supported_plmns:
     - "45204"
     - "45608"
 common:
+    apns:
+        - apn: metfone
+          type_mask: 49
+        - apn: IMS
+          type_mask: 131072
+          use_network_mtu: true
     ims:
         apn: ims
         signaling:

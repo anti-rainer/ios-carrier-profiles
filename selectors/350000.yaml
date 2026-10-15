@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "350000"
+          carrier_name: ONE
+          iso: BM

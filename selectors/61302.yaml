@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "61302"
+          carrier_name: Orange BF
+          iso: BF

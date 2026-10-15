@@ -6,6 +6,18 @@ supported_plmns:
     - "27402"
 plmn_overrides:
     "27402":
+        apns:
+            - apn: internet
+              type_mask: 32817
+            - apn: mms.gprs.is
+              type_mask: 4
+              tech_type_mask: 4
+            - apn: hos
+              type_mask: 1048576
+              tech_type_mask: 1048576
+            - apn: sos
+              type_mask: 262144
+              tech_type_mask: 262144
         apple:
             carrier_entitlements:
                 supported_entitlements: 5121

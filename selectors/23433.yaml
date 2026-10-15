@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "23433"
+          carrier_name: EE
+          iso: GB

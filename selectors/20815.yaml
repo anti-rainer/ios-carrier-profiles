@@ -6,15 +6,21 @@ profiles:
       generic: true
       selectors:
         - raw: "20815"
+          carrier_name: Free
+          iso: FR
     - id: apple_free_mq
       path: profiles/free_mq.yaml
       selectors:
         - raw: 20815_GID1-f007
+          carrier_name: Free
+          iso: MQ
           conditions:
             - field: gid1
               match: prefix
               value: F007
         - raw: 20815_GID1-f008
+          carrier_name: Free
+          iso: MQ
           conditions:
             - field: gid1
               match: prefix
@@ -23,11 +29,15 @@ profiles:
       path: profiles/free_re.yaml
       selectors:
         - raw: 20815_GID1-F006
+          carrier_name: Telco OI
+          iso: RE
           conditions:
             - field: gid1
               match: prefix
               value: F006
         - raw: 20815_GID1-F233_ID-8926203
+          carrier_name: Free
+          iso: RE
           conditions:
             - field: gid1
               match: prefix
@@ -39,6 +49,8 @@ profiles:
       path: profiles/iliad_it.yaml
       selectors:
         - raw: 20815_GID1-F003
+          carrier_name: Iliad
+          iso: IT
           conditions:
             - field: gid1
               match: prefix

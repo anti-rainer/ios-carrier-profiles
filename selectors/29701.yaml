@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "29701"
+          carrier_name: One
+          iso: ME

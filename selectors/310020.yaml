@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "310020"
+          carrier_name: Union
+          iso: US

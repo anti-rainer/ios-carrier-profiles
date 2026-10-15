@@ -6,6 +6,22 @@ supported_plmns:
     - "21407"
 plmn_overrides:
     "21407":
+        apns:
+            - apn: telefonica.es
+              username: telefonica
+              password: telefonica
+              type_mask: 32819
+              allowed_ip_stack: ipv4v6
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv6
+              support_switch_over: true
+              support_5g_sa_handover: true
+              use_network_mtu: true
+            - apn: xcap
+              type_mask: 1048576
+              allowed_ip_stack: ipv4v6
         apple:
             carrier_entitlements:
                 supported_entitlements: 97281
@@ -46,8 +62,6 @@ plmn_overrides:
                             - sha512
                           esn: auto
                           lifetime_seconds: 86400
-                    lifetime_seconds: 86400
-                sa_lifetime_seconds: 86400
             register:
                 use_ipsec: true
                 include_cellular_network_info: true

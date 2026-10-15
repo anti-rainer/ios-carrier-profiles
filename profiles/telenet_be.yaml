@@ -6,6 +6,24 @@ supported_plmns:
     - "20601"
     - "20605"
 common:
+    apns:
+        - apn: telenetwap.be
+          type_mask: 32819
+          allowed_ip_stack: ipv4v6
+        - apn: mms.be
+          type_mask: 4
+          tech_type_mask: 4
+          allowed_ip_stack: ipv4
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv6
+          roaming_ip_stack: ipv6
+          support_switch_over: true
+        - apn: xcap
+          type_mask: 1048576
+          tech_type_mask: 1048576
+          allowed_ip_stack: ipv4
     apple:
         carrier_entitlements:
             supported_entitlements: 1025
@@ -27,7 +45,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 80000
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -58,7 +75,6 @@ common:
                   lifetime_seconds: 80000
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 80000
             validate_remote_certificate: false
         ip_stack: ipv6
         media:

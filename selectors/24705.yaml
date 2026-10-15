@@ -5,6 +5,8 @@ profiles:
       path: profiles/bite_lv.yaml
       selectors:
         - raw: 24705_ID-8937105
+          carrier_name: Bite
+          iso: LV
           conditions:
             - field: iccid
               match: prefix

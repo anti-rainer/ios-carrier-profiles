@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "60400"
+          carrier_name: Orange
+          iso: MA

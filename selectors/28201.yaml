@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "28201"
+          carrier_name: Silknet
+          iso: GE

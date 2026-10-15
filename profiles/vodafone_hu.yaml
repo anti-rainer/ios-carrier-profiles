@@ -6,6 +6,31 @@ supported_plmns:
     - "21670"
 plmn_overrides:
     "21670":
+        apns:
+            - apn: internet
+              type_mask: 49
+              allowed_ip_stack: ipv4
+            - apn: ims
+              type_mask: 131072
+              allowed_ip_stack: ipv4v6
+            - apn: mms
+              type_mask: 4
+              allowed_ip_stack: ipv4
+            - apn: hos
+              type_mask: 1048576
+              tech_type_mask: 1048576
+              allowed_ip_stack: ipv4v6
+              no_cellular_reconnect_cause_codes:
+                - cause_codes:
+                    - 27
+                    - 29
+                    - 30
+                    - 31
+                    - 32
+                    - 33
+                    - 38
+                    - 91
+                  recovers_on_airplane_mode: true
         apple:
             carrier_entitlements:
                 supported_entitlements: 5121
@@ -86,8 +111,6 @@ plmn_overrides:
                             - sha256
                           esn: auto
                           lifetime_seconds: 86400
-                    lifetime_seconds: 86400
-                sa_lifetime_seconds: 86400
             register:
                 use_ipsec: false
             signaling:

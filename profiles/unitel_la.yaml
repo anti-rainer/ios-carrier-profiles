@@ -6,6 +6,9 @@ supported_plmns:
     - "45204"
     - "45703"
 common:
+    apns:
+        - apn: unitel3g
+          type_mask: 49
     ims:
         ussi:
             enabled: true

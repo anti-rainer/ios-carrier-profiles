@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "21303"
+          carrier_name: AndorraTelecom
+          iso: AD

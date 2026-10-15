@@ -6,35 +6,49 @@ profiles:
       generic: true
       selectors:
         - raw: "302720"
+          carrier_name: Rogers
+          iso: CA
     - id: apple_rogers_chatr_ca
       path: profiles/rogers_chatr_ca.yaml
       selectors:
         - raw: 302720_GID1-D2
+          carrier_name: chatr
+          iso: CA
           conditions:
             - field: gid1
               match: prefix
               value: D2
         - raw: 302720_ID-8930272040194
+          carrier_name: chatr
+          iso: CA
           conditions:
             - field: iccid
               match: prefix
               value: "8930272040194"
         - raw: 302720_ID-8930272040794
+          carrier_name: chatr
+          iso: CA
           conditions:
             - field: iccid
               match: prefix
               value: "8930272040794"
         - raw: 302720_ID-8930272041394
+          carrier_name: chatr
+          iso: CA
           conditions:
             - field: iccid
               match: prefix
               value: "8930272041394"
         - raw: 302720_ID-8930272041794
+          carrier_name: chatr
+          iso: CA
           conditions:
             - field: iccid
               match: prefix
               value: "8930272041794"
         - raw: 302720_ID-8930272051394
+          carrier_name: chatr
+          iso: CA
           conditions:
             - field: iccid
               match: prefix
@@ -43,6 +57,8 @@ profiles:
       path: profiles/rogers_cityfone_ca.yaml
       selectors:
         - raw: 302720_GID1-CC
+          carrier_name: Cityfone
+          iso: CA
           conditions:
             - field: gid1
               match: prefix
@@ -51,6 +67,8 @@ profiles:
       path: profiles/tbaytel_ca.yaml
       selectors:
         - raw: 302720_GID1-BA
+          carrier_name: tbaytel
+          iso: CA
           conditions:
             - field: gid1
               match: prefix

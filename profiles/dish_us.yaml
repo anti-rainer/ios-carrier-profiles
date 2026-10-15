@@ -6,6 +6,34 @@ supported_plmns:
     - "302220"
     - "313340"
 common:
+    apns:
+        - apn: internet
+          type_mask: 32771
+          tech_type_mask: 2
+          allowed_ip_stack: ipv4v6
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv4v6
+          support_switch_over: true
+          support_5g_sa_handover: true
+        - apn: ota
+          type_mask: 512
+          tech_type_mask: 512
+          allowed_ip_stack: ipv4v6
+        - apn: hotspot
+          type_mask: 48
+          allowed_ip_stack: ipv4v6
+        - apn: xcap
+          type_mask: 1048580
+          tech_type_mask: 1048580
+          allowed_ip_stack: ipv4v6
+          support_5g_sa_handover: true
+        - apn: sos
+          type_mask: 262144
+          tech_type_mask: 262144
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
     apple:
         carrier_entitlements:
             supported_entitlements: 4205705
@@ -29,7 +57,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 80000
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -58,7 +85,6 @@ common:
                   lifetime_seconds: 80000
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 80000
             validate_remote_certificate: false
         ip_stack: ipv4v6
         media:

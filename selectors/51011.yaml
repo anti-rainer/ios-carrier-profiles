@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "51011"
+          carrier_name: XL Axiata
+          iso: ID

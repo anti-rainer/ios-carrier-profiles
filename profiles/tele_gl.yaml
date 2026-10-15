@@ -6,6 +6,13 @@ supported_plmns:
     - "29001"
 plmn_overrides:
     "29001":
+        apns:
+            - apn: internet
+              type_mask: 49
+            - apn: mms
+              type_mask: 4
+            - apn: internet
+              type_mask: 48
         ims:
             volte:
                 enable_volte_by_default: true

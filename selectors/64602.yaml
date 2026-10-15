@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "64602"
+          carrier_name: Orange Madagascar
+          iso: MG

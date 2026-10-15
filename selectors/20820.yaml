@@ -6,7 +6,11 @@ profiles:
       generic: true
       selectors:
         - raw: "20820"
+          carrier_name: Bouygues Telecom
+          iso: FR
         - raw: 20820_GID1-4C504D
+          carrier_name: La Poste Mobile
+          iso: FR
           conditions:
             - field: gid1
               match: prefix

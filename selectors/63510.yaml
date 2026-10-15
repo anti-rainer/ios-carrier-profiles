@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "63510"
+          carrier_name: MTN
+          iso: RW

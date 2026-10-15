@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "64502"
+          carrier_name: MTN ZM
+          iso: ZM

@@ -4,3 +4,10 @@ id: apple_movicel_ao
 bundle: Movicel_ao.bundle
 supported_plmns:
     - "63104"
+plmn_overrides:
+    "63104":
+        apns:
+            - apn: internet.movicel.co.ao
+              type_mask: 49
+            - apn: internet.movicel.co.ao
+              type_mask: 48

@@ -6,6 +6,19 @@ supported_plmns:
     - "41250"
 plmn_overrides:
     "41250":
+        apns:
+            - apn: etisalat.af.web
+              type_mask: 49
+              allowed_ip_stack: ipv4
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4
+              use_network_mtu: true
+            - apn: SOS
+              type_mask: 262144
+              tech_type_mask: 262144
+              allowed_ip_stack: ipv4
         e911:
             over_itech_supported: true
             emergency_urns:
@@ -18,6 +31,7 @@ plmn_overrides:
             ip_stack: ipv4
             register:
                 use_ipsec: true
+                expires: 7200
             signaling:
                 preconditions: supported
                 support_p_early_media: false

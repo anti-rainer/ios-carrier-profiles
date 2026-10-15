@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "311230"
+          carrier_name: C Spire
+          iso: US

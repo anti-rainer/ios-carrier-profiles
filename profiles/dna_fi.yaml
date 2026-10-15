@@ -6,6 +6,26 @@ supported_plmns:
     - "24403"
     - "24412"
 common:
+    apns:
+        - apn: internet
+          type_mask: 32817
+          allowed_ip_stack: ipv4v6
+        - apn: mms
+          type_mask: 4
+          allowed_ip_stack: ipv4v6
+        - apn: ims
+          type_mask: 131072
+          allowed_ip_stack: ipv6
+          support_switch_over: true
+        - apn: internet
+          type_mask: 48
+          allowed_ip_stack: ipv4v6
+        - apn: hos
+          type_mask: 1048576
+          allowed_ip_stack: ipv6
+        - apn: sos
+          type_mask: 262144
+          allowed_ip_stack: ipv6
     apple:
         carrier_entitlements:
             supported_entitlements: 13313

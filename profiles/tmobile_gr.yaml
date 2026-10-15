@@ -6,6 +6,37 @@ supported_plmns:
     - "20201"
 plmn_overrides:
     "20201":
+        apns:
+            - apn: internet
+              type_mask: 1081393
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+              xlat464_enabled: true
+            - apn: mms
+              type_mask: 4
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+              xlat464_enabled: true
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv6
+              always_on_pdu: true
+              support_switch_over: true
+              support_5g_sa_handover: true
+              no_cellular_reconnect_cause_codes:
+                - cause_codes:
+                    - 33
+                  recovers_on_airplane_mode: true
+                  num_tries_allowed: 2
+                  type: 3GPP
+                  timeout: 86400
+            - apn: hos
+              tech_type_mask: 1048580
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+              xlat464_enabled: true
         apple:
             carrier_entitlements:
                 supported_entitlements: 4195329
@@ -54,11 +85,9 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 64800
-                    lifetime_seconds: 64800
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 64800
             register:
                 use_ipsec: true
                 include_cellular_network_info: true

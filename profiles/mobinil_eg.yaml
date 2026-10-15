@@ -6,6 +6,11 @@ supported_plmns:
     - "60201"
 plmn_overrides:
     "60201":
+        apns:
+            - apn: mobinilweb
+              type_mask: 49
+            - apn: mobinilmms
+              type_mask: 4
         ims:
             register:
                 use_ipsec: true

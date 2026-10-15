@@ -4,3 +4,12 @@ id: apple_tigo_cd
 bundle: Tigo_cd.bundle
 supported_plmns:
     - "63089"
+plmn_overrides:
+    "63089":
+        apns:
+            - apn: tigo.web
+              type_mask: 49
+            - apn: tigo.mms
+              type_mask: 4
+            - apn: tigo.web
+              type_mask: 48

@@ -4,3 +4,8 @@ id: apple_vimpelcom_kg
 bundle: VimpelCom_kg.bundle
 supported_plmns:
     - "43701"
+plmn_overrides:
+    "43701":
+        apns:
+            - apn: internet
+              type_mask: 49

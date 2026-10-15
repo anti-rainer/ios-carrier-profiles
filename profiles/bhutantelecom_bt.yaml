@@ -6,6 +6,19 @@ supported_plmns:
     - "40211"
 plmn_overrides:
     "40211":
+        apns:
+            - apn: internet
+              type_mask: 49
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+            - apn: ims
+              type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: hos
+              type_mask: 1048576
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
         ims:
             apn: ims
             ip_stack: ipv4v6
@@ -32,4 +45,4 @@ plmn_overrides:
             media:
                 rtp_inactivity_seconds: 20
             volte:
-                enable_volte_by_default: false
+                enable_volte_by_default: true

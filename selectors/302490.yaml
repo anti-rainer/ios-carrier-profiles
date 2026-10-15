@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "302490"
+          carrier_name: Freedom Mobile
+          iso: CA

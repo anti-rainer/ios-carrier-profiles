@@ -6,10 +6,14 @@ profiles:
       generic: true
       selectors:
         - raw: "44054"
+          carrier_name: KDDI
+          iso: JP
     - id: apple_kddi_povo_nr_jp
       path: profiles/kddi_povo_nr_jp.yaml
       selectors:
         - raw: 44054_GID1-26_GID2-00
+          carrier_name: povo
+          iso: JP
           conditions:
             - field: gid1
               match: prefix
@@ -21,6 +25,8 @@ profiles:
       path: profiles/kddi_uq_nr_jp.yaml
       selectors:
         - raw: 44054_GID1-20_GID2-00
+          carrier_name: UQ mobile
+          iso: JP
           conditions:
             - field: gid1
               match: prefix

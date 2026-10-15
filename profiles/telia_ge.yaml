@@ -4,3 +4,10 @@ id: apple_telia_ge
 bundle: Telia_ge.bundle
 supported_plmns:
     - "28201"
+plmn_overrides:
+    "28201":
+        apns:
+            - apn: internet
+              type_mask: 49
+            - apn: mms
+              type_mask: 4

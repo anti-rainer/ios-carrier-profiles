@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "27001"
+          carrier_name: POST
+          iso: LU

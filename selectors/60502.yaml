@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "60502"
+          carrier_name: TUNTEL
+          iso: TN

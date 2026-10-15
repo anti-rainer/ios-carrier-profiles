@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "334090"
+          carrier_name: AT&T
+          iso: MX

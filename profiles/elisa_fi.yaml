@@ -6,6 +6,26 @@ supported_plmns:
     - "24405"
 plmn_overrides:
     "24405":
+        apns:
+            - apn: internet
+              type_mask: 32817
+              allowed_ip_stack: ipv4v6
+            - apn: mms
+              type_mask: 4
+              allowed_ip_stack: ipv4
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv6
+              support_switch_over: true
+              support_5g_sa_handover: true
+              use_network_mtu: true
+            - apn: xcap
+              type_mask: 1048576
+              tech_type_mask: 1048576
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv6
         apple:
             carrier_entitlements:
                 supported_entitlements: 1217
@@ -36,8 +56,6 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 86400
-                    lifetime_seconds: 86400
-                sa_lifetime_seconds: 86400
             register:
                 use_ipsec: true
                 include_cellular_network_info: true

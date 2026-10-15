@@ -4,3 +4,10 @@ id: apple_globacom_gh
 bundle: Globacom_gh.bundle
 supported_plmns:
     - "62007"
+plmn_overrides:
+    "62007":
+        apns:
+            - apn: internet
+              type_mask: 49
+            - apn: internet
+              type_mask: 48

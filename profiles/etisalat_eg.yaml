@@ -6,6 +6,14 @@ supported_plmns:
     - "60203"
 plmn_overrides:
     "60203":
+        apns:
+            - apn: etisalat
+              type_mask: 53
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+            - apn: ims
+              type_mask: 131072
+              allowed_ip_stack: ipv4v6
         ims:
             apn: ims
             ip_stack: ipv4v6

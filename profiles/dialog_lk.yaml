@@ -6,6 +6,15 @@ supported_plmns:
     - "41302"
 plmn_overrides:
     "41302":
+        apns:
+            - apn: dialogbb
+              type_mask: 32821
+              allowed_ip_stack: ipv4v6
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv6
+              support_switch_over: true
         apple:
             carrier_entitlements:
                 supported_entitlements: 9217
@@ -29,13 +38,13 @@ plmn_overrides:
             ike:
                 proposals:
                     - encryption:
-                        - aes128
+                        - aes256
                       integrity:
-                        - sha1
+                        - sha256
                       prf:
-                        - sha1
+                        - sha256
                       dh_groups:
-                        - 2
+                        - 14
                       lifetime_seconds: 80000
                       authentication_method: None
                       eap_method: EAP-AKA
@@ -48,18 +57,16 @@ plmn_overrides:
                     proposals:
                         - source_branch: FirstChild
                           encryption:
-                            - aes128
+                            - aes256
                           integrity:
-                            - sha1
-                          rekey_pfs_group: 2
+                            - sha256
+                          rekey_pfs_group: 14
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 80000
-                    lifetime_seconds: 80000
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
             signaling:
@@ -74,7 +81,9 @@ plmn_overrides:
                             - +g.3gpp.srvcc-alerting
                             - +g.3gpp.ps2cs-srvcc-orig-pre-alerting
                             - +g.3gpp.mid-call
+            ussi:
+                enabled: true
             volte:
                 enable_volte_by_default: true
         roaming:
-            wifi_calling_allowed: true
+            wifi_calling_allowed: false

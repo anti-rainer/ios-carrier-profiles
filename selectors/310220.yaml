@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "310220"
+          carrier_name: T-Mobile
+          iso: US

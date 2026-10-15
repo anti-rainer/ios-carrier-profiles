@@ -6,6 +6,19 @@ supported_plmns:
     - "23410"
 plmn_overrides:
     "23410":
+        apns:
+            - apn: idata.o2.co.uk
+              username: vertigo
+              password: password
+              type_mask: 1081399
+              allowed_ip_stack: ipv4v6
+              xlat464_enabled: true
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv6
+              support_switch_over: true
+              support_5g_sa_handover: true
         apple:
             carrier_entitlements:
                 supported_entitlements: 533520
@@ -56,11 +69,9 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 80000
-                    lifetime_seconds: 80000
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
             signaling:
@@ -83,3 +94,16 @@ plmn_overrides:
                 enable_volte_by_default: true
         roaming:
             wifi_calling_allowed: false
+selector_overrides:
+    23410_GID1-520F:
+        apns:
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv6
+              support_switch_over: true
+            - apn: mobile.o2.co.uk
+              username: o2
+              password: '*'
+              type_mask: 1081399
+              allowed_ip_stack: ipv4

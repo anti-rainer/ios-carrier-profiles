@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "45424"
+          carrier_name: MultiByte
+          iso: HK

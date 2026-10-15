@@ -6,6 +6,27 @@ supported_plmns:
     - "310140"
 plmn_overrides:
     "310140":
+        apns:
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              support_switch_over: true
+            - apn: iphone.gta.net
+              type_mask: 32769
+            - apn: gprs.gta.net
+              type_mask: 48
+            - apn: vvm.gta.net
+              type_mask: 2
+              tech_type_mask: 2
+            - apn: service
+              type_mask: 1048576
+              tech_type_mask: 1048576
+            - apn: sos
+              type_mask: 262144
+              tech_type_mask: 262144
+              allowed_ip_stack: ipv4v6
+              support_switch_over: true
         apple:
             carrier_entitlements:
                 supported_entitlements: 176
@@ -53,12 +74,11 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 86400
-                    lifetime_seconds: 86400
                     replay_window_size: 12
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
+                expires: 7200
             signaling:
                 preconditions: supported
                 support_p_early_media: true

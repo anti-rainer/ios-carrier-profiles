@@ -6,6 +6,13 @@ supported_plmns:
     - "65502"
 plmn_overrides:
     "65502":
+        apns:
+            - apn: internet
+              type_mask: 49
+            - apn: mms
+              type_mask: 4
+            - apn: internet
+              type_mask: 48
         ims:
             register:
                 use_ipsec: true

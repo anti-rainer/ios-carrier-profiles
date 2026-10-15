@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "52001"
+          carrier_name: AIS
+          iso: TH

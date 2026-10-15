@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "41903"
+          carrier_name: Ooredoo
+          iso: KW

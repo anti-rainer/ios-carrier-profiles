@@ -6,6 +6,26 @@ supported_plmns:
     - "22210"
 plmn_overrides:
     "22210":
+        apns:
+            - apn: iphone.vodafone.it
+              type_mask: 1
+              allowed_ip_stack: ipv4
+            - apn: mms.vodafone.it
+              type_mask: 4
+              allowed_ip_stack: ipv4
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              support_switch_over: true
+            - apn: internet
+              type_mask: 32816
+              allowed_ip_stack: ipv4
+            - apn: sos
+              type_mask: 262144
+              tech_type_mask: 262144
+              allowed_ip_stack: ipv4v6
+              support_switch_over: true
         apple:
             carrier_entitlements:
                 supported_entitlements: 9216
@@ -28,10 +48,11 @@ plmn_overrides:
                 contact:
                     always_add_sip_instance: true
                     additional_contact_params:
-                        - selector: INVITE,INVITE:*
+                        - selector: REGISTER,INVITE,INVITE:*
                           params:
                             - +g.3gpp.mid-call
                             - +g.3gpp.srvcc-alerting
+                            - text
             media:
                 rtp_inactivity_seconds: 20
             volte:

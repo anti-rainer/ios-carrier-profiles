@@ -6,6 +6,11 @@ supported_plmns:
     - "25901"
 plmn_overrides:
     "25901":
+        apns:
+            - apn: wap.orange.md
+              type_mask: 49
+            - apn: wap.orange.md
+              type_mask: 48
         ims:
             register:
                 use_ipsec: true

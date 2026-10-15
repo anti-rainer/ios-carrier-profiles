@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "42902"
+          carrier_name: Ncell
+          iso: NP

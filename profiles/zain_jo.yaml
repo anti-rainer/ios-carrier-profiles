@@ -6,6 +6,15 @@ supported_plmns:
     - "41601"
 plmn_overrides:
     "41601":
+        apns:
+            - apn: zain
+              username: zain
+              password: zain
+              type_mask: 53
+            - apn: zain
+              username: zain
+              password: zain
+              type_mask: 52
         ims:
             register:
                 use_ipsec: true

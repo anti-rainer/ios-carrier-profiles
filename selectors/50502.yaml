@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "50502"
+          carrier_name: OPTUS
+          iso: AU

@@ -5,6 +5,8 @@ profiles:
       path: profiles/affinityclick.yaml
       selectors:
         - raw: 53703_GID1-616C6F73696D31
+          carrier_name: aloSIM
+          iso: PG
           conditions:
             - field: gid1
               match: prefix
@@ -14,10 +16,14 @@ profiles:
       generic: true
       selectors:
         - raw: "53703"
+          carrier_name: Digicel
+          iso: PG
     - id: apple_knowroaming
       path: profiles/knowroaming.yaml
       selectors:
         - raw: 53703_GID1-636f6e6e65637431
+          carrier_name: Connect
+          iso: PG
           conditions:
             - field: gid1
               match: prefix

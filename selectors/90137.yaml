@@ -6,16 +6,10 @@ profiles:
       generic: true
       selectors:
         - raw: "90137"
+          carrier_name: Transatel
         - raw: 90137_ID-89882470001
+          carrier_name: Transatel
           conditions:
             - field: iccid
               match: prefix
               value: "89882470001"
-    - id: apple_wonet
-      path: profiles/wonet.yaml
-      selectors:
-        - raw: 90137_GID1-CC11
-          conditions:
-            - field: gid1
-              match: prefix
-              value: CC11

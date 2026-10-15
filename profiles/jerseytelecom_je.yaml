@@ -6,6 +6,11 @@ supported_plmns:
     - "23450"
 plmn_overrides:
     "23450":
+        apns:
+            - apn: pepper
+              type_mask: 49
+            - apn: pepper
+              type_mask: 48
         ims:
             volte:
                 enable_volte_by_default: true

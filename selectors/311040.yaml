@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "311040"
+          carrier_name: VIYA
+          iso: VI

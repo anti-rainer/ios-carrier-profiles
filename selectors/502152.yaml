@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "502152"
+          carrier_name: "YES"
+          iso: MY

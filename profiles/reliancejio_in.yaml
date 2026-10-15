@@ -27,6 +27,24 @@ supported_plmns:
     - "405873"
     - "405874"
 common:
+    apns:
+        - apn: jionet
+          type_mask: 1081393
+          tech_type_mask: 1048576
+          allowed_ip_stack: ipv4v6
+          xlat464_enabled: true
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv6
+          roaming_ip_stack: ipv4v6
+          support_switch_over: true
+          support_5g_sa_handover: true
+          dont_suspend: true
+        - apn: sos
+          type_mask: 262144
+          allowed_ip_stack: ipv6
+          roaming_ip_stack: ipv4v6
     apple:
         carrier_entitlements:
             supported_entitlements: 11265
@@ -47,7 +65,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 86400
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -78,11 +95,11 @@ common:
                   lifetime_seconds: 80000
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 80000
         ip_stack: ipv4v6
         media:
             rtp_inactivity_seconds: 20
         register:
+            expires: 7200
             include_cellular_network_info: true
             use_ipsec: true
         signaling:

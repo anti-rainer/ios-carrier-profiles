@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "22601"
+          carrier_name: Vodafone RO
+          iso: RO

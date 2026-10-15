@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "29401"
+          carrier_name: Telekom.mk
+          iso: MK

@@ -6,12 +6,29 @@ supported_plmns:
     - "722310"
 plmn_overrides:
     "722310":
+        apns:
+            - apn: igprs.claro.com.ar
+              username: clarogprs
+              password: clarogprs999
+              type_mask: 1081393
+              tech_type_mask: 1048576
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: ims
+              username: claro
+              password: claro
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv6
+              support_switch_over: true
         apple:
             carrier_entitlements:
                 supported_entitlements: 1041
         e911:
             over_itech_supported: false
             wifi_calling_without_entitlement: true
+            emergency_urns:
+                "911": urn:service:sos.police
         entitlement:
             entitlement_url: https://aes.mnc310.mcc722.pub.3gppnetwork.org:44301/entitlement/
         ims:
@@ -55,10 +72,8 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 86400
-                    lifetime_seconds: 86400
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
-                sa_lifetime_seconds: 86400
             register:
                 use_ipsec: true
                 include_cellular_network_info: true

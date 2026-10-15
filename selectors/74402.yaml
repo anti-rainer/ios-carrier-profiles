@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "74402"
+          carrier_name: CLARO Paraguay
+          iso: PY

@@ -7,6 +7,22 @@ supported_plmns:
     - "708001"
     - "70801"
 common:
+    apns:
+        - apn: internet.ideasclaro
+          type_mask: 49
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+        - apn: mms.ideasclaro
+          type_mask: 4
+        - apn: internet.ideasclaro
+          type_mask: 48
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv4v6
+          support_switch_over: true
     e911:
         over_itech_supported: false
         wifi_calling_without_entitlement: true
@@ -23,7 +39,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 86400
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -53,7 +68,6 @@ common:
                   lifetime_seconds: 86400
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 86400
         ip_stack: ipv4v6
         media:
             rtcp_inactivity_seconds: 36000

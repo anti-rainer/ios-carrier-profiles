@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "45606"
+          carrier_name: Smart
+          iso: KH

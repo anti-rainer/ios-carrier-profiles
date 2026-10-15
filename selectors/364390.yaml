@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "364390"
+          carrier_name: BTC
+          iso: BS

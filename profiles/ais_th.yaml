@@ -6,10 +6,30 @@ supported_plmns:
     - "52001"
     - "52003"
 common:
+    apns:
+        - apn: internet
+          type_mask: 32817
+          allowed_ip_stack: ipv4v6
+        - apn: IMS
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv6
+          support_switch_over: true
+        - apn: multimedia
+          type_mask: 4
+        - apn: xcap
+          type_mask: 1048576
+          allowed_ip_stack: ipv6
     apple:
         carrier_entitlements:
             supported_entitlements: 11393
     e911:
+        emergency_urns:
+            "112": urn:service:sos
+            "1669": urn:service:sos.ambulance
+            "191": urn:service:sos.police
+            "199": urn:service:sos.fire
+            "911": urn:service:sos
         over_itech_supported: true
         wifi_calling_without_entitlement: false
     entitlement:
@@ -28,7 +48,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 80000
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -58,7 +77,6 @@ common:
                   lifetime_seconds: 80000
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 80000
             validate_remote_certificate: false
         impi_format: imsi@carrierDomain
         ip_stack: ipv6

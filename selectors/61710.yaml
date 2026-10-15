@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "61710"
+          carrier_name: Emtel
+          iso: MU

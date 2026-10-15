@@ -5,6 +5,8 @@ profiles:
       path: profiles/tmobile_germany.yaml
       selectors:
         - raw: 26298_GID1-CA
+          carrier_name: Telekom.de
+          iso: DE
           conditions:
             - field: gid1
               match: prefix

@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "41902"
+          carrier_name: Zain KW
+          iso: KW

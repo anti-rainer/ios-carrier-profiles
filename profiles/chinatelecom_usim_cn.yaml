@@ -6,6 +6,32 @@ supported_plmns:
     - "20404"
     - "46011"
 common:
+    apns:
+        - apn: CTNET
+          type_mask: 1081905
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+          use_network_mtu: true
+        - apn: CTWAP
+          type_mask: 4
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+        - apn: CTNET
+          type_mask: 1081904
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+          use_network_mtu: true
+        - apn: ims
+          type_mask: 131072
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+          support_switch_over: true
+          wait_for_bring_up_complete: true
+        - apn: sos
+          type_mask: 262144
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+          allow_no_dns: 1
     apple:
         carrier_entitlements:
             supported_entitlements: 3121

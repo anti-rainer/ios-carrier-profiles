@@ -7,6 +7,15 @@ supported_plmns:
     - "45605"
     - "45606"
 common:
+    apns:
+        - apn: smart
+          type_mask: 1081395
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          support_switch_over: true
+        - apn: mms
+          type_mask: 4
     apple:
         carrier_entitlements:
             supported_entitlements: 1
@@ -28,7 +37,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 80000
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -63,7 +71,6 @@ common:
                   lifetime_seconds: 80000
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 80000
             validate_remote_certificate: false
         register:
             use_ipsec: true

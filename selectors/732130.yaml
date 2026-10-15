@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "732130"
+          carrier_name: Avantel
+          iso: CO

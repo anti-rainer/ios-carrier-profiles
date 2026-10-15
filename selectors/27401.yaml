@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "27401"
+          carrier_name: Siminn
+          iso: IS

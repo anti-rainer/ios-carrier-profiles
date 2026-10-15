@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "45608"
+          carrier_name: Metfone
+          iso: KH

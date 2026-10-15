@@ -6,6 +6,36 @@ supported_plmns:
     - "44054"
 plmn_overrides:
     "44054":
+        apns:
+            - apn: uqmobile.jp
+              username: uq@uqmobile.jp
+              password: uq
+              auth_type: CHAP
+              type_mask: 567
+            - apn: uqmobile.jp
+              username: uq@uqmobile.jp
+              password: uq
+              auth_type: CHAP
+              type_mask: 519
+              allowed_ip_stack: ipv4v6
+            - apn: IMS
+              type_mask: 131072
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv6
+            - apn: trg.uqmobile.jp
+              username: uq@trg.uqmobile.jp
+              password: uq
+              auth_type: CHAP
+              type_mask: 16
+              allowed_ip_stack: ipv4v6
+            - apn: xcap
+              type_mask: 1048576
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: ""
+              type_mask: 262144
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
         apple:
             carrier_entitlements:
                 supported_entitlements: 8201

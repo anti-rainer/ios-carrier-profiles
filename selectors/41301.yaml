@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "41301"
+          carrier_name: Mobitel
+          iso: LK

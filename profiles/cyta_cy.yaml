@@ -6,6 +6,10 @@ supported_plmns:
     - "28001"
 plmn_overrides:
     "28001":
+        apns:
+            - apn: cytamobile
+              type_mask: 32821
+              allowed_ip_stack: ipv4v6
         apple:
             carrier_entitlements:
                 supported_entitlements: 13313
@@ -35,8 +39,6 @@ plmn_overrides:
                             - sha256
                           esn: auto
                           lifetime_seconds: 28800
-                    lifetime_seconds: 28800
-                sa_lifetime_seconds: 86400
             register:
                 use_ipsec: true
                 include_cellular_network_info: true

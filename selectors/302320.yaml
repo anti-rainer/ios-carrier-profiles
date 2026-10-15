@@ -5,11 +5,15 @@ profiles:
       path: profiles/rogers_chatr_ca.yaml
       selectors:
         - raw: 302320_ID-89302320100
+          carrier_name: chatr
+          iso: CA
           conditions:
             - field: iccid
               match: prefix
               value: "89302320100"
         - raw: 302320_ID-89302320900
+          carrier_name: chatr
+          iso: CA
           conditions:
             - field: iccid
               match: prefix

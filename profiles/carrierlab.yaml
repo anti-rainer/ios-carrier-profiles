@@ -32,6 +32,21 @@ supported_plmns:
     - "29981"
     - "311011"
 common:
+    apns:
+        - apn: ""
+          type_mask: 49
+          allowed_ip_stack: ipv4v6
+        - apn: IMS
+          type_mask: 131072
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+        - apn: xcap
+          type_mask: 1048576
+          allowed_ip_stack: ipv4v6
+        - apn: sos
+          type_mask: 262144
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
     ims:
         apn: ims
         ip_stack: ipv4v6

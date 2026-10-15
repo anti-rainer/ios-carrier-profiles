@@ -6,6 +6,11 @@ supported_plmns:
     - "63301"
 plmn_overrides:
     "63301":
+        apns:
+            - apn: internet
+              type_mask: 49
+            - apn: ims
+              type_mask: 131072
         ims:
             apn: ims
             register:

@@ -6,6 +6,13 @@ supported_plmns:
     - "47001"
 plmn_overrides:
     "47001":
+        apns:
+            - apn: gpinternet
+              type_mask: 49
+            - apn: ims
+              type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              use_network_mtu: true
         ims:
             apn: ims
             ip_stack: ipv4v6

@@ -8,6 +8,25 @@ supported_plmns:
     - "23211"
     - "23212"
 common:
+    apns:
+        - apn: A1.net
+          username: ppp@A1plus.at
+          password: ppp
+          type_mask: 1081395
+          tech_type_mask: 1048576
+          allowed_ip_stack: ipv4v6
+        - apn: free.A1.net
+          username: ppp@A1plus.at
+          password: ppp
+          type_mask: 4
+          tech_type_mask: 0
+        - apn: ims
+          username: ppp@A1plus.at
+          password: ppp
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv4v6
+          support_switch_over: true
     apple:
         carrier_entitlements:
             supported_entitlements: 9217
@@ -29,7 +48,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 80000
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -59,12 +77,12 @@ common:
                   authentication_method: None
                   eap_method: EAP-AKA
             remote_identifier_type: KeyID
-            sa_lifetime_seconds: 80000
             validate_remote_certificate: false
         ip_stack: ipv4v6
         media:
             rtp_inactivity_seconds: 20
         register:
+            expires: 7200
             use_ipsec: true
         signaling:
             additional_headers:

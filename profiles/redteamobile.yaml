@@ -26,6 +26,9 @@ supported_plmns:
     - "52505"
     - "71204"
 common:
+    apns:
+        - apn: iboots
+          type_mask: 49
     ims:
         volte:
             enable_volte_by_default: false

@@ -58,6 +58,14 @@ supported_plmns:
     - "732123"
     - "90131"
 common:
+    apns:
+        - apn: globaldata
+          type_mask: 49
+    apple:
+        carrier_entitlements:
+            supported_entitlements: 8240
+    entitlement:
+        entitlement_url: https://es1.esr.globaldata.mobile/api/apple
     ims:
         volte:
             enable_volte_by_default: false

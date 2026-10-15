@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "45415"
+          carrier_name: SMC HK
+          iso: HK

@@ -4,3 +4,10 @@ id: apple_telesur_sr
 bundle: Telesur_sr.bundle
 supported_plmns:
     - "74602"
+plmn_overrides:
+    "74602":
+        apns:
+            - apn: win.teleg.sr
+              type_mask: 49
+            - apn: win.teleg.sr
+              type_mask: 48

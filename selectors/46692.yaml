@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "46692"
+          carrier_name: 中華電信
+          iso: TW

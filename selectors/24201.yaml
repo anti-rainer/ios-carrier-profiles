@@ -6,22 +6,32 @@ profiles:
       generic: true
       selectors:
         - raw: "24201"
+          carrier_name: Telenor
+          iso: "NO"
         - raw: 24201_ID-89470002
+          carrier_name: Talkmore
+          iso: "NO"
           conditions:
             - field: iccid
               match: prefix
               value: "89470002"
         - raw: 24201_ID-89470003
+          carrier_name: Talkmore
+          iso: "NO"
           conditions:
             - field: iccid
               match: prefix
               value: "89470003"
         - raw: 24201_ID-89470022
+          carrier_name: Talkmore
+          iso: "NO"
           conditions:
             - field: iccid
               match: prefix
               value: "89470022"
         - raw: 24201_ID-89470023
+          carrier_name: Talkmore
+          iso: "NO"
           conditions:
             - field: iccid
               match: prefix

@@ -4,3 +4,8 @@ id: apple_digicel_ws
 bundle: Digicel_ws.bundle
 supported_plmns:
     - "54900"
+plmn_overrides:
+    "54900":
+        apns:
+            - apn: web.digicelsamoa.ws
+              type_mask: 49

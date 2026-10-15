@@ -6,6 +6,17 @@ supported_plmns:
     - "21407"
     - "73002"
 common:
+    apns:
+        - apn: wap.tmovil.cl
+          username: wap
+          password: wap
+          type_mask: 32817
+        - apn: ims
+          type_mask: 131072
+          support_switch_over: true
+        - apn: sos
+          type_mask: 262144
+          allowed_ip_stack: ipv4v6
     apple:
         carrier_entitlements:
             supported_entitlements: 9233

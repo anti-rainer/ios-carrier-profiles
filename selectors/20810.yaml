@@ -6,17 +6,39 @@ profiles:
       generic: true
       selectors:
         - raw: "20810"
+          carrier_name: SFR
+          iso: FR
+        - raw: 20810_ID-89331014
+          carrier_name: Coriolis
+          iso: FR
+          conditions:
+            - field: iccid
+              match: prefix
+              value: "89331014"
         - raw: 20810_ID-89331043
+          carrier_name: Prixtel
+          iso: FR
           conditions:
             - field: iccid
               match: prefix
               value: "89331043"
         - raw: 20810_ID-89331069
+          carrier_name: Syma
+          iso: FR
           conditions:
             - field: iccid
               match: prefix
               value: "89331069"
+        - raw: 20810_ID-893327
+          carrier_name: Coriolis
+          iso: FR
+          conditions:
+            - field: iccid
+              match: prefix
+              value: "893327"
         - raw: 20810_ID-893330
+          carrier_name: Syma
+          iso: FR
           conditions:
             - field: iccid
               match: prefix
@@ -25,6 +47,8 @@ profiles:
       path: profiles/sfr_lpm_fr.yaml
       selectors:
         - raw: 20810_GID1-4C504D
+          carrier_name: La Poste Mobile
+          iso: FR
           conditions:
             - field: gid1
               match: prefix

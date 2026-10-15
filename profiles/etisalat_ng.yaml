@@ -4,3 +4,8 @@ id: apple_etisalat_ng
 bundle: Etisalat_ng.bundle
 supported_plmns:
     - "62160"
+plmn_overrides:
+    "62160":
+        apns:
+            - apn: 9mobile
+              type_mask: 53

@@ -4,3 +4,8 @@ id: apple_vodafone_ki
 bundle: Vodafone_ki.bundle
 supported_plmns:
     - "54501"
+plmn_overrides:
+    "54501":
+        apns:
+            - apn: internet
+              type_mask: 51

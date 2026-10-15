@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "60203"
+          carrier_name: e& Egypt
+          iso: EG

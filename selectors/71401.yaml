@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "71401"
+          carrier_name: +Movil
+          iso: PA

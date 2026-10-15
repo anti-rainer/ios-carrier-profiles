@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "54720"
+          carrier_name: VINI
+          iso: PF

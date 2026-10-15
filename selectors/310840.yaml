@@ -5,6 +5,8 @@ profiles:
       path: profiles/affinityclick.yaml
       selectors:
         - raw: 310840_GID1-616C6F73696D31
+          carrier_name: aloSIM
+          iso: US
           conditions:
             - field: gid1
               match: prefix
@@ -13,6 +15,8 @@ profiles:
       path: profiles/airgsm.yaml
       selectors:
         - raw: 310840_GID1-616972616c6f31
+          carrier_name: Airalo
+          iso: US
           conditions:
             - field: gid1
               match: prefix
@@ -21,6 +25,8 @@ profiles:
       path: profiles/bne.yaml
       selectors:
         - raw: 310840_GID1-626e6573696d31
+          carrier_name: bne
+          iso: US
           conditions:
             - field: gid1
               match: prefix
@@ -29,6 +35,8 @@ profiles:
       path: profiles/knowroaming.yaml
       selectors:
         - raw: 310840_GID1-636f6e6e65637431
+          carrier_name: Connect
+          iso: US
           conditions:
             - field: gid1
               match: prefix
@@ -37,6 +45,8 @@ profiles:
       path: profiles/mysim.yaml
       selectors:
         - raw: 310840_GID1-434F423236303036
+          carrier_name: UPeSIM
+          iso: US
           conditions:
             - field: gid1
               match: prefix
@@ -45,6 +55,8 @@ profiles:
       path: profiles/redteamobile.yaml
       selectors:
         - raw: 310840_ID-89852245280
+          carrier_name: RedteaMobile
+          iso: US
           conditions:
             - field: iccid
               match: prefix
@@ -53,6 +65,8 @@ profiles:
       path: profiles/roamless.yaml
       selectors:
         - raw: 310840_GID1-4D2E3F1A6B7C8D9E
+          carrier_name: Roamless
+          iso: US
           conditions:
             - field: gid1
               match: prefix
@@ -61,6 +75,8 @@ profiles:
       path: profiles/simly.yaml
       selectors:
         - raw: 310840_GID1-73696D6C7931
+          carrier_name: Simly
+          iso: US
           conditions:
             - field: gid1
               match: prefix
@@ -69,6 +85,8 @@ profiles:
       path: profiles/telefonica_esimflag.yaml
       selectors:
         - raw: 310840_GID1-80_ID-8910300
+          carrier_name: eSimFLAG
+          iso: US
           conditions:
             - field: gid1
               match: prefix

@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "45500"
+          carrier_name: SmarTone
+          iso: MO

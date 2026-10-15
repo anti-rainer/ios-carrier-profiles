@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "45505"
+          carrier_name: 3 Macau
+          iso: MO

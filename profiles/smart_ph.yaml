@@ -6,12 +6,24 @@ supported_plmns:
     - "51503"
 plmn_overrides:
     "51503":
+        apns:
+            - apn: internet
+              type_mask: 32817
+              allowed_ip_stack: ipv4
+            - apn: IMS
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              support_switch_over: true
+              use_network_mtu: false
         apple:
             carrier_entitlements:
-                supported_entitlements: 1
+                supported_entitlements: 5137
         e911:
             over_itech_supported: true
             wifi_calling_without_entitlement: true
+            emergency_urns:
+                "911": urn:service:sos
         entitlement:
             entitlement_url: https://esim-pldt-es-prd.ipaas.amdocs.com/pldt/prd/executeAppleActions
         ims:
@@ -32,13 +44,13 @@ plmn_overrides:
             ike:
                 proposals:
                     - encryption:
-                        - aes128
+                        - aes256
                       integrity:
-                        - sha1
+                        - sha256
                       prf:
-                        - sha1
+                        - sha256
                       dh_groups:
-                        - 2
+                        - 14
                       lifetime_seconds: 86400
                       authentication_method: None
                       eap_method: EAP-AKA
@@ -52,20 +64,19 @@ plmn_overrides:
                     proposals:
                         - source_branch: FirstChild
                           encryption:
-                            - aes128
+                            - aes256
                           integrity:
-                            - sha1
-                          rekey_pfs_group: 2
+                            - sha256
+                          rekey_pfs_group: 14
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 86400
-                    lifetime_seconds: 86400
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 86400
             register:
                 use_ipsec: false
+                expires: 7200
                 include_cellular_network_info: true
             signaling:
                 max_udp_message_size: 1200
@@ -95,6 +106,8 @@ plmn_overrides:
                     T4: 17000
             media:
                 rtcp_interval_seconds: 5
+            ussi:
+                enabled: true
             volte:
                 enable_volte_by_default: true
         roaming:

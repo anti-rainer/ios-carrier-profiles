@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "46011"
+          carrier_name: 中国电信
+          iso: CN

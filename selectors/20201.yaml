@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "20201"
+          carrier_name: COSMOTE
+          iso: GR

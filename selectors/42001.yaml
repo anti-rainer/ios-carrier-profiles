@@ -6,10 +6,14 @@ profiles:
       generic: true
       selectors:
         - raw: "42001"
+          carrier_name: stc
+          iso: SA
     - id: apple_viva_bh
       path: profiles/viva_bh.yaml
       selectors:
         - raw: 42001_ID-8997304
+          carrier_name: stc
+          iso: BH
           conditions:
             - field: iccid
               match: prefix

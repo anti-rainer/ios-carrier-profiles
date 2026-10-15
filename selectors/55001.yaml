@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "55001"
+          carrier_name: FSMTC
+          iso: FM

@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "41305"
+          carrier_name: airtel
+          iso: LK

@@ -6,6 +6,39 @@ supported_plmns:
     - "20404"
     - "45507"
 common:
+    apns:
+        - apn: CTNET
+          type_mask: 1081905
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+        - apn: CTWAP
+          type_mask: 4
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+        - apn: CTNET
+          type_mask: 1049136
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv6
+          roaming_ip_stack: ipv6
+          support_switch_over: true
+          wait_for_bring_up_complete: true
+        - apn: CTNET
+          type_mask: 565
+        - apn: CTNET
+          type_mask: 564
+        - apn: sos
+          type_mask: 262144
+          tech_type_mask: 262144
+          allowed_ip_stack: ipv6
+          roaming_ip_stack: ipv6
+          allow_no_dns: 1
+    apple:
+        carrier_entitlements:
+            supported_entitlements: 8192
     e911:
         emergency_urns:
             "110": urn:service:sos.police
@@ -13,6 +46,8 @@ common:
             "120": urn:service:sos.ambulance
             "993": urn:service:sos.mountain
             "999": urn:service:sos.police
+    entitlement:
+        entitlement_url: https://ios-es.1888.com.mo
     ims:
         apn: ims
         domain: ims.mnc007.mcc455.3gppnetwork.org

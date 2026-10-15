@@ -6,3 +6,7 @@ supported_plmns:
     - "24007"
     - "25020"
     - "25050"
+common:
+    apns:
+        - apn: sberbank
+          type_mask: 49

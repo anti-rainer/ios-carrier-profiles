@@ -5,6 +5,8 @@ profiles:
       path: profiles/bics.yaml
       selectors:
         - raw: 302220_ID-893204
+          carrier_name: BICS
+          iso: CA
           conditions:
             - field: iccid
               match: prefix
@@ -13,6 +15,8 @@ profiles:
       path: profiles/cmcc_cmi.yaml
       selectors:
         - raw: 302220_ID-8985234
+          carrier_name: CMLink
+          iso: CA
           conditions:
             - field: iccid
               match: prefix
@@ -21,11 +25,15 @@ profiles:
       path: profiles/dish_us.yaml
       selectors:
         - raw: 302220_GID1-6332
+          carrier_name: Boost
+          iso: US
           conditions:
             - field: gid1
               match: prefix
               value: "6332"
         - raw: 302220_GID1-6336
+          carrier_name: Boost
+          iso: US
           conditions:
             - field: gid1
               match: prefix
@@ -34,6 +42,8 @@ profiles:
       path: profiles/holafly.yaml
       selectors:
         - raw: 302220_GID2-0407_ID-8985234
+          carrier_name: Holafly
+          iso: CA
           conditions:
             - field: gid2
               match: prefix
@@ -46,26 +56,24 @@ profiles:
       generic: true
       selectors:
         - raw: "302220"
+          carrier_name: TELUS
+          iso: CA
     - id: apple_telus_koodo_ca
       path: profiles/telus_koodo_ca.yaml
       selectors:
         - raw: 302220_GID1-4B
+          carrier_name: Koodo
+          iso: CA
           conditions:
             - field: gid1
               match: prefix
               value: 4B
-    - id: apple_telus_pcmobile_ca
-      path: profiles/telus_pcmobile_ca.yaml
-      selectors:
-        - raw: 302220_GID1-50
-          conditions:
-            - field: gid1
-              match: prefix
-              value: "50"
     - id: apple_telus_publicmobile_ca
       path: profiles/telus_publicmobile_ca.yaml
       selectors:
         - raw: 302220_GID1-4D
+          carrier_name: Public Mobile
+          iso: CA
           conditions:
             - field: gid1
               match: prefix
@@ -74,6 +82,8 @@ profiles:
       path: profiles/wom_co.yaml
       selectors:
         - raw: 302220_ID-8957360
+          carrier_name: WOM
+          iso: CO
           conditions:
             - field: iccid
               match: prefix

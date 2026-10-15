@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "53024"
+          carrier_name: 2degrees
+          iso: NZ

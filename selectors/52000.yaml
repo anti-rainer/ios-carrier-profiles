@@ -5,6 +5,8 @@ profiles:
       path: profiles/trueh_th.yaml
       selectors:
         - raw: 52000_GID1-01
+          carrier_name: TRUE-H
+          iso: TH
           conditions:
             - field: gid1
               match: prefix

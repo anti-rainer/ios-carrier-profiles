@@ -4,3 +4,18 @@ id: apple_korek_iq
 bundle: Korek_iq.bundle
 supported_plmns:
     - "41840"
+plmn_overrides:
+    "41840":
+        apns:
+            - apn: net.korek.com
+              username: korek
+              password: korek
+              type_mask: 49
+            - apn: mms.korek.com
+              username: korek
+              password: korek
+              type_mask: 4
+            - apn: net.korek.com
+              username: korek
+              password: korek
+              type_mask: 48

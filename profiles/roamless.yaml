@@ -8,3 +8,7 @@ supported_plmns:
     - "310840"
     - "45400"
     - "732123"
+common:
+    apns:
+        - apn: roamless
+          type_mask: 49

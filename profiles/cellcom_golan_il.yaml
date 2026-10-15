@@ -6,3 +6,10 @@ supported_plmns:
     - "20601"
     - "42502"
     - "42508"
+common:
+    apns:
+        - apn: internet.golantelecom.net.il
+          type_mask: 49
+          allowed_ip_stack: ipv4v6
+        - apn: mms.golantelecom.net.il
+          type_mask: 4

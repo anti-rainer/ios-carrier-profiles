@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "310480"
+          carrier_name: iConnect
+          iso: GU

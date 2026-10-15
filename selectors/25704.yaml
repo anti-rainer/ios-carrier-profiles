@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "25704"
+          carrier_name: Life
+          iso: BY

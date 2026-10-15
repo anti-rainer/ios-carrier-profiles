@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "63903"
+          carrier_name: Airtel
+          iso: KE

@@ -6,6 +6,28 @@ supported_plmns:
     - "20205"
 plmn_overrides:
     "20205":
+        apns:
+            - apn: internet.vodafone.gr
+              username: user
+              password: pass
+              type_mask: 32817
+            - apn: mms.vodafone.net
+              username: user
+              password: pass
+              type_mask: 4
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              support_switch_over: true
+              allow_no_dns: 1
+            - apn: hos
+              type_mask: 1048576
+              tech_type_mask: 1048576
+            - apn: sos
+              type_mask: 262144
+              tech_type_mask: 262144
+              allowed_ip_stack: ipv4v6
+              support_switch_over: true
         apple:
             carrier_entitlements:
                 supported_entitlements: 13440
@@ -54,9 +76,7 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 3600
-                    lifetime_seconds: 3600
                     replay_window_size: 12
-                sa_lifetime_seconds: 3600
             register:
                 use_ipsec: true
                 include_cellular_network_info: true
@@ -67,7 +87,6 @@ plmn_overrides:
                 csfb_on:
                     - method: INVITE
                       statuses:
-                        - "380"
                         - 5XX
                 require_preconditions_when_mandatory: false
                 contact:

@@ -6,6 +6,13 @@ supported_plmns:
     - "42403"
 plmn_overrides:
     "42403":
+        apns:
+            - apn: internet1
+              type_mask: 32817
+            - apn: ims
+              type_mask: 131072
+              allowed_ip_stack: ipv4
+              allow_no_dns: 1
         apple:
             carrier_entitlements:
                 supported_entitlements: 1025

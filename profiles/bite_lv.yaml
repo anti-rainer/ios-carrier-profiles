@@ -6,6 +6,19 @@ supported_plmns:
     - "24705"
 plmn_overrides:
     "24705":
+        apns:
+            - apn: internet
+              type_mask: 32819
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: mms
+              username: mms@mms
+              password: mms
+              type_mask: 4
+            - apn: hos
+              type_mask: 1048576
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
         apple:
             carrier_entitlements:
                 supported_entitlements: 5121

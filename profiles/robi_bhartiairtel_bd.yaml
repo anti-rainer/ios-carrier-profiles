@@ -6,6 +6,13 @@ supported_plmns:
     - "47007"
 plmn_overrides:
     "47007":
+        apns:
+            - apn: INTERNET
+              type_mask: 49
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: ims
+              type_mask: 131072
         ims:
             apn: ims
             signaling:

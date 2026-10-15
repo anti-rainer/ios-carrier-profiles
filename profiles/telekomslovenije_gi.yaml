@@ -6,6 +6,13 @@ supported_plmns:
     - "26601"
 plmn_overrides:
     "26601":
+        apns:
+            - apn: www.gibtele.com
+              type_mask: 49
+            - apn: mms.gibtele.com
+              type_mask: 4
+            - apn: www.gibtele.com
+              type_mask: 48
         ims:
             register:
                 use_ipsec: true

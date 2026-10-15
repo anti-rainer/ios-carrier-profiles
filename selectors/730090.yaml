@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "730090"
+          carrier_name: WOM
+          iso: CL

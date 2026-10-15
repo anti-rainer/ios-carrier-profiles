@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "25901"
+          carrier_name: Orange Moldova
+          iso: MD

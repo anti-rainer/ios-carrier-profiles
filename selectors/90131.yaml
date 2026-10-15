@@ -5,6 +5,7 @@ profiles:
       path: profiles/affinityclick.yaml
       selectors:
         - raw: 90131_GID1-616C6F73696D31
+          carrier_name: aloSIM
           conditions:
             - field: gid1
               match: prefix
@@ -13,6 +14,7 @@ profiles:
       path: profiles/knowroaming.yaml
       selectors:
         - raw: 90131_GID1-636f6e6e65637431
+          carrier_name: Connect
           conditions:
             - field: gid1
               match: prefix
@@ -21,6 +23,7 @@ profiles:
       path: profiles/webbing.yaml
       selectors:
         - raw: 90131_ID-8985235
+          carrier_name: Webbing
           conditions:
             - field: iccid
               match: prefix

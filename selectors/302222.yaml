@@ -6,10 +6,14 @@ profiles:
       generic: true
       selectors:
         - raw: "302222"
+          carrier_name: TELUS
+          iso: CA
     - id: apple_telus_koodo_ca
       path: profiles/telus_koodo_ca.yaml
       selectors:
         - raw: 302222_GID1-4B
+          carrier_name: Koodo
+          iso: CA
           conditions:
             - field: gid1
               match: prefix

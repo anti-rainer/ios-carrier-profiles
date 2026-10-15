@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "60402"
+          carrier_name: inwi
+          iso: MA

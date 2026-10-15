@@ -6,6 +6,22 @@ supported_plmns:
     - "20404"
     - "302500"
 common:
+    apns:
+        - apn: media.ng
+          type_mask: 32823
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv6
+          support_switch_over: true
+        - apn: xcap
+          type_mask: 1048576
+          tech_type_mask: 1048582
+          allowed_ip_stack: ipv4v6
+        - apn: sos
+          type_mask: 262144
+          tech_type_mask: 262144
+          allowed_ip_stack: ipv4v6
     apple:
         carrier_entitlements:
             supported_entitlements: 4195505
@@ -27,7 +43,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 86400
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -57,7 +72,6 @@ common:
                   lifetime_seconds: 86400
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 86400
             validate_remote_certificate: false
         ip_stack: ipv6
         register:

@@ -6,6 +6,11 @@ supported_plmns:
     - "21910"
 plmn_overrides:
     "21910":
+        apns:
+            - apn: internet
+              type_mask: 32817
+            - apn: mms
+              type_mask: 4
         apple:
             carrier_entitlements:
                 supported_entitlements: 13313

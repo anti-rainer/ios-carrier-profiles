@@ -6,10 +6,14 @@ profiles:
       generic: true
       selectors:
         - raw: "45404"
+          carrier_name: Hutchison HK
+          iso: HK
     - id: apple_multibyte
       path: profiles/multibyte.yaml
       selectors:
         - raw: 45404_GID1-0227_GID2-02280
+          carrier_name: MultiByte
+          iso: HK
           conditions:
             - field: gid1
               match: prefix

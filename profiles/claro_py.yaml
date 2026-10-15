@@ -6,6 +6,25 @@ supported_plmns:
     - "74402"
 plmn_overrides:
     "74402":
+        apns:
+            - apn: igprs.claro.com.py
+              username: clarogprs
+              password: clarogprs999
+              type_mask: 1048625
+              tech_type_mask: 1048576
+              allowed_ip_stack: ipv4v6
+              apple_options:
+                AllowedProtocolMaskInRoaming: "3"
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv4v6
+              support_switch_over: true
+            - apn: sos
+              type_mask: 262144
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv6
         e911:
             over_itech_supported: false
             wifi_calling_without_entitlement: true
@@ -52,10 +71,8 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 86400
-                    lifetime_seconds: 86400
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
-                sa_lifetime_seconds: 86400
             register:
                 use_ipsec: true
             signaling:

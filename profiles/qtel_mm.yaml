@@ -4,3 +4,8 @@ id: apple_qtel_mm
 bundle: Qtel_mm.bundle
 supported_plmns:
     - "41405"
+plmn_overrides:
+    "41405":
+        apns:
+            - apn: internet
+              type_mask: 49

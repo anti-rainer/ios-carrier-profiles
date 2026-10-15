@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "20605"
+          carrier_name: Telenet
+          iso: BE

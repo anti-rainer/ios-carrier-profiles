@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "41805"
+          carrier_name: Asiacell
+          iso: IQ

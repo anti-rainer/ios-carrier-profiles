@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "70802"
+          carrier_name: TIGO HND
+          iso: HN

@@ -6,6 +6,23 @@ supported_plmns:
     - "41677"
 plmn_overrides:
     "41677":
+        apns:
+            - apn: net.orange.jo
+              username: net
+              password: net
+              type_mask: 49
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+            - apn: mms.orange.jo
+              username: mmc
+              password: mmc
+              type_mask: 4
+            - apn: net.orange.jo
+              username: net
+              password: net
+              type_mask: 48
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
         ims:
             register:
                 use_ipsec: true

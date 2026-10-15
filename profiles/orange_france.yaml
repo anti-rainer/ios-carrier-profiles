@@ -6,6 +6,34 @@ supported_plmns:
     - "20801"
     - "20802"
 common:
+    apns:
+        - apn: orange
+          username: orange
+          password: orange
+          type_mask: 1081399
+          allowed_ip_stack: ipv6
+          roaming_ip_stack: ipv4v6
+          xlat464_enabled: true
+        - apn: vowifiorange
+          username: orange
+          password: orange
+          tech_type_mask: 1081350
+          use_network_mtu: true
+        - apn: ims
+          username: orange
+          password: orange
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv4v6
+          support_switch_over: true
+          support_5g_sa_handover: true
+          use_network_mtu: true
+        - apn: sos
+          type_mask: 262144
+          tech_type_mask: 262144
+          allowed_ip_stack: ipv4v6
+          use_network_mtu: true
+          allow_no_dns: 1
     apple:
         carrier_entitlements:
             supported_entitlements: 4236497
@@ -27,7 +55,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 80000
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -60,7 +87,6 @@ common:
                   authentication_method: None
                   eap_method: EAP-AKA
             remote_identifier_type: KeyID
-            sa_lifetime_seconds: 80000
             validate_remote_certificate: false
         ip_stack: ipv4v6
         media:

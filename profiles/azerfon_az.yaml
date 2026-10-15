@@ -6,6 +6,11 @@ supported_plmns:
     - "40004"
 plmn_overrides:
     "40004":
+        apns:
+            - apn: NAR
+              type_mask: 49
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
         ims:
             register:
                 use_ipsec: true
@@ -19,3 +24,5 @@ plmn_overrides:
                             - +g.3gpp.mid-call
                             - +g.3gpp.srvcc-alerting
                             - +g.3gpp.ps2cs-srvcc-orig-pre-alerting
+            volte:
+                enable_volte_by_default: true

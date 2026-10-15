@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "41308"
+          carrier_name: HUTCH
+          iso: LK

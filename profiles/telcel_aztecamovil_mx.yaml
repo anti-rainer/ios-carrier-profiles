@@ -6,6 +6,11 @@ supported_plmns:
     - "334020"
 plmn_overrides:
     "334020":
+        apns:
+            - apn: internet.mvne1.com
+              type_mask: 49
+            - apn: internet.mvne1.com
+              type_mask: 48
         ims:
             register:
                 use_ipsec: true

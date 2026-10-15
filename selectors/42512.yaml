@@ -5,6 +5,8 @@ profiles:
       path: profiles/primemobile.yaml
       selectors:
         - raw: 42512_GID1-2636
+          carrier_name: Prime Mobile
+          iso: IL
           conditions:
             - field: gid1
               match: prefix

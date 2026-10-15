@@ -4,3 +4,10 @@ id: apple_bhartiairtel_ke
 bundle: BhartiAirtel_ke.bundle
 supported_plmns:
     - "63903"
+plmn_overrides:
+    "63903":
+        apns:
+            - apn: INTERNET
+              type_mask: 49
+            - apn: INTERNET
+              type_mask: 48

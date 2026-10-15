@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "70269"
+          carrier_name: Smart
+          iso: BZ

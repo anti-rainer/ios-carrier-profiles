@@ -4,3 +4,10 @@ id: apple_bhartiairtel_gh
 bundle: BhartiAirtel_gh.bundle
 supported_plmns:
     - "62006"
+plmn_overrides:
+    "62006":
+        apns:
+            - apn: internet
+              type_mask: 49
+            - apn: internet
+              type_mask: 48

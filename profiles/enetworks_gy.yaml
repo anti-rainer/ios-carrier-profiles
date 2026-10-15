@@ -6,6 +6,14 @@ supported_plmns:
     - "738040"
 plmn_overrides:
     "738040":
+        apns:
+            - apn: enet
+              type_mask: 49
+            - apn: ims
+              type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              use_network_mtu: true
+              allow_no_dns: 1
         e911:
             emergency_urns:
                 "911": urn:service:sos.police

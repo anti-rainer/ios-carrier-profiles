@@ -6,7 +6,11 @@ profiles:
       generic: true
       selectors:
         - raw: "24002"
+          carrier_name: 3 SE
+          iso: SE
         - raw: 24002_GID1-00000002
+          carrier_name: Hallon
+          iso: SE
           conditions:
             - field: gid1
               match: prefix

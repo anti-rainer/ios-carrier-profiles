@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "51402"
+          carrier_name: TT
+          iso: TL

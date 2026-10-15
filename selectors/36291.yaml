@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "36291"
+          carrier_name: CHIPPIE
+          iso: CW

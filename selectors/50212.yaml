@@ -5,6 +5,8 @@ profiles:
       path: profiles/bics.yaml
       selectors:
         - raw: 50212_ID-893204
+          carrier_name: BICS
+          iso: MY
           conditions:
             - field: iccid
               match: prefix
@@ -14,10 +16,14 @@ profiles:
       generic: true
       selectors:
         - raw: "50212"
+          carrier_name: Maxis
+          iso: MY
     - id: apple_redteamobile
       path: profiles/redteamobile.yaml
       selectors:
         - raw: 50212_ID-89852245280
+          carrier_name: RedteaMobile
+          iso: MY
           conditions:
             - field: iccid
               match: prefix
@@ -26,6 +32,8 @@ profiles:
       path: profiles/soracom.yaml
       selectors:
         - raw: 50212_ID-8942310
+          carrier_name: SORACOM
+          iso: MY
           conditions:
             - field: iccid
               match: prefix

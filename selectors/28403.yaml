@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "28403"
+          carrier_name: VIVACOM
+          iso: BG

@@ -6,6 +6,21 @@ supported_plmns:
     - "24603"
 plmn_overrides:
     "24603":
+        apns:
+            - apn: internet.tele2.lt
+              type_mask: 32817
+              allowed_ip_stack: ipv4v6
+            - apn: mms.tele2.lt
+              type_mask: 4
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv6
+              support_switch_over: true
+            - apn: hos
+              type_mask: 1048576
+              tech_type_mask: 1048576
+              allowed_ip_stack: ipv6
         apple:
             carrier_entitlements:
                 supported_entitlements: 5121

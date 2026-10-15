@@ -5,6 +5,8 @@ profiles:
       path: profiles/bt_business_uk.yaml
       selectors:
         - raw: 23430_GID1-B3
+          carrier_name: EE
+          iso: GB
           conditions:
             - field: gid1
               match: prefix
@@ -13,6 +15,8 @@ profiles:
       path: profiles/bt_consumer_uk.yaml
       selectors:
         - raw: 23430_GID1-C3
+          carrier_name: BT-C
+          iso: GB
           conditions:
             - field: gid1
               match: prefix
@@ -21,6 +25,8 @@ profiles:
       path: profiles/bt_onephone_uk.yaml
       selectors:
         - raw: 23430_GID1-B2
+          carrier_name: BT-OP
+          iso: GB
           conditions:
             - field: gid1
               match: prefix
@@ -30,3 +36,5 @@ profiles:
       generic: true
       selectors:
         - raw: "23430"
+          carrier_name: EE
+          iso: GB

@@ -6,6 +6,25 @@ supported_plmns:
     - "50503"
 plmn_overrides:
     "50503":
+        apns:
+            - apn: live.vodafone.com
+              type_mask: 32817
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+              xlat464_enabled: true
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+              support_switch_over: true
+              support_5g_sa_handover: true
+            - apn: HOS
+              type_mask: 1048582
+              tech_type_mask: 1048582
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+              support_5g_sa_handover: true
         apple:
             carrier_entitlements:
                 supported_entitlements: 1
@@ -50,13 +69,11 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 80000
-                    lifetime_seconds: 80000
                     replay_window_size: 12
                 local_identifier: vha@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 remote_certificate_authority_name: DigiCert Global Root G2
                 remote_certificate_hostname: epdg.epc.mnc003.mcc505.pub.3gppnetwork.org
                 validate_remote_certificate: true
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
                 include_cellular_network_info: true

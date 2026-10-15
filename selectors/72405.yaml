@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "72405"
+          carrier_name: Claro Brasil
+          iso: BR

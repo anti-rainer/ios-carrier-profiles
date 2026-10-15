@@ -6,6 +6,17 @@ supported_plmns:
     - "25506"
 plmn_overrides:
     "25506":
+        apns:
+            - apn: internet
+              type_mask: 32817
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              support_switch_over: true
+              use_network_mtu: true
         apple:
             carrier_entitlements:
                 supported_entitlements: 5121
@@ -37,8 +48,6 @@ plmn_overrides:
                             - sha512
                           esn: auto
                           lifetime_seconds: 86400
-                    lifetime_seconds: 86400
-                sa_lifetime_seconds: 86400
             register:
                 use_ipsec: true
                 include_cellular_network_info: true

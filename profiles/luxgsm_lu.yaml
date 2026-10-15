@@ -6,6 +6,26 @@ supported_plmns:
     - "27001"
 plmn_overrides:
     "27001":
+        apns:
+            - apn: web.pt.lu
+              type_mask: 49
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv6
+              support_switch_over: true
+              use_network_mtu: true
+              no_cellular_reconnect_cause_codes:
+                - cause_codes:
+                    - 33
+                  recovers_on_airplane_mode: false
+                  num_tries_allowed: 2
+                  type: 3GPP
+                  timeout: 3600
+            - apn: hos
+              type_mask: 1048576
+              tech_type_mask: 1048576
+              allowed_ip_stack: ipv6
         e911:
             over_itech_supported: false
             wifi_calling_without_entitlement: true
@@ -52,11 +72,9 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 80000
-                    lifetime_seconds: 80000
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
             signaling:

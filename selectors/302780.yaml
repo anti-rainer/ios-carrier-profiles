@@ -6,10 +6,14 @@ profiles:
       generic: true
       selectors:
         - raw: "302780"
+          carrier_name: SaskTel
+          iso: CA
     - id: apple_sasktel_lum_ca
       path: profiles/sasktel_lum_ca.yaml
       selectors:
         - raw: 302780_GID1-5b
+          carrier_name: LUM Mobile
+          iso: CA
           conditions:
             - field: gid1
               match: prefix

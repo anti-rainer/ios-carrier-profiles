@@ -6,6 +6,16 @@ supported_plmns:
     - "21601"
 plmn_overrides:
     "21601":
+        apns:
+            - apn: online
+              type_mask: 49
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+            - apn: mms
+              type_mask: 4
+            - apn: ims
+              type_mask: 131072
+              allowed_ip_stack: ipv6
         ims:
             apn: ims
             ip_stack: ipv6

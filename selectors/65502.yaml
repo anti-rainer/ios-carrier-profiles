@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "65502"
+          carrier_name: TelkomSA
+          iso: ZA

@@ -8,9 +8,38 @@ supported_plmns:
     - "26278"
     - "26298"
 common:
+    apns:
+        - apn: internet.v6.telekom
+          username: telekom
+          password: telekom
+          type_mask: 32817
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4
+          xlat464_enabled: true
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv6
+          roaming_ip_stack: ipv6
+          support_switch_over: true
+          support_5g_sa_handover: true
+          no_cellular_reconnect_cause_codes:
+            - cause_codes:
+                - 30
+                - 33
+              recovers_on_airplane_mode: true
+              num_tries_allowed: 2
+              type: 3GPP
+              timeout: 86400
+        - apn: hos
+          type_mask: 1048582
+          tech_type_mask: 1048582
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4
+          xlat464_enabled: true
     apple:
         carrier_entitlements:
-            supported_entitlements: 4307969
+            supported_entitlements: 12696577
     e911:
         emergency_urns:
             "110": urn:service:sos.police
@@ -32,7 +61,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 64800
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -61,7 +89,6 @@ common:
                   lifetime_seconds: 64800
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 64800
             validate_remote_certificate: false
         ip_stack: ipv6
         media:

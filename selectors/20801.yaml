@@ -5,6 +5,8 @@ profiles:
       path: profiles/1and1_de.yaml
       selectors:
         - raw: 20801_ID-894936
+          carrier_name: 1&1
+          iso: DE
           conditions:
             - field: iccid
               match: prefix
@@ -13,6 +15,8 @@ profiles:
       path: profiles/affinityclick.yaml
       selectors:
         - raw: 20801_GID1-616C6F73696D31
+          carrier_name: aloSIM
+          iso: FR
           conditions:
             - field: gid1
               match: prefix
@@ -21,6 +25,8 @@ profiles:
       path: profiles/airgsm.yaml
       selectors:
         - raw: 20801_GID1-41
+          carrier_name: Airalo
+          iso: FR
           conditions:
             - field: gid1
               match: prefix
@@ -29,6 +35,8 @@ profiles:
       path: profiles/cmcc_cmi.yaml
       selectors:
         - raw: 20801_ID-8985234
+          carrier_name: CMLink
+          iso: FR
           conditions:
             - field: iccid
               match: prefix
@@ -37,6 +45,8 @@ profiles:
       path: profiles/coriolis_fr.yaml
       selectors:
         - raw: 20801_ID-893327
+          carrier_name: Coriolis
+          iso: FR
           conditions:
             - field: iccid
               match: prefix
@@ -45,6 +55,8 @@ profiles:
       path: profiles/holafly.yaml
       selectors:
         - raw: 20801_GID1-0407_ID-893301
+          carrier_name: Holafly
+          iso: FR
           conditions:
             - field: gid1
               match: prefix
@@ -56,6 +68,8 @@ profiles:
       path: profiles/knowroaming.yaml
       selectors:
         - raw: 20801_GID1-636f6e6e65637431
+          carrier_name: Connect
+          iso: FR
           conditions:
             - field: gid1
               match: prefix
@@ -64,6 +78,8 @@ profiles:
       path: profiles/monacotel_mc.yaml
       selectors:
         - raw: 20801_ID-8937710
+          carrier_name: Monaco Telecom
+          iso: MC
           conditions:
             - field: iccid
               match: prefix
@@ -72,6 +88,8 @@ profiles:
       path: profiles/nrj_fr.yaml
       selectors:
         - raw: 20801_ID-893326
+          carrier_name: BTBD
+          iso: FR
           conditions:
             - field: iccid
               match: prefix
@@ -80,6 +98,8 @@ profiles:
       path: profiles/ora_pf.yaml
       selectors:
         - raw: 20801_ID-8954705
+          carrier_name: ORA MOBILE
+          iso: PF
           conditions:
             - field: iccid
               match: prefix
@@ -89,10 +109,14 @@ profiles:
       generic: true
       selectors:
         - raw: "20801"
+          carrier_name: Orange France
+          iso: FR
     - id: apple_rakuten_jp
       path: profiles/rakuten_jp.yaml
       selectors:
         - raw: 20801_ID-8981090
+          carrier_name: Rakuten
+          iso: JP
           conditions:
             - field: iccid
               match: prefix
@@ -101,6 +125,8 @@ profiles:
       path: profiles/simly.yaml
       selectors:
         - raw: 20801_GID1-73696D6C7931
+          carrier_name: Simly
+          iso: FR
           conditions:
             - field: gid1
               match: prefix
@@ -109,14 +135,28 @@ profiles:
       path: profiles/webbing.yaml
       selectors:
         - raw: 20801_ID-8985235
+          carrier_name: Webbing
+          iso: FR
           conditions:
             - field: iccid
               match: prefix
               value: "8985235"
+    - id: apple_wonet
+      path: profiles/wonet.yaml
+      selectors:
+        - raw: 20801_GID1-cc11
+          carrier_name: USIMS
+          iso: FR
+          conditions:
+            - field: gid1
+              match: prefix
+              value: CC11
     - id: apple_zeop_re
       path: profiles/zeop_re.yaml
       selectors:
         - raw: 20801_ID-892620497
+          carrier_name: Zeop
+          iso: RE
           conditions:
             - field: iccid
               match: prefix

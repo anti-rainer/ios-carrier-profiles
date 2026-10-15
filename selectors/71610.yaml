@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "71610"
+          carrier_name: CLARO PERU
+          iso: PE

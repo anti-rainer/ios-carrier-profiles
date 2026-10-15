@@ -6,6 +6,17 @@ supported_plmns:
     - "60801"
 plmn_overrides:
     "60801":
+        apns:
+            - apn: internet
+              username: internet
+              password: internet
+              type_mask: 49
+              allowed_ip_stack: ipv4
+            - apn: xcap
+              username: internet
+              password: internet
+              type_mask: 1048576
+              allowed_ip_stack: ipv4v6
         ims:
             register:
                 use_ipsec: true

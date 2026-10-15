@@ -4,3 +4,12 @@ id: apple_tigo_sv
 bundle: Tigo_sv.bundle
 supported_plmns:
     - "70603"
+plmn_overrides:
+    "70603":
+        apns:
+            - apn: internet.tigo.sv
+              type_mask: 49
+            - apn: mms.tigo.sv
+              type_mask: 4
+            - apn: internet.tigo.sv
+              type_mask: 48

@@ -4,3 +4,10 @@ id: apple_bhartiairtel_cg
 bundle: BhartiAirtel_cg.bundle
 supported_plmns:
     - "62901"
+plmn_overrides:
+    "62901":
+        apns:
+            - apn: internet.cg.airtel.com
+              type_mask: 49
+            - apn: internet.cg.airtel.com
+              type_mask: 48

@@ -6,6 +6,24 @@ supported_plmns:
     - "72234"
     - "722341"
 common:
+    apns:
+        - apn: datos.personal.com
+          username: datos
+          password: datos
+          type_mask: 1
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+        - apn: internet.personal.com
+          username: internet
+          password: internet
+          type_mask: 48
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv4v6
+          support_switch_over: true
     e911:
         over_itech_supported: false
         wifi_calling_without_entitlement: true
@@ -23,7 +41,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 86400
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -54,7 +71,6 @@ common:
                   lifetime_seconds: 86400
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 86400
         impi_format: imsi@carrierDomain
         impu_format: imsi@carrierDomain
         ip_stack: ipv4v6

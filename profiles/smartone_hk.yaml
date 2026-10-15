@@ -7,6 +7,25 @@ supported_plmns:
     - "45415"
     - "45417"
 common:
+    apns:
+        - apn: smartone
+          type_mask: 32775
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          support_switch_over: true
+          support_5g_sa_handover: true
+        - apn: internet
+          type_mask: 48
+        - apn: smt
+          type_mask: 1048576
+          tech_type_mask: 1048576
+        - apn: sos
+          type_mask: 262144
+          tech_type_mask: 262144
+          allowed_ip_stack: ipv4
+          support_switch_over: true
+          allow_no_dns: 1
     apple:
         carrier_entitlements:
             supported_entitlements: 11649
@@ -28,7 +47,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 80000
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -58,7 +76,6 @@ common:
                   lifetime_seconds: 80000
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 80000
             validate_remote_certificate: false
         media:
             rtcp_interval_seconds: 5

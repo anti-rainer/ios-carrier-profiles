@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "45601"
+          carrier_name: Cellcard
+          iso: KH

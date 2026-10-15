@@ -5,6 +5,8 @@ profiles:
       path: profiles/fastweb_it.yaml
       selectors:
         - raw: 22801_GID1-D8FFFFFFFFFFFFFF
+          carrier_name: Fastweb
+          iso: IT
           conditions:
             - field: gid1
               match: prefix
@@ -14,10 +16,14 @@ profiles:
       generic: true
       selectors:
         - raw: "22801"
+          carrier_name: Swisscom
+          iso: CH
     - id: apple_swisscom_wingo_ch
       path: profiles/swisscom_wingo_ch.yaml
       selectors:
         - raw: 22801_GID1-01_GID2-01
+          carrier_name: Wingo
+          iso: CH
           conditions:
             - field: gid1
               match: prefix

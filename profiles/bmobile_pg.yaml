@@ -4,3 +4,10 @@ id: apple_bmobile_pg
 bundle: bMobile_pg.bundle
 supported_plmns:
     - "53701"
+plmn_overrides:
+    "53701":
+        apns:
+            - apn: internet
+              type_mask: 49
+            - apn: internet
+              type_mask: 48

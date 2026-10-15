@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "42899"
+          carrier_name: MobiCom
+          iso: MN

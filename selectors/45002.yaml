@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "45002"
+          carrier_name: KT
+          iso: KR

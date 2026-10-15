@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "24491"
+          carrier_name: Telia FI
+          iso: FI

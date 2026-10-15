@@ -6,6 +6,29 @@ supported_plmns:
     - "23457"
     - "24007"
 common:
+    apns:
+        - apn: mobile.sky
+          type_mask: 32819
+          tech_type_mask: 2
+          allowed_ip_stack: ipv4
+        - apn: mms.mobile.sky
+          type_mask: 4
+          allowed_ip_stack: ipv4
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+          support_switch_over: true
+          use_network_mtu: true
+          allow_no_dns: 1
+        - apn: wifi.mms.mobile.sky
+          tech_type_mask: 4
+          allowed_ip_stack: ipv4
+        - apn: ut.mobile.sky
+          type_mask: 1048576
+          tech_type_mask: 1048576
+          allowed_ip_stack: ipv4
     apple:
         carrier_entitlements:
             supported_entitlements: 8193
@@ -27,7 +50,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 86400
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -56,7 +78,6 @@ common:
                   lifetime_seconds: 86400
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 86400
         ip_stack: ipv4v6
         media:
             rtp_inactivity_seconds: 20

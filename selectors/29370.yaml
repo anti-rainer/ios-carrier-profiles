@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "29370"
+          carrier_name: TELEMACH
+          iso: SI

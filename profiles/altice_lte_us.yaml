@@ -6,6 +6,42 @@ supported_plmns:
     - "20809"
     - "313390"
 common:
+    apns:
+        - apn: altice
+          type_mask: 32771
+          allowed_ip_stack: ipv4
+          roaming_ip_stack: ipv4
+          domestic_roaming_ip_stack: ipv4
+        - apn: tethering
+          type_mask: 48
+          allowed_ip_stack: ipv4
+          roaming_ip_stack: ipv4
+          domestic_roaming_ip_stack: ipv4
+        - apn: mms
+          type_mask: 4
+          tech_type_mask: 4
+          allowed_ip_stack: ipv4
+          roaming_ip_stack: ipv4
+          domestic_roaming_ip_stack: ipv4
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv4
+          roaming_ip_stack: ipv4
+          domestic_roaming_ip_stack: ipv4
+          support_switch_over: true
+        - apn: xcap
+          type_mask: 1048576
+          tech_type_mask: 1048576
+          allowed_ip_stack: ipv4
+          roaming_ip_stack: ipv4
+          domestic_roaming_ip_stack: ipv4
+        - apn: sos
+          type_mask: 262144
+          tech_type_mask: 262144
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+          domestic_roaming_ip_stack: ipv4v6
     apple:
         carrier_entitlements:
             supported_entitlements: 153
@@ -31,7 +67,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 80000
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -60,7 +95,6 @@ common:
                   lifetime_seconds: 86400
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 86400
             validate_remote_certificate: false
         ip_stack: ipv4
         media:

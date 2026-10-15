@@ -7,6 +7,33 @@ supported_plmns:
     - "302221"
     - "302222"
 common:
+    apns:
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv6
+          roaming_ip_stack: ipv4v6
+          support_switch_over: true
+          support_5g_sa_handover: true
+        - apn: sp.telus.com
+          type_mask: 32775
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4
+          use_network_mtu: true
+        - apn: isp.telus.com
+          type_mask: 48
+          allowed_ip_stack: ipv4
+          roaming_ip_stack: ipv4
+        - apn: services.telus.com
+          type_mask: 1048576
+          tech_type_mask: 1048582
+          allowed_ip_stack: ipv6
+          roaming_ip_stack: ipv4v6
+        - apn: sos
+          type_mask: 262144
+          tech_type_mask: 262144
+          allowed_ip_stack: ipv6
+          roaming_ip_stack: ipv4v6
     apple:
         carrier_entitlements:
             supported_entitlements: 4209841
@@ -25,7 +52,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 86400
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -55,7 +81,6 @@ common:
                   lifetime_seconds: 80000
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 80000
             validate_remote_certificate: false
         ip_stack: ipv4v6
         media:

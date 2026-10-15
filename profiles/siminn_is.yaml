@@ -6,9 +6,21 @@ supported_plmns:
     - "27401"
 plmn_overrides:
     "27401":
+        apns:
+            - apn: internet
+              type_mask: 32817
+            - apn: mms.simi.is
+              type_mask: 4
+              tech_type_mask: 4
+            - apn: hos
+              type_mask: 1048576
+              tech_type_mask: 1048576
+            - apn: sos
+              type_mask: 262144
+              tech_type_mask: 262144
         apple:
             carrier_entitlements:
-                supported_entitlements: 5121
+                supported_entitlements: 13313
         e911:
             over_itech_supported: false
         entitlement:

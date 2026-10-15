@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "62006"
+          carrier_name: Airtel
+          iso: GH

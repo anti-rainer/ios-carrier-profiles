@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "37635"
+          carrier_name: FLOW
+          iso: TC

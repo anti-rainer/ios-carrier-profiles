@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "23203"
+          carrier_name: Magenta-T-
+          iso: AT

@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "738040"
+          carrier_name: ENet
+          iso: GY

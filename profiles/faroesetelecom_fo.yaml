@@ -6,6 +6,15 @@ supported_plmns:
     - "28801"
 plmn_overrides:
     "28801":
+        apns:
+            - apn: internet
+              type_mask: 32817
+              allowed_ip_stack: ipv4
+              use_network_mtu: true
+            - apn: hos
+              type_mask: 1048576
+              tech_type_mask: 1048576
+              allowed_ip_stack: ipv4
         apple:
             carrier_entitlements:
                 supported_entitlements: 1

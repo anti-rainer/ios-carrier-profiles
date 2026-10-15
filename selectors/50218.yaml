@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "50218"
+          carrier_name: U Mobile
+          iso: MY

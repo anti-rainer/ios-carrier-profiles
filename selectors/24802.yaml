@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "24802"
+          carrier_name: Elisa
+          iso: EE

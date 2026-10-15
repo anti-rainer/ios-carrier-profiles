@@ -5,6 +5,7 @@ profiles:
       path: profiles/cmcc_cmi.yaml
       selectors:
         - raw: 90101_ID-8985234
+          carrier_name: CMLink
           conditions:
             - field: iccid
               match: prefix
@@ -13,6 +14,7 @@ profiles:
       path: profiles/webbing.yaml
       selectors:
         - raw: 90101_ID-8985235
+          carrier_name: Webbing
           conditions:
             - field: iccid
               match: prefix

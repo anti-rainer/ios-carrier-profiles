@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "60802"
+          carrier_name: Free
+          iso: SN

@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "54801"
+          carrier_name: Telecom Cook
+          iso: CK

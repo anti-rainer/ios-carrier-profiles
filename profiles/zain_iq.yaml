@@ -6,6 +6,15 @@ supported_plmns:
     - "41820"
     - "41830"
 common:
+    apns:
+        - apn: internet
+          type_mask: 49
+        - apn: mms
+          username: mms
+          password: app
+          type_mask: 4
+        - apn: internet
+          type_mask: 48
     ims:
         register:
             use_ipsec: true

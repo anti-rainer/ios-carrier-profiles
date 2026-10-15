@@ -6,3 +6,9 @@ supported_plmns:
     - "22201"
     - "23453"
     - "313770"
+common:
+    apns:
+        - apn: globaldata
+          type_mask: 65541
+        - apn: globalhotspot
+          type_mask: 48

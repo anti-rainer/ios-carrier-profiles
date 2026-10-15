@@ -6,6 +6,27 @@ supported_plmns:
     - "24801"
 plmn_overrides:
     "24801":
+        apns:
+            - apn: internet.emt.ee
+              type_mask: 32817
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              support_switch_over: true
+            - apn: mms.emt.ee
+              type_mask: 4
+              tech_type_mask: 4
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: hos
+              type_mask: 1048576
+              tech_type_mask: 1048576
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+              support_switch_over: true
         apple:
             carrier_entitlements:
                 supported_entitlements: 13313
@@ -54,11 +75,9 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 86400
-                    lifetime_seconds: 86400
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 86400
             register:
                 use_ipsec: true
                 include_cellular_network_info: true

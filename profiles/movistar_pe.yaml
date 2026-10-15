@@ -6,6 +6,16 @@ supported_plmns:
     - "21407"
     - "71606"
 common:
+    apns:
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv4
+          support_switch_over: true
+        - apn: movistar.pe
+          username: movistar@datos
+          password: movistar
+          type_mask: 1048625
     e911:
         over_itech_supported: false
         wifi_calling_without_entitlement: true
@@ -22,7 +32,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 80000
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -52,9 +61,9 @@ common:
                   lifetime_seconds: 80000
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 80000
         ip_stack: ipv4
         register:
+            expires: 3600
             include_cellular_network_info: true
             use_ipsec: true
         signaling:

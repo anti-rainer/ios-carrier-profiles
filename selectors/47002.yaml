@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "47002"
+          carrier_name: Robi
+          iso: BD

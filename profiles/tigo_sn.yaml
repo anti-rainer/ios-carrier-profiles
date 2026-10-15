@@ -4,3 +4,8 @@ id: apple_tigo_sn
 bundle: Tigo_sn.bundle
 supported_plmns:
     - "60802"
+plmn_overrides:
+    "60802":
+        apns:
+            - apn: web.sentel.com
+              type_mask: 49

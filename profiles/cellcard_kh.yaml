@@ -6,6 +6,9 @@ supported_plmns:
     - "45601"
 plmn_overrides:
     "45601":
+        apns:
+            - apn: cellcard
+              type_mask: 49
         ims:
             volte:
                 enable_volte_by_default: true

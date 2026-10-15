@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "27601"
+          carrier_name: One.al
+          iso: AL

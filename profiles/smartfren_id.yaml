@@ -7,6 +7,15 @@ supported_plmns:
     - "51028"
     - "52505"
 common:
+    apns:
+        - apn: smartfren4g
+          type_mask: 1048625
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          support_switch_over: true
     e911:
         over_itech_supported: false
         wifi_calling_without_entitlement: true
@@ -23,7 +32,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 80000
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -44,12 +52,11 @@ common:
                 max_retries: 4
                 retry_interval_seconds: 10
             local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
-            sa_lifetime_seconds: 80000
-        ip_stack: ipv4
         media:
             rtcp_interval_seconds: 5
         register:
             include_cellular_network_info: true
+            use_ipsec: true
         signaling:
             contact:
                 always_add_sip_instance: true

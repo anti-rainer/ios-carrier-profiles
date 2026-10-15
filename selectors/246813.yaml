@@ -6,3 +6,4 @@ profiles:
       generic: true
       selectors:
         - raw: "246813"
+          iso: LT

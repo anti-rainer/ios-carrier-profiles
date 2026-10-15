@@ -8,6 +8,38 @@ supported_plmns:
     - "310950"
     - "311180"
 common:
+    apns:
+        - apn: eReseller
+          type_mask: 1081351
+          tech_type_mask: 1081351
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+          always_on_pdu: true
+          use_network_mtu: true
+        - apn: ResellerMHT
+          type_mask: 48
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+          use_network_mtu: true
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+          always_on_pdu: true
+          support_switch_over: true
+          use_network_mtu: true
+          no_cellular_reconnect_cause_codes:
+            - cause_codes:
+                - 33
+              recovers_on_airplane_mode: true
+              type: 3GPP
+        - apn: sos
+          type_mask: 262144
+          tech_type_mask: 262144
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+          use_network_mtu: true
     apple:
         carrier_entitlements:
             supported_entitlements: 4194945
@@ -28,7 +60,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 80000
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -58,7 +89,6 @@ common:
                   lifetime_seconds: 80000
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 80000
             validate_remote_certificate: false
         ip_stack: ipv4v6
         media:

@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "36301"
+          carrier_name: SETAR
+          iso: AW

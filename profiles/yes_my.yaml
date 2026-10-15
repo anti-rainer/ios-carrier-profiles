@@ -6,6 +6,18 @@ supported_plmns:
     - "502152"
     - "52505"
 common:
+    apns:
+        - apn: yesnet
+          type_mask: 49
+          allowed_ip_stack: ipv4v6
+        - apn: ims
+          type_mask: 131072
+          allowed_ip_stack: ipv6
+          support_switch_over: true
+        - apn: sos
+          type_mask: 262144
+          tech_type_mask: 262144
+          allowed_ip_stack: ipv6
     e911:
         over_itech_supported: false
     ims:

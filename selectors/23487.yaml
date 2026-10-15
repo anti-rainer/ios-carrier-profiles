@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "23487"
+          carrier_name: Lebara UK
+          iso: GB

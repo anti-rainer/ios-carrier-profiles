@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "344030"
+          carrier_name: APUA inet
+          iso: AG

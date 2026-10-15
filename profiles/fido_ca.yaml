@@ -6,6 +6,38 @@ supported_plmns:
     - "302370"
 plmn_overrides:
     "302370":
+        apns:
+            - apn: ltemobile.apn
+              type_mask: 32775
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+              xlat464_enabled: true
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv6
+              support_switch_over: true
+              no_cellular_reconnect_cause_codes:
+                - cause_codes:
+                    - 29
+                  recovers_on_airplane_mode: true
+                  num_tries_allowed: 1
+                  type: 3GPP
+            - apn: ltedata.apn
+              type_mask: 48
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+            - apn: netsvcs
+              type_mask: 1048576
+              tech_type_mask: 1048582
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: sos
+              type_mask: 262144
+              tech_type_mask: 262144
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv6
         apple:
             carrier_entitlements:
                 supported_entitlements: 4202673
@@ -55,11 +87,9 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 86400
-                    lifetime_seconds: 86400
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
                 include_cellular_network_info: true

@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "28001"
+          carrier_name: Cyta
+          iso: CY

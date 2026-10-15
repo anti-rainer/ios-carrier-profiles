@@ -6,6 +6,13 @@ supported_plmns:
     - "22001"
 plmn_overrides:
     "22001":
+        apns:
+            - apn: internet
+              username: yettel
+              password: gprs
+              type_mask: 49
+            - apn: mms
+              type_mask: 4
         ims:
             register:
                 use_ipsec: true

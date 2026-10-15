@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "34004"
+          carrier_name: Free
+          iso: MQ

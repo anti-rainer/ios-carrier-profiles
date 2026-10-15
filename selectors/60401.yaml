@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "60401"
+          carrier_name: IAM
+          iso: MA

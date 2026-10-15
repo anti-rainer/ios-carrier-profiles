@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "43602"
+          carrier_name: TCELL
+          iso: TJ

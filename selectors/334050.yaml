@@ -6,10 +6,14 @@ profiles:
       generic: true
       selectors:
         - raw: "334050"
+          carrier_name: AT&T
+          iso: MX
     - id: apple_iusacell_unefon_mx
       path: profiles/iusacell_unefon_mx.yaml
       selectors:
         - raw: 334050_GID2-FFFFFF55
+          carrier_name: UNEFON
+          iso: MX
           conditions:
             - field: gid2
               match: prefix
@@ -18,6 +22,8 @@ profiles:
       path: profiles/iusacell_wim_mx.yaml
       selectors:
         - raw: 334050_GID1-4F4E45
+          carrier_name: WIM
+          iso: MX
           conditions:
             - field: gid1
               match: prefix

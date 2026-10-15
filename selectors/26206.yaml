@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "26206"
+          carrier_name: Telekom.de
+          iso: DE

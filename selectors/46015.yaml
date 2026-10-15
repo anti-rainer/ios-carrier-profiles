@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "46015"
+          carrier_name: 中国广电
+          iso: CN

@@ -6,6 +6,19 @@ supported_plmns:
     - "26806"
 plmn_overrides:
     "26806":
+        apns:
+            - apn: internet
+              type_mask: 32817
+            - apn: mmsc.tmn.pt
+              type_mask: 4
+            - apn: ims
+              type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              support_5g_sa_handover: true
+              use_network_mtu: true
+            - apn: hos
+              type_mask: 1048576
+              allowed_ip_stack: ipv4v6
         apple:
             carrier_entitlements:
                 supported_entitlements: 13313
@@ -40,6 +53,7 @@ plmn_overrides:
                             - +g.3gpp.mid-call
                             - +g.3gpp.srvcc-alerting
                             - +g.3gpp.ps2cs-srvcc-orig-pre-alerting
+                            - text
                         - selector: REGISTER[wifi]
                           params:
                             - +g.3gpp.accesstype="wlan1"

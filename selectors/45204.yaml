@@ -5,6 +5,8 @@ profiles:
       path: profiles/affinityclick.yaml
       selectors:
         - raw: 45204_GID1-616C6F73696D31
+          carrier_name: aloSIM
+          iso: VN
           conditions:
             - field: gid1
               match: prefix
@@ -13,6 +15,8 @@ profiles:
       path: profiles/knowroaming.yaml
       selectors:
         - raw: 45204_GID1-636f6e6e65637431
+          carrier_name: Connect
+          iso: VN
           conditions:
             - field: gid1
               match: prefix
@@ -21,6 +25,8 @@ profiles:
       path: profiles/metfone_kh.yaml
       selectors:
         - raw: 45204_ID-8985508
+          carrier_name: Metfone
+          iso: KH
           conditions:
             - field: iccid
               match: prefix
@@ -29,6 +35,8 @@ profiles:
       path: profiles/mysim.yaml
       selectors:
         - raw: 45204_GID1-434F423236303036
+          carrier_name: UPeSIM
+          iso: VN
           conditions:
             - field: gid1
               match: prefix
@@ -37,6 +45,8 @@ profiles:
       path: profiles/natcom_ht.yaml
       selectors:
         - raw: 45204_ID-8950903
+          carrier_name: NATCOM
+          iso: HT
           conditions:
             - field: iccid
               match: prefix
@@ -45,6 +55,8 @@ profiles:
       path: profiles/unitel_la.yaml
       selectors:
         - raw: 45204_ID-8945703
+          carrier_name: Unitel
+          iso: LA
           conditions:
             - field: iccid
               match: prefix
@@ -54,3 +66,5 @@ profiles:
       generic: true
       selectors:
         - raw: "45204"
+          carrier_name: Viettel
+          iso: VN

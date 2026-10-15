@@ -5,6 +5,8 @@ profiles:
       path: profiles/knowroaming.yaml
       selectors:
         - raw: 41909_GID1-636f6e6e65637431
+          carrier_name: Connect
+          iso: KW
           conditions:
             - field: gid1
               match: prefix

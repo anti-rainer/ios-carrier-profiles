@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "52005"
+          carrier_name: dtac
+          iso: TH

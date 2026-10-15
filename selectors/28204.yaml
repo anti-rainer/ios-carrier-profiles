@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "28204"
+          carrier_name: Cellfie
+          iso: GE

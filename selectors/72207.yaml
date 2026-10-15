@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "72207"
+          carrier_name: Movistar
+          iso: AR

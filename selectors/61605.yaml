@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "61605"
+          carrier_name: GLO
+          iso: BJ

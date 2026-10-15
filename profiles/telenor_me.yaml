@@ -6,6 +6,13 @@ supported_plmns:
     - "29701"
 plmn_overrides:
     "29701":
+        apns:
+            - apn: internet
+              type_mask: 49
+            - apn: mms
+              username: mms
+              password: mms
+              type_mask: 4
         ims:
             register:
                 use_ipsec: true

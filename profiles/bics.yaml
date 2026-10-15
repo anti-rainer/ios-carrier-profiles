@@ -11,3 +11,7 @@ supported_plmns:
     - "50212"
     - "52505"
     - "72454"
+common:
+    apns:
+        - apn: bicsapn
+          type_mask: 49

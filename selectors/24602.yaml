@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "24602"
+          carrier_name: Bite
+          iso: LT

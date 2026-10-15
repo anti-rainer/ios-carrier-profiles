@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "42701"
+          carrier_name: Ooredoo
+          iso: QA

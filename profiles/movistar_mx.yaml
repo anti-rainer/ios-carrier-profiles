@@ -6,6 +6,14 @@ supported_plmns:
     - "33403"
 plmn_overrides:
     "33403":
+        apns:
+            - apn: internet.movistar.mx
+              username: movistar
+              password: movistar
+              type_mask: 1081393
+            - apn: ims
+              type_mask: 131072
+              support_switch_over: true
         apple:
             carrier_entitlements:
                 supported_entitlements: 8193

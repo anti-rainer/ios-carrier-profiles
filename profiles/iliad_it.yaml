@@ -6,6 +6,9 @@ supported_plmns:
     - "20815"
     - "22250"
 common:
+    apns:
+        - apn: iliad
+          type_mask: 55
     ims:
         register:
             use_ipsec: true

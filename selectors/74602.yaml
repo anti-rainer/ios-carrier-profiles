@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "74602"
+          carrier_name: Telesur
+          iso: SR

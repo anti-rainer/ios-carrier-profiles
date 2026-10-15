@@ -6,6 +6,15 @@ supported_plmns:
     - "42203"
 plmn_overrides:
     "42203":
+        apns:
+            - apn: ooredoo
+              type_mask: 53
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+            - apn: ooredoo
+              type_mask: 52
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
         ims:
             signaling:
                 support_p_early_media: false

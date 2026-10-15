@@ -6,3 +6,9 @@ supported_plmns:
     - "20601"
     - "302370"
     - "73008"
+common:
+    apns:
+        - apn: movil.vtr.com
+          username: vtrmovil
+          password: vtrmovil
+          type_mask: 49

@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "41201"
+          carrier_name: AWCC
+          iso: AF

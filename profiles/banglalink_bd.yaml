@@ -6,6 +6,14 @@ supported_plmns:
     - "47003"
 plmn_overrides:
     "47003":
+        apns:
+            - apn: blweb
+              type_mask: 49
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+              xlat464_enabled: true
+            - apn: blmms
+              type_mask: 4
         ims:
             ussi:
                 enabled: true

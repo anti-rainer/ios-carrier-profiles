@@ -38,6 +38,9 @@ supported_plmns:
     - "732123"
     - "90131"
 common:
+    apns:
+        - apn: alosim
+          type_mask: 49
     ims:
         volte:
             enable_volte_by_default: false

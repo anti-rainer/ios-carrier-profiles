@@ -5,6 +5,8 @@ profiles:
       path: profiles/cellcom_golan_il.yaml
       selectors:
         - raw: 42502_ID-89972080
+          carrier_name: GOLAN T
+          iso: IL
           conditions:
             - field: iccid
               match: prefix
@@ -14,3 +16,5 @@ profiles:
       generic: true
       selectors:
         - raw: "42502"
+          carrier_name: Cellcom
+          iso: IL

@@ -5,6 +5,8 @@ profiles:
       path: profiles/bics.yaml
       selectors:
         - raw: 72454_ID-893204
+          carrier_name: BICS
+          iso: BR
           conditions:
             - field: iccid
               match: prefix

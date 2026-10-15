@@ -4,3 +4,18 @@ id: apple_telekomsrbija_me
 bundle: TelekomSrbija_me.bundle
 supported_plmns:
     - "29703"
+plmn_overrides:
+    "29703":
+        apns:
+            - apn: mtelinternet
+              username: internet
+              password: "068"
+              type_mask: 49
+            - apn: mtelmms
+              username: mms
+              password: "068"
+              type_mask: 4
+            - apn: mtelinternet
+              username: internet
+              password: "068"
+              type_mask: 48

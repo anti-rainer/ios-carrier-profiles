@@ -6,6 +6,13 @@ supported_plmns:
     - "41805"
 plmn_overrides:
     "41805":
+        apns:
+            - apn: net.asiacell.com
+              type_mask: 49
+            - apn: wap.asiacell.com
+              type_mask: 4
+            - apn: net.asiacell.com
+              type_mask: 48
         ims:
             register:
                 use_ipsec: true

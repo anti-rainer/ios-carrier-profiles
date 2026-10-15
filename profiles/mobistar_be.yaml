@@ -6,6 +6,22 @@ supported_plmns:
     - "20610"
 plmn_overrides:
     "20610":
+        apns:
+            - apn: mworld.be
+              type_mask: 32817
+            - apn: mms.be
+              type_mask: 6
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              support_switch_over: true
+              use_network_mtu: true
+              allow_no_dns: 1
+            - apn: sos
+              type_mask: 262144
+              allowed_ip_stack: ipv4v6
+              use_network_mtu: true
+              allow_no_dns: 1
         apple:
             carrier_entitlements:
                 supported_entitlements: 4202705
@@ -53,12 +69,10 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 80000
-                    lifetime_seconds: 80000
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 remote_identifier_type: KeyID
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
             signaling:

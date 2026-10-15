@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "60302"
+          carrier_name: Djezzy
+          iso: DZ

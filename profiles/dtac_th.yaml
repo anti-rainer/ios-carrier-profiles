@@ -6,6 +6,22 @@ supported_plmns:
     - "52005"
     - "52018"
 common:
+    apns:
+        - apn: www.dtac.co.th
+          type_mask: 32817
+        - apn: mms
+          type_mask: 4
+        - apn: www.dtac.co.th
+          type_mask: 32816
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv6
+          support_switch_over: true
+        - apn: xcap
+          type_mask: 1048576
+          tech_type_mask: 1048576
+          allowed_ip_stack: ipv6
     apple:
         carrier_entitlements:
             supported_entitlements: 11473
@@ -28,7 +44,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 80000
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -58,7 +73,6 @@ common:
                   lifetime_seconds: 80000
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 80000
             validate_remote_certificate: false
         impi_format: imsi@carrierDomain
         impu_format: msisdn@carrierDomain

@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "64301"
+          carrier_name: mcel
+          iso: MZ

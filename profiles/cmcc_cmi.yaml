@@ -15,3 +15,7 @@ supported_plmns:
     - "454384"
     - "732123"
     - "90101"
+common:
+    apns:
+        - apn: cmlink
+          type_mask: 49

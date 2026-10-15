@@ -6,6 +6,31 @@ supported_plmns:
     - "23102"
 plmn_overrides:
     "23102":
+        apns:
+            - apn: internet
+              type_mask: 32817
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+              xlat464_enabled: true
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv6
+              roaming_ip_stack: ipv6
+              support_switch_over: true
+              no_cellular_reconnect_cause_codes:
+                - cause_codes:
+                    - 33
+                  recovers_on_airplane_mode: true
+                  num_tries_allowed: 2
+                  type: 3GPP
+                  timeout: 86400
+            - apn: hos
+              type_mask: 1048580
+              tech_type_mask: 1048580
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+              xlat464_enabled: true
         apple:
             carrier_entitlements:
                 supported_entitlements: 4207617

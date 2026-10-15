@@ -6,6 +6,9 @@ supported_plmns:
     - "28202"
 plmn_overrides:
     "28202":
+        apns:
+            - apn: 3g.ge
+              type_mask: 53
         ims:
             register:
                 use_ipsec: true

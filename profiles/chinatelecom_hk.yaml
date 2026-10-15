@@ -6,6 +6,29 @@ supported_plmns:
     - "45400"
     - "45431"
 common:
+    apns:
+        - apn: CTExcel
+          type_mask: 1048625
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+          support_switch_over: true
+          wait_for_bring_up_complete: true
+        - apn: CTNET
+          type_mask: 561
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+          use_network_mtu: true
+        - apn: sos
+          type_mask: 262144
+          tech_type_mask: 262144
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+          allow_no_dns: 1
     e911:
         emergency_urns:
             "110": urn:service:sos.police

@@ -5,6 +5,8 @@ profiles:
       path: profiles/att_aio_nr_us.yaml
       selectors:
         - raw: 310150_GID1-53FF
+          carrier_name: Cricket
+          iso: US
           conditions:
             - field: gid1
               match: prefix
@@ -14,3 +16,5 @@ profiles:
       generic: true
       selectors:
         - raw: "310150"
+          carrier_name: Cricket
+          iso: US

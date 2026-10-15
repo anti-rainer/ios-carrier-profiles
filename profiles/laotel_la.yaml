@@ -6,6 +6,11 @@ supported_plmns:
     - "45701"
 plmn_overrides:
     "45701":
+        apns:
+            - apn: ltcnet
+              type_mask: 49
+            - apn: ims
+              type_mask: 131072
         ims:
             apn: ims
             register:

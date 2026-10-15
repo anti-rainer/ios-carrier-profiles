@@ -5,6 +5,8 @@ profiles:
       path: profiles/talkmobile_uk.yaml
       selectors:
         - raw: 23415_GID1-C1
+          carrier_name: Talkmobile
+          iso: GB
           conditions:
             - field: gid1
               match: prefix
@@ -14,3 +16,5 @@ profiles:
       generic: true
       selectors:
         - raw: "23415"
+          carrier_name: vodafone UK
+          iso: GB

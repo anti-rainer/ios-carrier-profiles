@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "52503"
+          carrier_name: M1 Singapore
+          iso: SG

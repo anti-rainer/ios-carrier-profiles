@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "73001"
+          carrier_name: entel
+          iso: CL

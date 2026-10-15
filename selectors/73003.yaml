@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "73003"
+          carrier_name: Claro
+          iso: CL

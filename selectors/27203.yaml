@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "27203"
+          carrier_name: Eir
+          iso: IE

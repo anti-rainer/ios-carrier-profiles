@@ -5,6 +5,8 @@ profiles:
       path: profiles/esimgo.yaml
       selectors:
         - raw: 23457_GID1-0409
+          carrier_name: eSIM Go
+          iso: GB
           conditions:
             - field: gid1
               match: prefix
@@ -13,6 +15,8 @@ profiles:
       path: profiles/o2_sky_uk.yaml
       selectors:
         - raw: 23457_GID1-0C
+          carrier_name: Sky
+          iso: GB
           conditions:
             - field: gid1
               match: prefix

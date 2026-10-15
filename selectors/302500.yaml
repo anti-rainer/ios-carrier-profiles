@@ -6,10 +6,14 @@ profiles:
       generic: true
       selectors:
         - raw: "302500"
+          carrier_name: Videotron
+          iso: CA
     - id: apple_videotron_fizz_ca
       path: profiles/videotron_fizz_ca.yaml
       selectors:
         - raw: 302500_GID1-55
+          carrier_name: Fizz
+          iso: CA
           conditions:
             - field: gid1
               match: prefix

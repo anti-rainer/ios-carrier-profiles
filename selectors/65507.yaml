@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "65507"
+          carrier_name: Cell C
+          iso: ZA

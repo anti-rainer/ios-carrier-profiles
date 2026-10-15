@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "40004"
+          carrier_name: NAR
+          iso: AZ

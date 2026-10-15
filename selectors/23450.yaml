@@ -5,6 +5,8 @@ profiles:
       path: profiles/affinityclick.yaml
       selectors:
         - raw: 23450_GID1-616C6F73696D31
+          carrier_name: aloSIM
+          iso: GB
           conditions:
             - field: gid1
               match: prefix
@@ -13,6 +15,8 @@ profiles:
       path: profiles/dentwireless.yaml
       selectors:
         - raw: 23450_GID1-3597bfd533
+          carrier_name: DENT
+          iso: GB
           conditions:
             - field: gid1
               match: prefix
@@ -21,6 +25,8 @@ profiles:
       path: profiles/flexiroam.yaml
       selectors:
         - raw: 23450_GID1-46526F616D313054
+          carrier_name: Flexiroam
+          iso: GB
           conditions:
             - field: gid1
               match: prefix
@@ -30,10 +36,14 @@ profiles:
       generic: true
       selectors:
         - raw: "23450"
+          carrier_name: Jersey Telecom
+          iso: JE
     - id: apple_knowroaming
       path: profiles/knowroaming.yaml
       selectors:
         - raw: 23450_GID1-636f6e6e65637431
+          carrier_name: Connect
+          iso: GB
           conditions:
             - field: gid1
               match: prefix
@@ -42,6 +52,8 @@ profiles:
       path: profiles/primemobile.yaml
       selectors:
         - raw: 23450_GID1-2636
+          carrier_name: Prime Mobile
+          iso: GB
           conditions:
             - field: gid1
               match: prefix

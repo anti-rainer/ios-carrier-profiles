@@ -6,9 +6,44 @@ supported_plmns:
     - "311840"
 plmn_overrides:
     "311840":
+        apns:
+            - apn: ccinternet
+              type_mask: 1
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: ccadmin
+              type_mask: 33280
+              tech_type_mask: 33280
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+              support_switch_over: true
+            - apn: ccapps
+              type_mask: 6
+              tech_type_mask: 6
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: cchotspot
+              type_mask: 16
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: xcap
+              type_mask: 1048576
+              tech_type_mask: 1048576
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: sos
+              type_mask: 262144
+              tech_type_mask: 262144
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
         apple:
             carrier_entitlements:
-                supported_entitlements: 11481
+                supported_entitlements: 4205785
         e911:
             over_itech_supported: false
             emergency_urns:
@@ -52,7 +87,6 @@ plmn_overrides:
                 local_identifier_type: IDUserFQDN
                 remote_identifier_type: IDFQDN
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 86400
             register:
                 include_cellular_network_info: true
             signaling:

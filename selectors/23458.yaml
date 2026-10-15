@@ -6,10 +6,14 @@ profiles:
       generic: true
       selectors:
         - raw: "23458"
+          carrier_name: Manx Telecom
+          iso: IM
     - id: apple_redteamobile
       path: profiles/redteamobile.yaml
       selectors:
         - raw: 23458_ID-89852245280
+          carrier_name: RedteaMobile
+          iso: GB
           conditions:
             - field: iccid
               match: prefix

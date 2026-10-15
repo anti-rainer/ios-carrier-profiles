@@ -12,6 +12,9 @@ supported_plmns:
     - "312870"
     - "338050"
 common:
+    apns:
+        - apn: gigsky
+          type_mask: 65585
     ims:
         volte:
             enable_volte_by_default: false

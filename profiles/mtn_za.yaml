@@ -6,6 +6,23 @@ supported_plmns:
     - "65510"
 plmn_overrides:
     "65510":
+        apns:
+            - apn: mymtn
+              type_mask: 32821
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4
+              support_switch_over: true
+              use_network_mtu: true
+              allow_no_dns: 1
+            - apn: hos
+              type_mask: 1048576
+              tech_type_mask: 1048576
+            - apn: sos
+              type_mask: 262144
+              tech_type_mask: 262144
+              allowed_ip_stack: ipv4
         apple:
             carrier_entitlements:
                 supported_entitlements: 5121
@@ -35,8 +52,6 @@ plmn_overrides:
                           rekey_pfs_group: 2
                           esn: auto
                           lifetime_seconds: 86400
-                    lifetime_seconds: 86400
-                sa_lifetime_seconds: 86400
             register:
                 use_ipsec: true
                 include_cellular_network_info: true
@@ -65,4 +80,4 @@ plmn_overrides:
             volte:
                 enable_volte_by_default: true
         roaming:
-            wifi_calling_allowed: false
+            wifi_calling_allowed: true

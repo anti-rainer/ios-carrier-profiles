@@ -6,9 +6,30 @@ supported_plmns:
     - "312130"
 plmn_overrides:
     "312130":
+        apns:
+            - apn: 4g.myawi.com
+              type_mask: 33335
+              allowed_ip_stack: ipv4
+              roaming_ip_stack: ipv4
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131078
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+              support_switch_over: true
+            - apn: hos.myawi.com
+              type_mask: 1048576
+              tech_type_mask: 1048576
+              allowed_ip_stack: ipv4
+              roaming_ip_stack: ipv4
+            - apn: sos
+              type_mask: 262144
+              tech_type_mask: 262144
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
         apple:
             carrier_entitlements:
-                supported_entitlements: 1209
+                supported_entitlements: 4195513
         e911:
             over_itech_supported: false
             emergency_urns:
@@ -57,13 +78,11 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 86400
-                    lifetime_seconds: 86400
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 local_identifier_type: IDUserFQDN
                 remote_identifier_type: IDFQDN
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
                 include_cellular_network_info: true

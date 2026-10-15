@@ -6,9 +6,39 @@ supported_plmns:
     - "44054"
     - "44055"
 common:
+    apns:
+        - apn: uio5gn.au-net.ne.jp
+          username: 685840734641020@uio5gn.au-net.ne.jp
+          password: KpyrR6BP
+          auth_type: CHAP
+          type_mask: 33303
+        - apn: uio5gn.au-net.ne.jp
+          username: 685840734641020@uio5gn.au-net.ne.jp
+          password: KpyrR6BP
+          auth_type: CHAP
+          type_mask: 33287
+          allowed_ip_stack: ipv4v6
+        - apn: IMS
+          type_mask: 131072
+          allowed_ip_stack: ipv6
+          roaming_ip_stack: ipv6
+        - apn: uio5gntrg.au-net.ne.jp
+          username: X36yN3Dhe9UjPhzm@uio5gntrg.au-net.ne.jp
+          password: KpyrR6BP
+          auth_type: CHAP
+          type_mask: 16
+          allowed_ip_stack: ipv4v6
+        - apn: xcap
+          type_mask: 1048576
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+        - apn: ""
+          type_mask: 262144
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
     apple:
         carrier_entitlements:
-            supported_entitlements: 44041
+            supported_entitlements: 568345
     e911:
         emergency_urns:
             "110": urn:service:sos.police

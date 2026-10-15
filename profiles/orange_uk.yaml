@@ -6,6 +6,25 @@ supported_plmns:
     - "23433"
 plmn_overrides:
     "23433":
+        apns:
+            - apn: everywhere
+              type_mask: 32817
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+              xlat464_enabled: true
+            - apn: eezone
+              type_mask: 1048582
+              tech_type_mask: 1048582
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv6
+              support_switch_over: true
+              support_5g_sa_handover: true
+            - apn: sos
+              type_mask: 262144
+              tech_type_mask: 262144
+              allowed_ip_stack: ipv6
         apple:
             carrier_entitlements:
                 supported_entitlements: 4202497
@@ -53,11 +72,9 @@ plmn_overrides:
                           rekey_pfs_group: 14
                           esn: auto
                           lifetime_seconds: 86400
-                    lifetime_seconds: 86400
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
             signaling:

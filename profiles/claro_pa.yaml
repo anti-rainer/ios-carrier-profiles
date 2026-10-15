@@ -7,6 +7,17 @@ supported_plmns:
     - "334020"
     - "71403"
 common:
+    apns:
+        - apn: web.claro.com.pa
+          username: CLAROWEB
+          password: CLAROWEB
+          type_mask: 49
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131072
+          allowed_ip_stack: ipv4
+          support_switch_over: true
+          use_network_mtu: true
     e911:
         over_itech_supported: false
         wifi_calling_without_entitlement: true
@@ -23,7 +34,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 86400
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -46,7 +56,6 @@ common:
                   lifetime_seconds: 86400
                   authentication_method: None
                   eap_method: EAP-AKA
-            sa_lifetime_seconds: 86400
         ip_stack: ipv4
         media:
             rtp_inactivity_seconds: 10

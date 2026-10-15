@@ -6,6 +6,17 @@ supported_plmns:
     - "20820"
 plmn_overrides:
     "20820":
+        apns:
+            - apn: mmsbouygtel.com
+              type_mask: 1081399
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+              xlat464_enabled: true
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv6
+              support_switch_over: true
         apple:
             carrier_entitlements:
                 supported_entitlements: 4202705
@@ -56,14 +67,12 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 80000
-                    lifetime_seconds: 80000
                     replay_window_size: 12
                 local_identifier: anonymous@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 username: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 remote_certificate_authority_name: DigiCert Global G2 TLS RSA SHA256 2020 CA1
                 remote_certificate_hostname: epdg.epc.mnc020.mcc208.pub.3gppnetwork.org
                 validate_remote_certificate: true
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
                 include_cellular_network_info: true

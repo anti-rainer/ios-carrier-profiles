@@ -5,3 +5,9 @@ bundle: APUA_ag.bundle
 supported_plmns:
     - "34403"
     - "344030"
+common:
+    apns:
+        - apn: net
+          type_mask: 1
+        - apn: net
+          type_mask: 48

@@ -6,6 +6,21 @@ supported_plmns:
     - "26801"
 plmn_overrides:
     "26801":
+        apns:
+            - apn: net2.vodafone.pt
+              username: vodafone
+              password: vodafone
+              type_mask: 1081349
+            - apn: ims
+              type_mask: 131072
+            - apn: net2.vodafone.pt
+              username: vodafone
+              password: vodafone
+              type_mask: 1048580
+            - apn: internet.vodafone.pt
+              username: vodafone
+              password: vodafone
+              type_mask: 48
         apple:
             carrier_entitlements:
                 supported_entitlements: 13312

@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "52004"
+          carrier_name: TRUE-H
+          iso: TH

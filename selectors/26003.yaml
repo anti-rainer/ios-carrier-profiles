@@ -5,6 +5,8 @@ profiles:
       path: profiles/dentwireless.yaml
       selectors:
         - raw: 26003_GID1-3597bfd533
+          carrier_name: DENT
+          iso: PL
           conditions:
             - field: gid1
               match: prefix
@@ -14,10 +16,14 @@ profiles:
       generic: true
       selectors:
         - raw: "26003"
+          carrier_name: Orange
+          iso: PL
     - id: apple_primemobile
       path: profiles/primemobile.yaml
       selectors:
         - raw: 26003_GID1-2636
+          carrier_name: Prime Mobile
+          iso: PL
           conditions:
             - field: gid1
               match: prefix
@@ -26,6 +32,8 @@ profiles:
       path: profiles/redteamobile.yaml
       selectors:
         - raw: 26003_ID-89852245280
+          carrier_name: RedteaMobile
+          iso: PL
           conditions:
             - field: iccid
               match: prefix

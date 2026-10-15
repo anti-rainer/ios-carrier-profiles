@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "21910"
+          carrier_name: A1 HR
+          iso: HR

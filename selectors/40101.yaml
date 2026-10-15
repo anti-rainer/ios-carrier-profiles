@@ -5,6 +5,8 @@ profiles:
       path: profiles/vimpelcom_izi_kz.yaml
       selectors:
         - raw: 40101_ID-89997015608
+          carrier_name: izi
+          iso: KZ
           conditions:
             - field: iccid
               match: prefix
@@ -14,3 +16,5 @@ profiles:
       generic: true
       selectors:
         - raw: "40101"
+          carrier_name: Beeline
+          iso: KZ

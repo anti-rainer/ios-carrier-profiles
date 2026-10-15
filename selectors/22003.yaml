@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "22003"
+          carrier_name: mt:s
+          iso: RS

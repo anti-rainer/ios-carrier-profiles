@@ -6,14 +6,45 @@ supported_plmns:
     - "21401"
 plmn_overrides:
     "21401":
+        apns:
+            - apn: airtelwap.es
+              username: wap@wap
+              password: wap125
+              type_mask: 32769
+              allow_no_dns: 1
+            - apn: airtelwap.es
+              username: wap@wap
+              password: wap125
+              type_mask: 0
+              allow_no_dns: 1
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              support_switch_over: true
+            - apn: airtelnet.es
+              username: vodafone
+              password: vodafone
+              type_mask: 48
+              allow_no_dns: 1
+            - apn: ut.es
+              type_mask: 1048576
+              tech_type_mask: 1048576
+              allowed_ip_stack: ipv4v6
+              allow_no_dns: 1
+            - apn: sos
+              type_mask: 262144
+              tech_type_mask: 262144
+              allowed_ip_stack: ipv4v6
+              allow_no_dns: 1
         apple:
             carrier_entitlements:
-                supported_entitlements: 74768
+                supported_entitlements: 4269072
         e911:
             over_itech_supported: false
             wifi_calling_without_entitlement: true
         entitlement:
-            entitlement_url: https://es-es.vodafone.com:4446/ium-OEMInterface/servlet/IUMServlet
+            entitlement_url: https://es-prod.entitlement.vodafone.com:4446/ium-OEMInterface/servlet/IUMServlet
         ims:
             apn: ims
             ip_stack: ipv4v6
@@ -51,8 +82,6 @@ plmn_overrides:
                             - sha256
                           esn: auto
                           lifetime_seconds: 86400
-                    lifetime_seconds: 86400
-                sa_lifetime_seconds: 86400
             register:
                 use_ipsec: true
                 include_cellular_network_info: true

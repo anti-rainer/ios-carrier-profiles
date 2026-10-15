@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "26601"
+          carrier_name: Gibtel
+          iso: GI

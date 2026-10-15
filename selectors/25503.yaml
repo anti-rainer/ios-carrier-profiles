@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "25503"
+          carrier_name: Kyivstar
+          iso: UA

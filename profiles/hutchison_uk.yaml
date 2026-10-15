@@ -6,6 +6,22 @@ supported_plmns:
     - "23420"
 plmn_overrides:
     "23420":
+        apns:
+            - apn: three.co.uk
+              type_mask: 1081349
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4
+              xlat464_enabled: true
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv6
+              support_switch_over: true
+            - apn: 3hotspot
+              type_mask: 48
+            - apn: sos
+              type_mask: 262144
+              allowed_ip_stack: ipv4v6
         apple:
             carrier_entitlements:
                 supported_entitlements: 4207617
@@ -55,27 +71,25 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 80000
-                    lifetime_seconds: 80000
                     replay_window_size: 12
                 local_identifier: anonymous@nai.epc.mnc020.mcc234.3gppnetwork.org
                 username: 0$imsi@nai.epc.mnc020.mcc234.3gppnetwork.org
                 remote_certificate_authority_name: DigiCert Global Root G2
                 remote_certificate_hostname: epdg.epc.mnc020.mcc234.pub.3gppnetwork.org
                 validate_remote_certificate: true
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
             signaling:
                 preconditions: supported
                 support_p_early_media: true
                 early_media_needs_header: true
-                csfb_on:
+                re_register_on:
+                    - method: REGISTER
+                      statuses:
+                        - "500"
                     - method: INVITE
                       statuses:
-                        - 3XX
-                        - 4XX
-                        - 5XX
-                        - 6XX
+                        - "500"
                 require_preconditions_when_mandatory: false
                 contact:
                     always_add_sip_instance: true
@@ -84,6 +98,8 @@ plmn_overrides:
                           params:
                             - +g.3gpp.mid-call
                             - +g.3gpp.srvcc-alerting
+                sip_timers:
+                    InviteResponseTimeout: 0
             media:
                 rtp_inactivity_seconds: 20
                 rtcp_interval_seconds: 5

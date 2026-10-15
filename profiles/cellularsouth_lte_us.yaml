@@ -6,6 +6,49 @@ supported_plmns:
     - "20404"
     - "311230"
 common:
+    apns:
+        - apn: inet.cs.com
+          username: Uniroam@inet.cs.com
+          password: cs3g
+          type_mask: 32775
+          allowed_ip_stack: ipv4
+          roaming_ip_stack: ipv4
+        - apn: admin.cs4gLTE.com
+          username: Uniroam@inet.cs.com
+          password: cs3g
+          type_mask: 512
+          allowed_ip_stack: ipv4
+          roaming_ip_stack: ipv4
+        - apn: inet.cs.com
+          username: Uniroam@inet.cs.com
+          password: cs3g
+          type_mask: 48
+          allowed_ip_stack: ipv4
+          roaming_ip_stack: ipv4
+        - apn: ims
+          type_mask: 131072
+          tech_type_mask: 131078
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+          support_switch_over: true
+        - apn: internet.cs4gLTE.com
+          type_mask: 1081351
+          tech_type_mask: 1048576
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
+        - apn: tethering.cs4gLTE.com
+          type_mask: 48
+          allowed_ip_stack: ipv4
+          roaming_ip_stack: ipv4
+        - apn: admin.cs4gLTE.com
+          type_mask: 512
+          allowed_ip_stack: ipv4
+          roaming_ip_stack: ipv4
+        - apn: sos
+          type_mask: 262144
+          tech_type_mask: 262144
+          allowed_ip_stack: ipv4v6
+          roaming_ip_stack: ipv4v6
     apple:
         carrier_entitlements:
             supported_entitlements: 4205721
@@ -29,7 +72,6 @@ common:
                   type: v6
         ike:
             child_sa:
-                lifetime_seconds: 86400
                 proposals:
                     - source_branch: FirstChild
                       encryption:
@@ -61,7 +103,6 @@ common:
                   authentication_method: None
                   eap_method: EAP-AKA
             remote_identifier_type: IDFQDN
-            sa_lifetime_seconds: 80000
             validate_remote_certificate: false
         impi_format: imsi@carrierDomain
         impu_format: imsi@carrierDomain

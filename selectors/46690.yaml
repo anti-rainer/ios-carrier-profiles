@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "46690"
+          carrier_name: 台灣之星
+          iso: TW

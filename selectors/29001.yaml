@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "29001"
+          carrier_name: Tusass
+          iso: GL

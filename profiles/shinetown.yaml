@@ -8,3 +8,7 @@ supported_plmns:
     - "45403"
     - "45407"
     - "45501"
+common:
+    apns:
+        - apn: ppcom
+          type_mask: 49

@@ -4,3 +4,8 @@ id: apple_flexiroam
 bundle: Flexiroam.bundle
 supported_plmns:
     - "23450"
+plmn_overrides:
+    "23450":
+        apns:
+            - apn: pepper
+              type_mask: 49

@@ -6,6 +6,24 @@ supported_plmns:
     - "27602"
 plmn_overrides:
     "27602":
+        apns:
+            - apn: vodafoneweb
+              username: web
+              password: web
+              type_mask: 49
+            - apn: vodafoneweb
+              username: web
+              password: web
+              type_mask: 48
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4
+              support_switch_over: true
+            - apn: hos
+              type_mask: 1048576
+              tech_type_mask: 1048576
+              allowed_ip_stack: ipv4
         e911:
             over_itech_supported: true
             wifi_calling_without_entitlement: true
@@ -33,8 +51,6 @@ plmn_overrides:
                           rekey_pfs_group: 2
                           esn: auto
                           lifetime_seconds: 86400
-                    lifetime_seconds: 86400
-                sa_lifetime_seconds: 86400
             register:
                 use_ipsec: true
             signaling:

@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "27077"
+          carrier_name: TANGO
+          iso: LU

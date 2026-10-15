@@ -6,6 +6,28 @@ supported_plmns:
     - "22801"
 plmn_overrides:
     "22801":
+        apns:
+            - apn: gprs.swisscom.ch
+              type_mask: 32819
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+              use_network_mtu: true
+              xlat464_enabled: true
+            - apn: ims
+              type_mask: 131072
+              tech_type_mask: 131072
+              allowed_ip_stack: ipv4v6
+              support_switch_over: true
+            - apn: event.swisscom.ch
+              tech_type_mask: 2
+            - apn: hos
+              type_mask: 1048576
+              tech_type_mask: 1048576
+              allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
+            - apn: sos
+              type_mask: 262144
+              allowed_ip_stack: ipv6
         apple:
             carrier_entitlements:
                 supported_entitlements: 113665
@@ -67,11 +89,9 @@ plmn_overrides:
                           esn: auto
                           install_policies: true
                           lifetime_seconds: 80000
-                    lifetime_seconds: 80000
                     replay_window_size: 12
                 local_identifier: 0$imsi@nai.epc.mnc$mnc.mcc$mcc.3gppnetwork.org
                 validate_remote_certificate: false
-                sa_lifetime_seconds: 80000
             register:
                 use_ipsec: true
             signaling:

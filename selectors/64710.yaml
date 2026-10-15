@@ -6,3 +6,5 @@ profiles:
       generic: true
       selectors:
         - raw: "64710"
+          carrier_name: SFR
+          iso: RE

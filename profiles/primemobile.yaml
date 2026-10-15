@@ -8,3 +8,7 @@ supported_plmns:
     - "26006"
     - "42501"
     - "42512"
+common:
+    apns:
+        - apn: fastaccess
+          type_mask: 49
