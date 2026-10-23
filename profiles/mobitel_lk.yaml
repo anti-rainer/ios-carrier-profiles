@@ -80,5 +80,12 @@ plmn_overrides:
                             - +g.3gpp.srvcc-alerting
                             - +g.3gpp.ps2cs-srvcc-orig-pre-alerting
                             - +g.3gpp.mid-call
+            media:
+                codecs:
+                    - payload_type: 127
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=5.9-24.4; bw=nb-wb; ch-aw-recv=-1
         roaming:
             wifi_calling_allowed: true

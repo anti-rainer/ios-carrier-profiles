@@ -72,7 +72,22 @@ plmn_overrides:
                     InviteResponseTimeout: 5000
                     J: 32000
             media:
+                codecs:
+                    - payload_type: 110
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=9.6-24.4; bw=nb-swb
+                telephone_event_pt_8k: 101
+                telephone_event_pt_16k: 103
+                packet_alignment_amr_nb: octetAlignedOnly
+                packet_alignment_amr_wb: octetAlignedOnly
+                payload_type_be_amr_nb: 105
+                payload_type_oa_amr_nb: 98
+                payload_type_be_amr_wb: 106
+                payload_type_oa_amr_wb: 100
                 rtcp_inactivity_seconds: 36000
                 rtcp_interval_seconds: 3
+                evs_hard_bw_limit: nb-swb
             volte:
                 enable_volte_by_default: true

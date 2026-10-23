@@ -105,8 +105,16 @@ plmn_overrides:
                       headers:
                         - 'Feature-Caps: *;+g.3gpp.srvcc-alerting'
             media:
+                codecs:
+                    - payload_type: 109
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=5.9-24.4; bw=nb-swb; ch-aw-recv=-1
+                mode_set_amr_wb: 0,1,2
                 rtp_inactivity_seconds: 20
                 rtcp_interval_seconds: 5
+                evs_hard_bw_limit: nb-swb
             volte:
                 enable_volte_by_default: true
         roaming:

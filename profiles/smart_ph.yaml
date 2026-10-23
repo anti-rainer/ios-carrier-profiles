@@ -105,7 +105,14 @@ plmn_overrides:
                     T2: 16000
                     T4: 17000
             media:
+                codecs:
+                    - payload_type: 109
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=9.6-24.4; bw=nb-swb
                 rtcp_interval_seconds: 5
+                evs_hard_bw_limit: nb-swb
             ussi:
                 enabled: true
             volte:

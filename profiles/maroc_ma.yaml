@@ -46,3 +46,4 @@ plmn_overrides:
             media:
                 rtp_inactivity_seconds: 15
                 rtcp_interval_seconds: 5
+                suppress_octet_align_for_be: false

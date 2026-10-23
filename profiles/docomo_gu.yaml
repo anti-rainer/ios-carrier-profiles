@@ -26,6 +26,15 @@ common:
     ims:
         apn: ims
         ip_stack: ipv4
+        media:
+            codecs:
+                - payload_type: 127
+                  name: EVS
+                  clock_rate: 16000
+                  channels: 1
+                  fmtp: br=9.6-24.4; bw=nb-swb; cmr=-1
+            enable_incoming_dtmf: true
+            evs_hard_bw_limit: nb-swb
         register:
             use_ipsec: true
         signaling:

@@ -34,6 +34,13 @@ common:
         apn: ims
         ip_stack: ipv4v6
         media:
+            codecs:
+                - payload_type: 106
+                  name: EVS
+                  clock_rate: 16000
+                  channels: 1
+                  fmtp: br=5.9-13.2; bw=nb-swb; ch-aw-recv=-1
+            evs_hard_bw_limit: nb-swb
             rtcp_interval_seconds: 5
             rtp_inactivity_seconds: 15
         register:

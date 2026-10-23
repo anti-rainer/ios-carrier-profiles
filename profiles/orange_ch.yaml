@@ -88,6 +88,13 @@ plmn_overrides:
                 sip_timers:
                     InviteResponseTimeout: 4000
             media:
+                codecs:
+                    - payload_type: 109
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=5.9-24.4; bw=nb-wb; ch-aw-recv=0; cmr=1
+                preferred_amr_wb_mode: 8
                 rtp_inactivity_seconds: 10
                 rtcp_interval_seconds: 5
             volte:

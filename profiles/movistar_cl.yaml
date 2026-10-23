@@ -34,6 +34,7 @@ common:
     ims:
         apn: ims
         media:
+            preferred_amr_wb_mode: 8
             rtp_inactivity_seconds: 10
         register:
             use_ipsec: true

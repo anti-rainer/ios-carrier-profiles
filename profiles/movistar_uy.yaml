@@ -12,9 +12,8 @@ plmn_overrides:
               password: movistar
               type_mask: 49
               allowed_ip_stack: ipv4
+              roaming_ip_stack: ipv4
               domestic_roaming_ip_stack: ipv4
-              apple_options:
-                AllowedProtocolMaskInRoaming: "1"
             - apn: ims
               type_mask: 131072
               allowed_ip_stack: ipv6
@@ -44,5 +43,7 @@ plmn_overrides:
                           params:
                             - +g.3gpp.mid-call
                             - +g.3gpp.srvcc-alerting
+            media:
+                rtcp_interval_seconds: 5
             volte:
                 enable_volte_by_default: true

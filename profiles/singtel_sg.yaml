@@ -97,6 +97,14 @@ plmn_overrides:
                     - selector: INVITE
                       headers:
                         - Supported:histinfo
+            media:
+                codecs:
+                    - payload_type: 112
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=5.9-24.4; bw=nb-swb
+                evs_hard_bw_limit: nb-swb
             volte:
                 enable_volte_by_default: true
         roaming:

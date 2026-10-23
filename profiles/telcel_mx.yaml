@@ -79,6 +79,15 @@ common:
                   eap_method: EAP-AKA
         ip_stack: ipv6
         media:
+            codecs:
+                - payload_type: 106
+                  name: EVS
+                  clock_rate: 16000
+                  channels: 1
+                  fmtp: br=9.6-24.4; bw=nb-swb; ch-aw-recv=3
+            evs_hard_bw_limit: nb-swb
+            preferred_amr_nb_mode: 7
+            preferred_amr_wb_mode: 8
             rtcp_inactivity_seconds: 25
             rtp_inactivity_seconds: 30
         register:
@@ -125,6 +134,7 @@ common:
                     - "603"
             early_media_needs_header: true
             max_udp_message_size: 1300
+            preconditions: supported
             require_preconditions_when_mandatory: false
             support_p_early_media: true
         volte:

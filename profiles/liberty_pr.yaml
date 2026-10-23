@@ -107,7 +107,15 @@ plmn_overrides:
                         - 'P-Emergency-Info: IEEE-802.11b;i-wlan-node-id=${DEVICE_REF_ID}'
                         - 'Supported: geolocation'
             media:
+                codecs:
+                    - payload_type: 96
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=5.9-24.4; bw=nb-wb; ch-aw-recv=0
+                preferred_amr_wb_mode: 8
                 rtp_inactivity_seconds: 20
+                enable_incoming_dtmf: true
             ussi:
                 enabled: true
             volte:

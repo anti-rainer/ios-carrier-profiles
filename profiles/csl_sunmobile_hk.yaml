@@ -81,6 +81,8 @@ plmn_overrides:
                             - +g.3gpp.mid-call
                             - +g.3gpp.srvcc-alerting
             media:
+                mode_set_amr_nb: 3,4,5,6,7
+                mode_set_amr_wb: 0,1,2
                 rtcp_interval_seconds: 5
             ussi:
                 enabled: true

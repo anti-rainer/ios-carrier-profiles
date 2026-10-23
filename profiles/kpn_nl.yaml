@@ -74,6 +74,14 @@ common:
             validate_remote_certificate: false
         ip_stack: ipv6
         media:
+            codecs:
+                - payload_type: 112
+                  name: EVS
+                  clock_rate: 16000
+                  channels: 1
+                  fmtp: br=5.9-24.4; bw=nb-swb; ch-aw-recv=3; cmr=1
+            evs_hard_bw_limit: nb-swb
+            preferred_amr_wb_mode: 8
             rtcp_inactivity_seconds: 180
             rtcp_interval_seconds: 5
             rtp_inactivity_seconds: 20

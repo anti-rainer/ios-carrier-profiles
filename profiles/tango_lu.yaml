@@ -93,6 +93,9 @@ plmn_overrides:
                             - +g.3gpp.mid-call
                             - +g.3gpp.srvcc-alerting
                             - +g.3gpp.ps2cs-srvcc-orig-pre-alerting
+            media:
+                support_pcma: true
+                support_pcmu: true
             volte:
                 enable_volte_by_default: true
         roaming:

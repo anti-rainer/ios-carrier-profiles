@@ -94,8 +94,15 @@ plmn_overrides:
                         - 5XX
                 require_preconditions_when_mandatory: false
             media:
+                codecs:
+                    - payload_type: 112
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=5.9-24.4; bw=nb-swb; ch-aw-recv=0
                 rtp_inactivity_seconds: 20
                 rtcp_interval_seconds: 5
+                evs_hard_bw_limit: nb-swb
             volte:
                 enable_volte_by_default: true
         roaming:

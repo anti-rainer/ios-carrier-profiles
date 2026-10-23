@@ -7,13 +7,15 @@ supported_plmns:
     - "51566"
 common:
     apns:
+        - apn: internet.dito.ph
+          allowed_ip_stack: ipv4
         - apn: ims
           type_mask: 131072
           tech_type_mask: 131072
           allowed_ip_stack: ipv4
-          default_ip_stack: ipv4
     ims:
         apn: ims
+        domain: ims.mnc066.mcc515.3gppnetwork.org
         epdg:
             address: epdg.epc.mnc066.mcc515.pub.3gppnetwork.org
         ike:
@@ -26,6 +28,7 @@ common:
                         - sha1
                       esn: auto
                 replay_window_size: 32
+            local_identifier: 0$imsi@nai.epc.mnc066.mcc515.3gppnetwork.org
             nat_keepalive_enabled: true
             nat_keepalive_seconds: 20
             proposals:
@@ -39,10 +42,13 @@ common:
                     - 2
                   authentication_method: None
                   eap_method: EAP-AKA
+            username: 0$imsi@nai.epc.mnc066.mcc515.3gppnetwork.org
         ip_stack: ipv4
         register:
             expires: 7200
             include_cellular_network_info: true
             use_ipsec: true
+        ussi:
+            enabled: true
         volte:
             enable_volte_by_default: true

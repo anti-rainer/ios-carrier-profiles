@@ -80,6 +80,14 @@ common:
                   eap_method: EAP-AKA
         ip_stack: ipv4v6
         media:
+            codecs:
+                - payload_type: 127
+                  name: EVS
+                  clock_rate: 16000
+                  channels: 1
+                  fmtp: br=5.9-24.4; bw=nb-swb; ch-aw-recv=-1
+            evs_hard_bw_limit: nb-swb
+            mode_change_capability: 2
             rtp_inactivity_seconds: 20
         register:
             include_cellular_network_info: false

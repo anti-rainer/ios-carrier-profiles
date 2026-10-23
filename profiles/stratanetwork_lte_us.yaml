@@ -108,6 +108,8 @@ plmn_overrides:
                 rtp_inactivity_seconds: 20
                 rtcp_inactivity_seconds: 20
                 rtcp_interval_seconds: 5
+                max_redundancy: 220
+                enable_incoming_dtmf: true
             volte:
                 enable_volte_by_default: true
         roaming:

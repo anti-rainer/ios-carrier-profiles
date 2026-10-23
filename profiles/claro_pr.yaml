@@ -76,6 +76,8 @@ common:
             username: 0$imsi@nai.epc.mnc110.mcc330.3gppnetwork.org
             validate_remote_certificate: true
         ip_stack: ipv4v6
+        media:
+            enable_incoming_dtmf: true
         register:
             use_ipsec: true
         signaling:

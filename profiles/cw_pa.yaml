@@ -99,6 +99,10 @@ plmn_overrides:
                             - +g.3gpp.ps2cs-srvcc-orig-pre-alerting
                 sip_timers:
                     InviteResponseTimeout: 4500
+            media:
+                preferred_amr_wb_mode: 8
+                mode_set_amr_nb: "7"
+                mode_set_amr_wb: "8"
             volte:
                 enable_volte_by_default: true
         roaming:

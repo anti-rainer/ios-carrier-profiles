@@ -76,6 +76,7 @@ common:
                   eap_method: EAP-AKA
         ip_stack: ipv6
         media:
+            preferred_amr_wb_mode: 8
             rtp_inactivity_seconds: 15
         register:
             use_ipsec: true

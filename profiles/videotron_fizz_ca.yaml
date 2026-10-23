@@ -76,6 +76,7 @@ plmn_overrides:
                 validate_remote_certificate: false
             register:
                 use_ipsec: true
+                expires: 7200
             signaling:
                 preconditions: supported
                 support_p_early_media: true
@@ -88,6 +89,10 @@ plmn_overrides:
                         - "499"
                         - "606"
                 require_preconditions_when_mandatory: false
+            media:
+                rtp_inactivity_seconds: 30
+                max_redundancy: 220
+                enable_incoming_dtmf: true
             volte:
                 enable_volte_by_default: true
         roaming:

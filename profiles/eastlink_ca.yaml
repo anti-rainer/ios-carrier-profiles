@@ -82,6 +82,8 @@ common:
         impu_format: msisdn@carrierDomain
         ip_stack: ipv6
         media:
+            enable_incoming_dtmf: true
+            max_redundancy: 220
             rtp_inactivity_seconds: 30
         register:
             expires: 7200

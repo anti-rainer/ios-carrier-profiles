@@ -52,8 +52,13 @@ plmn_overrides:
             register:
                 use_ipsec: true
             signaling:
+                preconditions: supported
                 support_p_early_media: true
                 early_media_needs_header: true
+                re_register_on:
+                    - method: INVITE
+                      statuses:
+                        - "408"
                 require_qos_before_ringing: true
                 require_preconditions_when_mandatory: false
                 sip_timers:
@@ -65,7 +70,16 @@ plmn_overrides:
                     T1: 3000
                     T2: 16000
             media:
+                codecs:
+                    - payload_type: 109
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=13.2; bw=nb-swb; ch-aw-recv=2
+                mode_set_amr_wb: 0,1,2
                 rtp_inactivity_seconds: 20
                 remote_rtcp_deactivation: true
+                suppress_octet_align_for_be: false
+                evs_hard_bw_limit: nb-swb
             volte:
                 enable_volte_by_default: true

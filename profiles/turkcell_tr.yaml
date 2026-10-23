@@ -106,6 +106,13 @@ plmn_overrides:
                       headers:
                         - 'Supported: geolocation'
             media:
+                codecs:
+                    - payload_type: 109
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=5.9-24.4; bw=nb-wb; ch-aw-recv=2
+                mode_set_amr_wb: 0,1,2
                 rtp_inactivity_seconds: 30
                 rtcp_inactivity_seconds: 3600
                 rtcp_interval_seconds: 5

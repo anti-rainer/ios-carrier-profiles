@@ -46,6 +46,16 @@ plmn_overrides:
                       name: AssignedPCSCFIPv6
                       type: v6
             ike:
+                proposals:
+                    - encryption:
+                        - aes256
+                      integrity:
+                        - sha256
+                      prf:
+                        - sha256
+                      dh_groups:
+                        - 14
+                      lifetime_seconds: 80000
                 nat_keepalive_enabled: true
                 child_sa:
                     proposals:
@@ -80,6 +90,14 @@ plmn_overrides:
                             - +g.3gpp.srvcc-alerting
                             - +g.3gpp.ps2cs-srvcc-orig-pre-alerting
             media:
+                codecs:
+                    - payload_type: 109
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=5.9-24.4; bw=nb-swb; ch-aw-recv=-1; cmr=1
+                preferred_amr_wb_mode: 8
                 rtp_inactivity_seconds: 30
+                evs_hard_bw_limit: nb-swb
             volte:
                 enable_volte_by_default: true

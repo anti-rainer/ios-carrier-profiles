@@ -91,8 +91,11 @@ plmn_overrides:
                             - +g.3gpp.srvcc-alerting
                             - +g.3gpp.ps2cs-srvcc-orig-pre-alerting
             media:
+                preferred_amr_nb_mode: 7
+                preferred_amr_wb_mode: 8
                 rtp_inactivity_seconds: 10
                 rtcp_interval_seconds: 5
+                mode_change_capability: 2
             ussi:
                 enabled: false
             volte:

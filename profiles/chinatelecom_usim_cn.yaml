@@ -51,6 +51,7 @@ common:
         impu_format: imsi@carrierDomain
         ip_stack: ipv4v6
         media:
+            preferred_amr_wb_mode: 8
             rtcp_inactivity_seconds: 20
             rtcp_interval_seconds: 5
             rtp_inactivity_seconds: 20
@@ -58,6 +59,7 @@ common:
             use_ipsec: true
         signaling:
             early_media_needs_header: true
+            preconditions: supported
             require_preconditions_when_mandatory: false
             require_qos_before_ringing: true
             support_p_early_media: true

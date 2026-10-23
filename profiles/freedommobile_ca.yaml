@@ -121,8 +121,11 @@ plmn_overrides:
                 sip_timers:
                     InviteResponseTimeout: 5000
             media:
+                mode_set_amr_wb: 0,1,2
                 rtp_inactivity_seconds: 30
                 rtcp_interval_seconds: 5
+                max_redundancy: 220
+                enable_incoming_dtmf: true
             ussi:
                 enabled: true
             volte:

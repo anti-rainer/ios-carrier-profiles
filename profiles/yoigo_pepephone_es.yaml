@@ -26,6 +26,18 @@ plmn_overrides:
                           params:
                             - +g.3gpp.accesstype="cellular2"
             media:
+                codecs:
+                    - payload_type: 96
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=9.6-24.4; bw=swb
+                    - payload_type: 97
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=5.9-24.4; bw=nb-swb
                 rtcp_inactivity_seconds: 30
+                evs_hard_bw_limit: nb-swb
             volte:
                 enable_volte_by_default: true

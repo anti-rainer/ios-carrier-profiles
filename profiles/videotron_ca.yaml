@@ -74,7 +74,12 @@ common:
                   eap_method: EAP-AKA
             validate_remote_certificate: false
         ip_stack: ipv6
+        media:
+            enable_incoming_dtmf: true
+            max_redundancy: 220
+            rtp_inactivity_seconds: 30
         register:
+            expires: 7200
             use_ipsec: true
         signaling:
             csfb_on:

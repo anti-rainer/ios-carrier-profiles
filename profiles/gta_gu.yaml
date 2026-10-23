@@ -96,6 +96,8 @@ plmn_overrides:
                 require_preconditions_when_mandatory: false
             media:
                 rtp_inactivity_seconds: 30
+                max_redundancy: 220
+                enable_incoming_dtmf: true
             volte:
                 enable_volte_by_default: true
         roaming:

@@ -89,7 +89,16 @@ plmn_overrides:
                             - +g.3gpp.srvcc-alerting
                             - +g.3gpp.ps2cs-srvcc-orig-pre-alerting
             media:
+                codecs:
+                    - payload_type: 109
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=5.9-24.4; bw=nb-swb; ch-aw-recv=3; cmr=1
                 rtcp_interval_seconds: 5
+                max_redundancy: 220
+                dtmf_digit_duration_ms: 255
+                evs_hard_bw_limit: nb-swb
             volte:
                 enable_volte_by_default: true
         roaming:

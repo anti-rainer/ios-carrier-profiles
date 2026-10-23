@@ -92,7 +92,14 @@ plmn_overrides:
                         - "606"
                 require_preconditions_when_mandatory: false
             media:
+                codecs:
+                    - payload_type: 109
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=13.2; bw=nb-swb; ch-aw-recv=-1; cmr=-1
                 rtp_inactivity_seconds: 14
+                evs_hard_bw_limit: nb-swb
             ussi:
                 enabled: true
             volte:

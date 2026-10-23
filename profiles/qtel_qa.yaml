@@ -50,7 +50,14 @@ plmn_overrides:
                       headers:
                         - 'Feature-Caps: *;+g.3gpp.srvcc-alerting'
             media:
+                codecs:
+                    - payload_type: 106
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=5.9-24.4; bw=nb-swb; ch-aw-recv=-1
                 rtp_inactivity_seconds: 15
+                evs_hard_bw_limit: nb-swb
             ussi:
                 enabled: true
             volte:

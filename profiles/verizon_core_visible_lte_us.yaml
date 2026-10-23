@@ -120,8 +120,45 @@ common:
             validate_remote_certificate: true
         ip_stack: ipv6
         media:
+            codecs:
+                - payload_type: 102
+                  name: AMR
+                  clock_rate: 8000
+                  channels: 1
+                  fmtp: octet-align=0; mode-set=7
+                - payload_type: 104
+                  name: AMR-WB
+                  clock_rate: 16000
+                  channels: 1
+                  fmtp: octet-align=0; mode-set=2
+                - payload_type: 106
+                  name: AMR
+                  clock_rate: 8000
+                  channels: 1
+                  fmtp: octet-align=0
+                - payload_type: 108
+                  name: AMR
+                  clock_rate: 8000
+                  channels: 1
+                  fmtp: octet-align=1; mode-set=7
+                - payload_type: 109
+                  name: EVS
+                  clock_rate: 16000
+                  channels: 1
+                  fmtp: br=13.2; bw=nb-wb; ch-aw-recv=3
+                - payload_type: 110
+                  name: AMR-WB
+                  clock_rate: 16000
+                  channels: 1
+                  fmtp: octet-align=1; mode-set=2
+            enable_incoming_dtmf: true
+            mode_set_amr_nb: "7"
+            mode_set_amr_wb: "2"
             rtcp_inactivity_seconds: 20
             rtp_inactivity_seconds: 20
+            support_amr_nb: false
+            support_amr_wb: false
+            use_ephemeral_rtp_ports: true
         signaling:
             additional_headers:
                 - selector: INVITE[911,wifi]

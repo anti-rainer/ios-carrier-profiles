@@ -77,6 +77,8 @@ plmn_overrides:
                         - 6XX
                 sip_timers:
                     InviteResponseTimeout: 0
+            media:
+                max_redundancy: 220
             ussi:
                 enabled: true
         roaming:

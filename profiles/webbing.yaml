@@ -54,6 +54,7 @@ common:
         apn: ims
         ip_stack: ipv4v6
         media:
+            mode_change_capability: 2
             rtp_inactivity_seconds: 10
         register:
             use_ipsec: true

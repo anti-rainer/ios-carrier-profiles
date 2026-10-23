@@ -28,6 +28,8 @@ common:
         apn: ims
         ip_stack: ipv6
         media:
+            max_redundancy: 220
+            mode_set_amr_wb: 0,1,2
             rtcp_interval_seconds: 5
             rtp_inactivity_seconds: 30
         register:

@@ -46,6 +46,7 @@ plmn_overrides:
                 sip_timers:
                     InviteResponseTimeout: 16000
             media:
+                preferred_amr_wb_mode: 8
                 rtp_inactivity_seconds: 30
                 rtcp_inactivity_seconds: 30
             volte:

@@ -22,6 +22,8 @@ common:
         apn: ims
         ip_stack: ipv4v6
         media:
+            preferred_amr_nb_mode: 7
+            preferred_amr_wb_mode: 8
             rtcp_inactivity_seconds: 10
             rtcp_interval_seconds: 5
             rtp_inactivity_seconds: 10

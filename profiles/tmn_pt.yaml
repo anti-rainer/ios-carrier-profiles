@@ -57,5 +57,14 @@ plmn_overrides:
                         - selector: REGISTER[wifi]
                           params:
                             - +g.3gpp.accesstype="wlan1"
+            media:
+                codecs:
+                    - payload_type: 109
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=5.9-24.4; bw=nb-swb
+                preferred_amr_wb_mode: 8
+                evs_hard_bw_limit: nb-swb
             volte:
                 enable_volte_by_default: true

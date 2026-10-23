@@ -11,9 +11,8 @@ plmn_overrides:
               type_mask: 131072
               tech_type_mask: 131072
               allowed_ip_stack: ipv4v6
+              roaming_ip_stack: ipv4v6
               support_switch_over: true
-              apple_options:
-                AllowedProtocolMaskInRoaming: "3"
             - apn: entel.pe
               type_mask: 32817
             - apn: entel.pe
@@ -87,7 +86,20 @@ plmn_overrides:
                             - +g.3gpp.srvcc-alerting
                             - +g.3gpp.ps2cs-srvcc-orig-pre-alerting
             media:
+                codecs:
+                    - payload_type: 106
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=5.9-24.4; bw=nb-swb; ch-aw-recv=-1
+                    - payload_type: 107
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=5.9-13.2; bw=nb-swb; ch-aw-recv=-1
+                preferred_amr_wb_mode: 8
                 rtp_inactivity_seconds: 15
+                evs_hard_bw_limit: nb-swb
             volte:
                 enable_volte_by_default: true
         roaming:

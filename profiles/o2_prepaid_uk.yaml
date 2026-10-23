@@ -81,8 +81,10 @@ plmn_overrides:
                             - +g.3gpp.srvcc-alerting
                             - +g.3gpp.ps2cs-srvcc-orig-pre-alerting
             media:
+                preferred_amr_wb_mode: 8
                 rtp_inactivity_seconds: 20
                 rtcp_interval_seconds: 5
+                max_redundancy: 220
             volte:
                 enable_volte_by_default: true
         roaming:

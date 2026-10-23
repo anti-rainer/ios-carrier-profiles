@@ -97,6 +97,7 @@ plmn_overrides:
             media:
                 rtp_inactivity_seconds: 10
                 rtcp_interval_seconds: 5
+                mode_change_capability: 2
             volte:
                 enable_volte_by_default: true
         roaming:

@@ -75,6 +75,9 @@ common:
         impu_format: imsi@carrierDomain
         ip_stack: ipv4v6
         media:
+            mode_change_capability: 2
+            preferred_amr_nb_mode: 7
+            preferred_amr_wb_mode: 8
             remote_rtcp_deactivation: true
             rtcp_inactivity_seconds: 25
             rtcp_interval_seconds: 5

@@ -17,6 +17,9 @@ common:
         apn: ims.avt.com
         ip_stack: ipv4
         media:
+            mode_change_capability: 2
+            preferred_amr_nb_mode: 7
+            preferred_amr_wb_mode: 8
             rtcp_interval_seconds: 5
             rtp_inactivity_seconds: 25
         register:

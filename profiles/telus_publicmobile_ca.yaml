@@ -76,8 +76,16 @@ plmn_overrides:
                     F: 16000
                     InviteResponseTimeout: 5000
             media:
+                codecs:
+                    - payload_type: 109
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=5.9-24.4; bw=nb-wb; ch-aw-recv=2
                 rtp_inactivity_seconds: 30
                 rtcp_inactivity_seconds: 30
+                max_redundancy: 220
+                enable_incoming_dtmf: true
             ussi:
                 enabled: true
             volte:

@@ -55,7 +55,11 @@ plmn_overrides:
                             - +g.3gpp.srvcc-alerting
                             - +g.3gpp.ps2cs-srvcc-orig-pre-alerting
             media:
+                preferred_amr_wb_mode: 8
+                mode_set_amr_nb: "7"
+                mode_set_amr_wb: 0,1,2
                 rtp_inactivity_seconds: 20
                 rtcp_inactivity_seconds: 36000
+                suppress_octet_align_for_be: true
             volte:
                 enable_volte_by_default: true

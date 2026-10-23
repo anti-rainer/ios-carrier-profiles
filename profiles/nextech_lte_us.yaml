@@ -110,9 +110,11 @@ plmn_overrides:
                 sip_timers:
                     InviteResponseTimeout: 6000
             media:
+                preferred_amr_wb_mode: 8
                 rtp_inactivity_seconds: 20
                 rtcp_inactivity_seconds: 20
                 rtcp_interval_seconds: 5
+                enable_incoming_dtmf: true
             volte:
                 enable_volte_by_default: true
         roaming:

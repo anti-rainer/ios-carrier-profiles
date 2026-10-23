@@ -58,7 +58,9 @@ plmn_overrides:
                 sip_timers:
                     InviteResponseTimeout: 5000
             media:
+                mode_set_amr_wb: 0,1,2
                 rtp_inactivity_seconds: 30
+                max_redundancy: 220
             ussi:
                 enabled: true
             volte:

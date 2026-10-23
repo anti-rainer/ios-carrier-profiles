@@ -51,6 +51,25 @@ common:
         apn: ims
         ip_stack: ipv4v6
         media:
+            codecs:
+                - payload_type: 96
+                  name: EVS
+                  clock_rate: 16000
+                  channels: 1
+                  fmtp: br=5.9-24.4; bw=nb-swb
+                - payload_type: 116
+                  name: EVS
+                  clock_rate: 16000
+                  channels: 1
+                  fmtp: br=5.9-24.4; bw=nb-swb
+            evs_hard_br_limit: 5.9-24.4
+            evs_hard_bw_limit: nb-swb
+            include_evs_io_modes: true
+            packet_alignment_amr_nb: bandwidthEfficientOnly
+            packet_alignment_amr_wb: bandwidthEfficientOnly
+            payload_type_be_amr_nb: 97
+            payload_type_be_amr_wb: 99
+            restrict_session_evs_bandwidth: false
             rtcp_interval_seconds: 5
             rtp_inactivity_seconds: 120
         register:

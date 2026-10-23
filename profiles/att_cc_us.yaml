@@ -85,6 +85,7 @@ common:
             validate_remote_certificate: false
         ip_stack: ipv4v6
         media:
+            enable_incoming_dtmf: true
             remote_rtcp_deactivation: true
             rtcp_inactivity_seconds: 20
             rtcp_interval_seconds: 5

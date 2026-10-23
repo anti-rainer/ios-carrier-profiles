@@ -92,6 +92,7 @@ plmn_overrides:
                 include_cellular_network_info: true
             signaling:
                 max_udp_message_size: 1200
+                preconditions: supported
                 support_p_early_media: true
                 early_media_needs_header: false
                 require_preconditions_when_mandatory: false
@@ -103,7 +104,16 @@ plmn_overrides:
                             - +g.3gpp.srvcc-alerting
                             - +g.3gpp.ps2cs-srvcc-orig-pre-alerting
             media:
+                codecs:
+                    - payload_type: 109
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=5.9-24.4; bw=nb-swb; ch-aw-recv=0
                 rtp_inactivity_seconds: 20
+                max_redundancy: 220
+                mode_change_capability: 2
+                evs_hard_bw_limit: nb-swb
             ussi:
                 enabled: true
             volte:

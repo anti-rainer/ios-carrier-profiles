@@ -85,6 +85,7 @@ plmn_overrides:
                 include_cellular_network_info: true
             signaling:
                 max_udp_message_size: 1200
+                preconditions: supported
                 support_p_early_media: false
                 early_media_needs_header: false
                 require_preconditions_when_mandatory: false
@@ -101,6 +102,8 @@ plmn_overrides:
                 rtp_inactivity_seconds: 20
                 rtcp_inactivity_seconds: 20
                 rtcp_interval_seconds: 5
+                max_redundancy: 220
+                enable_incoming_dtmf: true
             volte:
                 enable_volte_by_default: true
         roaming:

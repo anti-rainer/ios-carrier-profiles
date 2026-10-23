@@ -29,6 +29,8 @@ common:
     ims:
         apn: ims
         ip_stack: ipv4v6
+        media:
+            rtp_inactivity_seconds: 10
         register:
             use_ipsec: true
         signaling:

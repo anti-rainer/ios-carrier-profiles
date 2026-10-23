@@ -60,8 +60,15 @@ common:
             remote_identifier_type: IDFQDN
             validate_remote_certificate: true
         media:
+            codecs:
+                - payload_type: 127
+                  name: EVS
+                  clock_rate: 16000
+                  channels: 1
+                  fmtp: br=5.9-13.2; bw=nb-wb; ch-aw-recv=2
             rtcp_inactivity_seconds: 30
             rtp_inactivity_seconds: 30
+            telephone_event_pt_8k: 101
         register:
             include_cellular_network_info: true
             use_ipsec: false

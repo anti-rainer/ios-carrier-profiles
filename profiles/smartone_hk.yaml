@@ -78,6 +78,13 @@ common:
                   eap_method: EAP-AKA
             validate_remote_certificate: false
         media:
+            codecs:
+                - payload_type: 109
+                  name: EVS
+                  clock_rate: 16000
+                  channels: 1
+                  fmtp: br=5.9-24.4; bw=nb-swb
+            evs_hard_bw_limit: nb-swb
             rtcp_interval_seconds: 5
         register:
             include_cellular_network_info: true

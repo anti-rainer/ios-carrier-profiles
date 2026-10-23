@@ -75,6 +75,7 @@ common:
             validate_remote_certificate: false
         ip_stack: ipv6
         media:
+            mode_set_amr_wb: 0,1,2
             rtcp_interval_seconds: 5
         register:
             include_cellular_network_info: true

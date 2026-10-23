@@ -116,6 +116,7 @@ plmn_overrides:
                 contact:
                     always_add_sip_instance: true
             media:
+                preferred_amr_wb_mode: 8
                 rtp_inactivity_seconds: 20
                 rtcp_interval_seconds: 5
             volte:

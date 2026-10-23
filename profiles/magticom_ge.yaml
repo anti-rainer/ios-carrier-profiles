@@ -29,5 +29,13 @@ plmn_overrides:
                             - +g.3gpp.mid-call
                             - +g.3gpp.srvcc-alerting
                             - +g.3gpp.ps2cs-srvcc-orig-pre-alerting
+            media:
+                codecs:
+                    - payload_type: 106
+                      name: EVS
+                      clock_rate: 16000
+                      channels: 1
+                      fmtp: br=9.6-24.4; bw=nb-swb; ch-aw-recv=0
+                evs_hard_bw_limit: nb-swb
             volte:
                 enable_volte_by_default: true

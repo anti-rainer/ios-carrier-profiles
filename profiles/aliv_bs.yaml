@@ -29,6 +29,8 @@ common:
     ims:
         apn: ims
         ip_stack: ipv4
+        media:
+            preferred_amr_wb_mode: 8
         signaling:
             contact:
                 additional_contact_params:
